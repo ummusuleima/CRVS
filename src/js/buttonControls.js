@@ -4,6 +4,7 @@ $(document).ready(function () {
     $("#sidebar").addClass("block");
     console.log("hellow");
   });
+  
   $("#close_sidebar").click(() => {
     $("#sidebar").addClass("hidden");
     $("#sidebar").removeClass("block");

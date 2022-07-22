@@ -4,6 +4,6 @@ $(document).ready(function () {
 
   $.each(sections, function () {
     const loadFileHere = $(this).attr("include");
-    $(this).load("./sections/" + loadFileHere);
+    $(this).load("../sections/" + loadFileHere);
   });
 });

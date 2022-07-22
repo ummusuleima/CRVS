@@ -1,0 +1,14 @@
+{
+  "name": "Softnet-Work",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/iam-dante/CRVS.git",
+  "author": "Brian Temu <bryangasper2124@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "reload": "^3.2.0"
+  },
+  "scripts": {
+    "dev": "reload -b --dir ./src"
+  }
+}
