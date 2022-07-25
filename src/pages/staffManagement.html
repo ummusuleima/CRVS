@@ -167,64 +167,48 @@
     ></script>
 
     <script>
-      const orders = [
+      const data = [
         {
           ID: 1,
-          OrderNumber: 35703,
-          OrderDate: "2017/04/10",
-          DeliveryDate: "2017/04/13 9:00",
-          SaleAmount: 11800,
-          Terms: "15 Days",
-          CustomerStoreCity: "Los Angeles, CA",
-          Employee: "Harv Mudd",
+          FirstName: "Alli",
+          MiddleName: "name",
+          LastName: "Someoone",
+          PhoneNumber: 071809908,
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: 08748908,
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 3,
+          FirstName: "Kanye",
+          MiddleName: "West",
+          LastName: "Someoone",
+          PhoneNumber: 04891180008,
+          Email: "kanyelse@gmail.com",
         },
         {
           ID: 4,
-          OrderNumber: 35711,
-          OrderDate: "2017/01/12",
-          DeliveryDate: "2017/01/13 9:00",
-          SaleAmount: 16050,
-          Terms: "15 Days",
-          CustomerStoreCity: "San Jose, CA",
-          Employee: "Jim Packard",
-        },
-        {
-          ID: 5,
-          OrderNumber: 35714,
-          OrderDate: "2017/01/22",
-          DeliveryDate: "2017/01/27 9:00",
-          SaleAmount: 14750,
-          Terms: "15 Days",
-          CustomerStoreCity: "Las Vegas, NV",
-          Employee: "Harv Mudd",
-        },
-
-        {
-          ID: 5,
-          OrderNumber: 35714,
-          OrderDate: "2017/01/22",
-          DeliveryDate: "2017/01/27 9:00",
-          SaleAmount: 14750,
-          Terms: "15 Days",
-          CustomerStoreCity: "Las Vegas, NV",
-          Employee: "Harv Mudd",
-        },
-
-        {
-          ID: 5,
-          OrderNumber: 35714,
-          OrderDate: "2017/01/22",
-          DeliveryDate: "2017/01/27 9:00",
-          SaleAmount: 14750,
-          Terms: "15 Days",
-          CustomerStoreCity: "Las Vegas, NV",
-          Employee: "Harv Mudd",
+          FirstName: "Jay",
+          MiddleName: "Name",
+          LastName: "Someoone",
+          PhoneNumber: 079837783,
+          Email: "JohnDoelse@gmail.com",
         },
       ];
 
       $(() => {
         const dataGrid = $("#tablecontent").dxDataGrid({
-          dataSource: orders,
+          dataSource: data,
+          showColumnLines: true,
+          showRowLines: true,
+          rowAlternationEnabled: true,
+          showBorders: true,
           keyExpr: "ID",
           columnsAutoWidth: true,
           headerFilter: { visible: true },
@@ -233,19 +217,35 @@
             visible: true,
             applyFilter: "auto",
           },
+
           columnChooser: {
             enabled: true,
             mode: "select",
           },
+
           export: {
             enabled: true,
           },
+
+          searchPanel: {
+            visible: true,
+            with:700,
+            // position: left,
+          },
+
           pager: {
             visible: true,
             // allowedPageSizes: [5, 10, 'all'],
             showPageSizeSelector: true,
             showInfo: true,
             showNavigationButtons: true,
+          },
+          editing: {
+            allowUpdating: true,
+            allowAdding: true,
+            allowDeleting: true,
+            useIcons: true,
+            mode: "form", // 'batch' | 'cell' | 'form' | 'popup'
           },
         });
       });
@@ -399,14 +399,13 @@
     </div>
 
     <script>
-
       $(document).ready(function () {
-      var pageURL = window.location.href;
+        var pageURL = window.location.href;
 
-      if (pageURL.includes("/pages/staffManagement.html")) {
-        document.getElementById("details-toggle").setAttribute("open", true);
-      }
-    })
+        if (pageURL.includes("/pages/staffManagement.html")) {
+          document.getElementById("details-toggle").setAttribute("open", true);
+        }
+      });
     </script>
 
     <!-- Flowbite script -->
