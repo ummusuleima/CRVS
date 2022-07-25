@@ -29,7 +29,7 @@
       </a>
 
       <details
-        class="details-toggle group flex w-full text-white font-bold hover:text-white hover:bg-sky-900 group items-center px-1 py-2 text-sm leading-6 cursor-pointer rounded-md"
+        class="details-toggle group flex w-full text-white font-bold hover:text-white hover:bg-sky-800 group items-center px-1 py-2 text-sm leading-6 cursor-pointer rounded-md"
       >
         <summary class="relative flex items-center">
           <svg
@@ -64,14 +64,14 @@
         </summary>
         <div class="bg-sky-700 px-2 py-4 rounded-md mt-2 font-medium">
           <a
-            class="staff py-2 flex hover:bg-sky-900 px-4 rounded-md text-sm text-white border-2 border-grey-200 hover:border-none"
+            class="staff py-2 flex bg-sky-900 px-4 rounded-md text-sm hover:bg-transparent text-white hover:border-2 hover:border-white hover:bg-sky-800"
             href="./staffManagement.html"
             >Staff Management</a
           >
         </div>
 
         <details
-          class="perm-details group flex w-full text-white font-bold hover:text-white hover:bg-sky-900 group items-center py-2 text-sm leading-6 cursor-pointer rounded-md"
+          class="perm-details group flex w-full text-white font-bold hover:text-white hover:bg-sky-800 group items-center py-2 text-sm leading-6 cursor-pointer rounded-md"
         >
           <summary class="relative flex items-center">
             <svg
@@ -108,13 +108,13 @@
             class="bg-sky-700 px-2 py-4 space-y-2 rounded-md mt-2 font-medium"
           >
             <a
-              class="permission py-2 flex hover:bg-sky-900 px-4 rounded-md text-white border-2 border-grey-200 hover:border-none"
+              class="permission py-2 flex bg-sky-900 px-4 rounded-md text-sm hover:bg-transparent text-white hover:border-2 hover:border-white hover:bg-sky-800"
               href="./permissions.html"
               >Permissions</a
             >
 
             <a
-              class="assignpermission py-2 flex hover:bg-sky-900 px-4 rounded-md text-white border-2 border-grey-200 hover:border-none"
+              class="assignpermission py-2 flex bg-sky-900 px-4 rounded-md text-sm hover:bg-transparent text-white hover:border-2 hover:border-white hover:bg-sky-800"
               href="./assignUserPermission.html"
               >Assign Permissions</a
             >
@@ -122,7 +122,7 @@
         </details>
 
         <details
-          class="group flex w-full text-white font-bold hover:text-white hover:bg-sky-900 group items-center py-2 text-sm leading-6 cursor-pointer rounded-md"
+          class="group-details group flex w-full text-white font-bold hover:text-white hover:bg-sky-800 group items-center py-2 text-sm leading-6 cursor-pointer rounded-md"
         >
           <summary class="relative flex items-center">
             <svg
@@ -159,13 +159,13 @@
             class="bg-sky-700 px-2 py-4 space-y-2 rounded-md mt-2 font-medium"
           >
             <a
-              class="py-2 flex hover:bg-sky-900 px-4 rounded-md text-white border-2 border-grey-200 hover:border-none"
+              class="groups py-2 flex bg-sky-900 px-4 rounded-md text-sm hover:bg-transparent text-white hover:border-2 hover:border-white hover:bg-sky-800"
               href="./groups.html"
               >Group</a
             >
 
             <a
-              class="py-2 flex hover:bg-sky-900 px-4 rounded-md text-white border-2 border-grey-200 hover:border-none"
+              class="usergroups py-2 flex bg-sky-900 px-4 rounded-md text-sm hover:bg-transparent text-white hover:border-2 hover:border-white hover:bg-sky-800"
               href="./groupUsers.html"
               >User Group</a
             >
@@ -173,7 +173,7 @@
         </details>
 
         <details
-          class="group flex w-full text-white font-bold hover:text-white hover:bg-sky-900 group items-center py-2 text-sm leading-6 cursor-pointer rounded-md"
+          class="group logs-details flex w-full text-white font-bold hover:text-white hover:bg-sky-800 group items-center py-2 text-sm leading-6 cursor-pointer rounded-md"
         >
           <summary class="relative flex items-center">
             <svg
@@ -210,7 +210,7 @@
             class="bg-sky-700 px-2 py-4 space-y-2 rounded-md mt-2 font-medium"
           >
             <a
-              class="py-2 flex hover:bg-sky-900 px-4 rounded-md text-white border-2 border-grey-200 hover:border-none"
+              class="py-2 all-logs flex bg-sky-900 px-4 rounded-md text-sm hover:bg-transparent text-white hover:border-2 hover:border-white hover:bg-sky-800"
               href="./allLogs.html"
               >All logs</a
             >
@@ -230,6 +230,21 @@
 
   <script>
     $(document).ready(function () {
+
+      function userManagementDetails(){
+         var details = document.getElementsByClassName("details-toggle");
+        for (let index = 0; index < details.length; index++) {
+          details[index].setAttribute("open", true);
+        }
+      }
+
+      function sectionDetails(cls){
+        var details = document.getElementsByClassName(cls);
+        for (let index = 0; index < details.length; index++) {
+          details[index].setAttribute("open", true);
+        }
+      }
+
       var pageURL = window.location.href;
 
       if (pageURL.includes("/pages/staffManagement.html")) {
@@ -237,38 +252,52 @@
         for (let index = 0; index < details.length; index++) {
           details[index].setAttribute("open", true);
         }
-        $(".staff").addClass("bg-sky-900 border-none");
+        $(".staff").removeClass("bg-sky-900");
+        $(".staff").addClass("border-2");
       } 
       else if (pageURL.includes("/pages/dashboard.html")) {
         $(".dashboard").addClass("bg-sky-900 ");
       }
 
       else if (pageURL.includes("/pages/permissions.html")) {
-        var secdetails = document.getElementsByClassName("perm-details");
-        for (let index = 0; index < secdetails.length; index++) {
-          secdetails[index].setAttribute("open", true);
-        }
+        sectionDetails("perm-details")
+        userManagementDetails()
+        $(".permission").removeClass("bg-sky-900");
+        $(".permission").addClass("border-2");
 
-        var details = document.getElementsByClassName("details-toggle");
-        for (let index = 0; index < details.length; index++) {
-          details[index].setAttribute("open", true);
-        }
-
-        $(".permission").addClass("bg-sky-900 border-none");
       }
 
       else if (pageURL.includes("/pages/assignUserPermission.html")) {
-        var secdetails = document.getElementsByClassName("perm-details");
-        for (let index = 0; index < secdetails.length; index++) {
-          secdetails[index].setAttribute("open", true);
-        }
+        sectionDetails("perm-details")
+        userManagementDetails()
+        $(".assignpermission").removeClass("bg-sky-900");
+        $(".assignpermission").addClass("border-2");
 
-        var details = document.getElementsByClassName("details-toggle");
-        for (let index = 0; index < details.length; index++) {
-          details[index].setAttribute("open", true);
-        }
+      }
 
-        $(".assignpermission").addClass("bg-sky-900 border-none");
+      else if (pageURL.includes("/pages/groups.html")) {
+        sectionDetails("group-details")
+        userManagementDetails()
+        $(".groups").removeClass("bg-sky-900");
+        $(".groups").addClass("border-2");
+
+      }
+
+      else if (pageURL.includes("/pages/groupUsers.html")) {
+        sectionDetails("group-details")
+        userManagementDetails()
+        $(".usergroups").removeClass("bg-sky-900");
+        $(".usergroups").addClass("border-2");
+
+      }
+
+      else if (pageURL.includes("/pages/allLogs.html")) {
+
+        sectionDetails("logs-details")
+        userManagementDetails()
+        $(".all-logs").removeClass("bg-sky-900");
+        $(".all-logs").addClass("border-2");
+
       }
     });
   </script>
