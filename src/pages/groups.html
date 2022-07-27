@@ -59,7 +59,7 @@
         </div>
 
         <div>
-          <!-- Dummy element to force sidebar to shrink to fit close icon -->
+          
         </div>
       </div>
 
@@ -73,7 +73,7 @@
           <div
             class="flex items-center flex-row space-x-3 flex-shrink-0 px-4 w-full"
           >
-            <image src="../images/crvs-image.png" class="h-10 w-16"/>
+            <image src="../images/crvs-image.png" class="h-10 w-16" />
             <h class="font-bold text-white text-2xl tracking-widest">CRVS</h>
           </div>
 
@@ -105,21 +105,19 @@
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
+                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                     />
                   </svg>
                 </span>
 
-                <h class="uppercase text-xl font-semibold "
-                  >groups</h
-                >
+                <h class="uppercase text-xl font-semibold">groups</h>
               </div>
               <button
-                  data-modal-toggle="newGroup"
-                  class="absolute right-10 bg-transparent uppercase hover:bg-crvsgreen-900 text-crvsgreen-700 font-semibold hover:text-white py-2 px-4 border border-crvsgreen-700 hover:border-transparent rounded"
-                >
-                  add group
-                </button>
+                data-modal-toggle="newGroup"
+                class="absolute right-10 bg-transparent uppercase hover:bg-crvsgreen-900 text-crvsgreen-700 font-semibold hover:text-white py-2 px-4 border border-crvsgreen-700 hover:border-transparent rounded"
+              >
+                add group
+              </button>
             </div>
 
             <!-- table content -->
@@ -250,15 +248,13 @@
       });
     </script>
 
-    <!-- add staff modal -->
+    <!-- add group modal -->
     <div
       id="newGroup"
       tabindex="-1"
       class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full bg-[#80808055]"
     >
-      <div
-        class="relative p-4 h-full w-full max-w-lg md:h-auto drop-shadow-xl "
-      >
+      <div class="relative p-4 h-full w-full max-w-lg md:h-auto drop-shadow-xl">
         <div class="relative bg-white rounded-lg shadow">
           <form>
             <button
@@ -290,13 +286,12 @@
 
               <div class="flex flex-col">
                 <label class="uppercase font-medium">Group Description:</label>
-                
+
                 <textarea
-                  class="h-24 px-2 mt-2 w-full  border-2 border-slate-300 rounded-md focus:outline-crvsblue-700"
+                  class="h-24 px-2 mt-2 w-full border-2 border-slate-300 rounded-md focus:outline-crvsblue-700"
                   placeholder="Group Description"
                   type="text"
                 >
-
                 </textarea>
               </div>
 

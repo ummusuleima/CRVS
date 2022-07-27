@@ -9,7 +9,6 @@
         class="dashboard text-white group flex items-center px-2 py-2 text-sm leading-6 font-bold rounded-md hover:bg-crvsblue-900"
         aria-current="page"
       >
-        <!-- Heroicon name: outline/home -->
         <svg
           class="mr-4 flex-shrink-0 h-6 w-6"
           xmlns="http://www.w3.org/2000/svg"
@@ -63,17 +62,29 @@
           </svg>
         </summary>
 
-        <div class="pl-6 border-l-2 border-white ">
-          <div class="bg-crvsblue-700 py-4 rounded-md mt-2 font-medium">
-            <ul class="list-disc space-y-1">
-              <li>
-                <a
-                  class="staff py-2 flex px-2 rounded-md text-sm text-white hover:bg-crvsblue-800"
-                  href="./staffmanagement.html"
-                  >Staff Management</a
-                >
-              </li>
-            </ul>
+        <div class="pl-6 border-l-2 border-white">
+          <div
+            class="bg-crvsblue-700 py-4 flex flex-row items-center space-x-2 w-full rounded-md mt-2 font-medium"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="flex-shrink-0 h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
+              />
+            </svg>
+            <a
+              class="staff py-2 flex px-2 rounded-md text-sm w-full text-white hover:bg-crvsblue-800"
+              href="./staffmanagement.html"
+              >Staff Management</a
+            >
           </div>
 
           <details
@@ -111,9 +122,9 @@
               </svg>
             </summary>
             <div
-              class="pl-6 py-4 space-y-2  mt-2 font-medium ml-2 border-l-2 border-white"
+              class="pl-6 py-4 space-y-2 mt-2 font-medium ml-2 border-l-2 border-white"
             >
-              <ul class="list-disc space-y-1">
+              <ul class="list-disc space-y-1 pl-2">
                 <li>
                   <a
                     class="permission py-2 flex px-4 rounded-md text-sm text-white hover:bg-crvsblue-800"
@@ -123,7 +134,14 @@
                 </li>
                 <li>
                   <a
-                    class="assignpermission py-2 flex px-4 rounded-md text-sm text-white hover:bg-crvsblue-800"
+                    class="userspermissions py-2 flex px-4 rounded-md text-sm text-white hover:bg-crvsblue-800"
+                    href="./userspermissions.html"
+                    >Users Permissions</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="assignpermission whitespace-normal py-2 flex px-4 rounded-md text-sm text-white hover:bg-crvsblue-800"
                     href="./assignuserpermission.html"
                     >Assign Permissions</a
                   >
@@ -167,9 +185,9 @@
               </svg>
             </summary>
             <div
-              class=" px-2 py-4 space-y-2  mt-2 font-medium ml-2 pl-6 border-l-2 border-white"
+              class="px-2 py-4 space-y-2 mt-2 font-medium ml-2 pl-6 border-l-2 border-white"
             >
-              <ul class="list-disc space-y-1">
+              <ul class="list-disc space-y-1 pl-2">
                 <li>
                   <a
                     class="groups py-2 flex px-4 rounded-md text-sm text-white hover:bg-crvsblue-800"
@@ -223,13 +241,12 @@
               </svg>
             </summary>
             <div
-              class=" px-2 py-4 space-y-2  mt-2 font-medium ml-2 pl-6 border-l-2 border-white"
+              class="px-2 py-4 space-y-2 mt-2 font-medium ml-2 pl-6 border-l-2 border-white"
             >
-              <ul class="list-disc">
+              <ul class="list-disc pl-2">
                 <li>
-
                   <a
-                    class="py-2 all-logs flex  px-4 rounded-md text-sm hover:bg-crvsblue-800"
+                    class="py-2 all-logs flex px-4 rounded-md text-sm hover:bg-crvsblue-800"
                     href="./alllogs.html"
                     >All logs</a
                   >
@@ -241,8 +258,6 @@
       </details>
     </div>
   </nav>
-
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
 
   <script
     src="../js/buttonControls.js"
@@ -273,34 +288,39 @@
         for (let index = 0; index < details.length; index++) {
           details[index].setAttribute("open", true);
         }
-        // $(".staff").removeClass("bg-crvsblue-900");
+
         $(".staff").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/dashboard.html")) {
         $(".dashboard").addClass("bg-crvsblue-900 ");
       } else if (pageURL.includes("/pages/permissions.html")) {
         sectionDetails("perm-details");
         userManagementDetails();
-        // $(".permission").removeClass("bg-crvsblue-900");
+
         $(".permission").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/assignuserpermission.html")) {
         sectionDetails("perm-details");
         userManagementDetails();
-        // $(".assignpermission").removeClass("bg-crvsblue-900");
+
         $(".assignpermission").addClass("bg-crvsblue-900");
+      } else if (pageURL.includes("/pages/userspermissions.html")) {
+        sectionDetails("perm-details");
+        userManagementDetails();
+
+        $(".userspermissions").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/groups.html")) {
         sectionDetails("group-details");
         userManagementDetails();
-        // $(".groups").removeClass("bg-crvsblue-900");
+
         $(".groups").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/groupusers.html")) {
         sectionDetails("group-details");
         userManagementDetails();
-        // $(".usergroups").removeClass("bg-crvsblue-900");
+
         $(".usergroups").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/alllogs.html")) {
         sectionDetails("logs-details");
         userManagementDetails();
-        // $(".all-logs").removeClass("bg-crvsblue-900");
+
         $(".all-logs").addClass("bg-crvsblue-900");
       }
     });
