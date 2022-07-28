@@ -7,59 +7,55 @@
     <title>CRVS</title>
     <link rel="icon" type="image/x-icon" href="../images/crvs-image.png" />
     <link href="./dist/output.css" rel="stylesheet" />
-    
   </head>
   <body>
-    <main class="bg-slate-200 h-screen flex items-center justify-center">
+    <main class="bg-slate-100 h-screen flex items-center justify-center">
       <div class="h-full w-full flex items-center justify-center">
-        <div class="w-full lg:w-[50%]">
+        <div class="w-full lg:w-[60%] space-y-8">
           <div class="w-full flex justify-center items-center">
             <img src="./images/crvs-image.png" class="h-36" />
           </div>
           <h1
-            class="flex justify-center items-center mt-4 font-bold lg:text-2xl md:text-xl"
+            class="flex justify-center items-center mt-4 font-bold md:text-xl"
           >
             CIVIL REGISTRATION AND VITAL STATISTICS
           </h1>
 
           <div class="w-full flex items-center justify-center px-2">
-            <div
-              class="w-[90%] lg:w-[60%] bg-slate-100 flex flex-col justify-center items-center py-8 mt-10 rounded-md"
-            >
-              <form class="space-y-8 w-full flex-col flex items-center px-4 md:px-12">
-                <label class="block w-full">
-                  <span class="block text-base md:text-xl  font-medium">USERNAME</span>
-                  <input
-                    type="text"
-                    class="border border-slate-300 h-12 w-full rounded-md px-4 mt-4 focus:outline-crvsblue-700"
-                    placeholder="Username"
-                  />
-                </label>
+            <div class="w-1/2">
+              <div class="w-full py-8 rounded-sm">
+                <form
+                  class="space-y-8 w-full flex-col flex items-center px-4 md:px-12"
+                >
+                  <label class="block w-full">
+                    <span class="block text-base font-medium uppercase"
+                      >username</span
+                    >
+                    <input
+                      type="text"
+                      class="border border-slate-300 h-12 w-full rounded-md px-4 mt-1 focus:outline-crvsblue-700"
+                      placeholder="Username"
+                    />
+                  </label>
 
-                <label class="block w-full">
-                  <span class="block  text-base md:text-xl font-medium">PASSWORD</span>
-                  <input
-                    type="password"
-                    class="border border-slate-300 h-12 w-full rounded-md px-4 mt-4 focus:outline-crvsblue-700"
-                    placeholder="Password"
-                  />
-                </label>
-              </form>
-              <div class="w-full px-4 md:px-12">
-                <a
-                  href="./pages/dashboard.html"
-                  class="h-12 w-full flex justify-center items-center rounded-md px-4 mt-8 bg-crvsblue-800 text-white font-bold  text-base md:text-xl  hover:border-2 hover:border-crvsblue-700 hover:bg-white hover:text-crvsblue-800"
-                >
-                  LOGIN
-                </a>
-              </div>
-              <div class="mt-4 w-full flex items-center justify-center px-4">
-                <h class="text-xs font-medium md:text-sm  text-center text-gray-500">
-                 All Rights Reserved. 
-                   &copy; <script>
-                document.write(new Date().getFullYear());
-              </script> Civil Registration and Vital Statistics. </h
-                >
+                  <label class="block w-full">
+                    <span class="block text-base font-medium uppercase"
+                      >password</span
+                    >
+                    <input
+                      type="password"
+                      class="border border-slate-300 h-12 w-full rounded-md px-4 mt-1 focus:outline-crvsblue-700"
+                      placeholder="Password"
+                    />
+                  </label>
+
+                  <a
+                    href="./pages/dashboard.html"
+                    class="p-2 rounded-sm w-full bg-crvsblue-700 text-white hover:text-crvsblue-700 uppercase border hover:bg-transparent border-crvsblue-700 text-center font-bold"
+                  >
+                    login
+                  </a>
+                </form>
               </div>
             </div>
           </div>

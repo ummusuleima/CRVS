@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
     <link href="../dist/output.css" rel="stylesheet" />
     <title>Group Users</title>
     <link rel="icon" type="image/x-icon" href="../images/crvs-image.png" />
@@ -111,7 +114,9 @@
                 >
               </div>
               <button
-                data-modal-toggle="assignusergroup"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#newUserGroup"
                 class="absolute right-10 bg-transparent uppercase hover:bg-crvsgreen-900 text-crvsgreen-700 font-semibold hover:text-white py-2 px-4 border border-crvsgreen-700 hover:border-transparent rounded"
               >
                 assign user group
@@ -246,77 +251,83 @@
       });
     </script>
 
-    <!-- add staff modal -->
+    <!-- add new user group modal -->
     <div
-      id="assignusergroup"
+      class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+      id="newUserGroup"
       tabindex="-1"
-      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full bg-[#80808055]"
+      aria-labelledby="exampleModalSmLabel"
+      aria-modal="true"
+      role="dialog"
     >
-      <div class="relative p-4 h-full w-full max-w-lg md:h-auto drop-shadow-xl">
-        <div class="relative bg-white rounded-lg shadow">
-          <form>
+      <div class="modal-dialog modal-lg relative w-auto pointer-events-none">
+        <div
+          class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current"
+        >
+          <div
+            class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md"
+          >
+            <h5
+              class="text-xl font-medium leading-normal text-gray-800 uppercase"
+            >
+              new user group
+            </h5>
             <button
-              data-modal-toggle="assignusergroup"
-              class="absolute top-3 right-2.5 bg-transparent hover:text-white rounded-lg text-sm p-1.5 ml-auto inline-flex items-center hover:bg-red-800"
-            >
-              <svg
-                class="w-5 h-5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </button>
-            <div class="pt-12 px-6 space-y-4">
-              <div class="flex flex-col">
-                <label class="uppercase font-medium">user name:</label>
-                <input
-                  class="h-12 px-2 mt-2 w-full border-2 border-slate-300 rounded-md focus:outline-crvsblue-700"
-                  placeholder="User Name"
-                  type="text"
-                />
+              type="button"
+              class="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body relative p-4">
+            <form>
+              <div class="px-6 space-y-4">
+                <div class="flex flex-col">
+                  <label class="uppercase font-medium">user name:</label>
+                  <input
+                    class="h-12 px-2 mt-2 w-full border-2 border-slate-300 rounded-md focus:outline-crvsblue-700"
+                    placeholder="User Name"
+                    type="text"
+                  />
+                </div>
+
+                <div class="flex flex-col">
+                  <label class="uppercase font-medium">Select Group:</label>
+
+                  <select
+                    class="h-12 px-2 mt-2 w-full border-2 bg-white rounded-md focus:outline-crvsblue-700"
+                  >
+                    <option>Select User type</option>
+                  </select>
+                </div>
+
+                <!-- Action buttons  -->
               </div>
-
-              <div class="flex flex-col">
-                <label class="uppercase font-medium">Select Group:</label>
-
-                <select
-                  class="h-12 px-2 mt-2 w-full border-2 bg-white rounded-md focus:outline-crvsblue-700"
+              <div
+                class="flex items-center justify-end w-full space-x-3 px-4 py-4"
+              >
+                <button
+                  type="button"
+                  class="bg-green-300 hover:bg-green-800 hover:text-white text-green-900 rounded-md text-sm font-medium px-5 py-2.5"
                 >
-                  <option>Select User type</option>
-                </select>
+                  Add Group
+                </button>
+
+                <button
+                  type="button"
+                  data-bs-dismiss="modal"
+                  class="bg-red-300 hover:bg-red-800 hover:text-white text-red-900 rounded-md text-sm font-medium px-5 py-2.5"
+                >
+                  Cancel
+                </button>
               </div>
-
-              <!-- Action buttons  -->
-            </div>
-            <div
-              class="flex items-center justify-end w-full space-x-3 px-4 py-4"
-            >
-              <button
-                data-modal-toggle="assignusergroup"
-                class="bg-green-300 hover:bg-green-800 hover:text-white text-green-900 rounded-md text-sm font-medium px-5 py-2.5"
-              >
-                Add Group
-              </button>
-
-              <button
-                data-modal-toggle="assignusergroup"
-                class="bg-red-300 hover:bg-red-800 hover:text-white text-red-900 rounded-md text-sm font-medium px-5 py-2.5"
-              >
-                Cancel
-              </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Flowbite script -->
-    <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script>
+    <!-- modal-tailwindcss cnd script -->
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   </body>
 </html>
