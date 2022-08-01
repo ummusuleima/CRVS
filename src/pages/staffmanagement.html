@@ -463,14 +463,14 @@
                 indent: 5,
               })
               .then(() => {
-                const header = `Country Area, Population, and GDP Structure`;
+                const header = `STAFF MANAGEMENT REPORT`;
                 const subheader = "something";
                 const pageWidth = doc.internal.pageSize.getWidth();
                 doc.setFontSize(15);
                 const headerWidth = doc.getTextDimensions(header).w;
                 doc.text(header, (pageWidth - headerWidth) / 2, 20);
                 // doc.text(subheader, (pageWidth - headerWidth) / 2, 40);
-                doc.save("Companies.pdf");
+                doc.save("Staff Management Report.pdf");
               });
           },
         });

@@ -6,6 +6,8 @@
   "author": "Brian Temu <bryangasper2124@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
     "reload": "^3.2.0"
   },
   "scripts": {

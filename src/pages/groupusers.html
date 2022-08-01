@@ -17,7 +17,7 @@
       <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
       <div
         id="sidebar"
-        class="hidden fixed flex inset-0 z-40"
+        class="fixed inset-0 z-40 flex hidden"
         role="dialog"
         aria-modal="true"
       >
@@ -27,13 +27,13 @@
         ></div>
 
         <div
-          class="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-crvsblue-700"
+          class="relative flex w-full max-w-xs flex-1 flex-col bg-crvsblue-700 pt-5 pb-4"
         >
           <div class="absolute top-0 right-0 -mr-12 pt-2">
             <button
               id="close_sidebar"
               type="button"
-              class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              class="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >
               <span class="sr-only">Close sidebar</span>
               <!-- Heroicon name: outline/x -->
@@ -67,17 +67,17 @@
       </div>
 
       <!-- Static sidebar for desktop -->
-      <div class="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
+      <div class="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
         <!-- Sidebar component, swap this element with another sidebar if you like -->
 
         <div
-          class="flex flex-col flex-grow bg-crvsblue-700 pt-5 pb-4 overflow-y-auto"
+          class="flex flex-grow flex-col overflow-y-auto bg-crvsblue-700 pt-5 pb-4"
         >
           <div
-            class="flex items-center justify-center flex-row space-x-3 flex-shrink-0 px-4 w-full"
+            class="flex w-full flex-shrink-0 flex-row items-center justify-center space-x-3 px-4"
           >
             <image src="../images/crvs-image.png" class="h-10 w-16" />
-            <h class="font-bold text-white text-2xl tracking-widest">CRVS</h>
+            <h class="text-2xl font-bold tracking-widest text-white">CRVS</h>
           </div>
 
           <!-- navigation section -->
@@ -85,7 +85,7 @@
         </div>
       </div>
 
-      <div class="lg:pl-64 flex flex-col flex-1">
+      <div class="flex flex-1 flex-col lg:pl-64">
         <main class="relative min-h-screen flex-1 pb-8">
           <!-- Header -->
           <section include="header.html"></section>
@@ -93,10 +93,10 @@
           <!-- Main Content -->
           <div class="px-6 py-2">
             <div
-              class="w-full border-b-2 border-black py-3 px-2 flex flex-row items-center"
+              class="flex w-full flex-row items-center border-b-2 border-black py-3 px-2"
             >
               <div class="flex flex-row items-center space-x-2">
-                <span class="px-3 py-3 bg-crvsicon-100 rounded-full">
+                <span class="rounded-full bg-crvsicon-100 px-3 py-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5 text-crvsicon-900"
@@ -109,7 +109,7 @@
                   </svg>
                 </span>
 
-                <h class="uppercase text-xl font-semibold"
+                <h class="text-xl font-semibold uppercase"
                   >manage user groups</h
                 >
               </div>
@@ -117,7 +117,7 @@
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#newUserGroup"
-                class="absolute right-10 bg-transparent uppercase hover:bg-crvsgreen-900 text-crvsgreen-700 font-semibold hover:text-white py-2 px-4 border border-crvsgreen-700 hover:border-transparent rounded"
+                class="absolute right-10 rounded border border-crvsgreen-700 bg-transparent py-2 px-4 font-semibold uppercase text-crvsgreen-700 hover:border-transparent hover:bg-crvsgreen-900 hover:text-white"
               >
                 assign user group
               </button>
@@ -253,49 +253,49 @@
 
     <!-- add new user group modal -->
     <div
-      class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+      class="modal fade fixed top-0 left-0 hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
       id="newUserGroup"
       tabindex="-1"
       aria-labelledby="exampleModalSmLabel"
       aria-modal="true"
       role="dialog"
     >
-      <div class="modal-dialog modal-lg relative w-auto pointer-events-none">
+      <div class="modal-dialog modal-lg pointer-events-none relative w-auto">
         <div
-          class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current"
+          class="modal-content pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none"
         >
           <div
-            class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md"
+            class="modal-header flex flex-shrink-0 items-center justify-between rounded-t-md border-b border-gray-200 p-4"
           >
             <h5
-              class="text-xl font-medium leading-normal text-gray-800 uppercase"
+              class="text-xl font-medium uppercase leading-normal text-gray-800"
             >
               new user group
             </h5>
             <button
               type="button"
-              class="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+              class="btn-close box-content h-4 w-4 rounded-none border-none p-1 text-black opacity-50 hover:text-black hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
           </div>
           <div class="modal-body relative p-4">
             <form>
-              <div class="px-6 space-y-4">
+              <div class="space-y-4 px-6">
                 <div class="flex flex-col">
-                  <label class="uppercase font-medium">user name:</label>
+                  <label class="font-medium uppercase">user name:</label>
                   <input
-                    class="h-12 px-2 mt-2 w-full border-2 border-slate-300 rounded-md focus:outline-crvsblue-700"
+                    class="mt-2 h-12 w-full rounded-md border-2 border-slate-300 px-2 focus:outline-crvsblue-700"
                     placeholder="User Name"
                     type="text"
                   />
                 </div>
 
                 <div class="flex flex-col">
-                  <label class="uppercase font-medium">Select Group:</label>
+                  <label class="font-medium uppercase">Select Group:</label>
 
                   <select
-                    class="h-12 px-2 mt-2 w-full border-2 bg-white rounded-md focus:outline-crvsblue-700"
+                    class="mt-2 h-12 w-full rounded-md border-2 bg-white px-2 focus:outline-crvsblue-700"
                   >
                     <option>Select User type</option>
                   </select>
@@ -304,11 +304,11 @@
                 <!-- Action buttons  -->
               </div>
               <div
-                class="flex items-center justify-end w-full space-x-3 px-4 py-4"
+                class="flex w-full items-center justify-end space-x-3 px-4 py-4"
               >
                 <button
                   type="button"
-                  class="bg-green-300 hover:bg-green-800 hover:text-white text-green-900 rounded-md text-sm font-medium px-5 py-2.5"
+                  class="rounded-md bg-green-300 px-5 py-2.5 text-sm font-medium text-green-900 hover:bg-green-800 hover:text-white"
                 >
                   Add Group
                 </button>
@@ -316,7 +316,7 @@
                 <button
                   type="button"
                   data-bs-dismiss="modal"
-                  class="bg-red-300 hover:bg-red-800 hover:text-white text-red-900 rounded-md text-sm font-medium px-5 py-2.5"
+                  class="rounded-md bg-red-300 px-5 py-2.5 text-sm font-medium text-red-900 hover:bg-red-800 hover:text-white"
                 >
                   Cancel
                 </button>
