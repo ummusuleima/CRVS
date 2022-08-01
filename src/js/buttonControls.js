@@ -11,8 +11,11 @@ $(document).ready(function () {
     console.log("hellow");
   });
 
-  $("#logout_button").click(() => {
-    $("#logout_menu").toggle()
+  $("#logout_button").focus(() => {
+    $("#logout_menu").show()
     console.log("hellow");
+  });
+  $("#logout_button").focusout(function () {
+    $("#logout_menu").hide();
   });
 });
