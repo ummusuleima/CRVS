@@ -11,11 +11,10 @@ $(document).ready(function () {
     
   });
 
-  $("#logout_button").focus(() => {
-    $("#logout_menu").show()
-    
+  $("#logout_button").click(() => {
+    $("#logout_menu").toggle() 
   });
-  $("#logout_button").focusout(function () {
-    $("#logout_menu").hide();
-  });
+  // $("#logout_button").focusout(function () {
+  //   $("#logout_menu").hide();
+  // });
 });

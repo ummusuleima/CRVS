@@ -9,23 +9,23 @@
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
   <body>
-    <main class="bg-slate-100 h-screen flex items-center justify-center">
-      <div class="h-full w-full flex items-center justify-center">
-        <div class="w-full lg:w-[60%] space-y-8">
-          <div class="w-full flex justify-center items-center">
+    <main class="flex h-screen items-center justify-center bg-slate-100">
+      <div class="flex h-full w-full items-center justify-center">
+        <div class="w-full space-y-8 lg:w-[60%]">
+          <div class="flex w-full items-center justify-center">
             <img src="./images/crvs-image.png" class="h-36" />
           </div>
           <h1
-            class="flex justify-center items-center mt-4 font-bold md:text-xl"
+            class="mt-4 flex items-center justify-center font-bold md:text-xl"
           >
             CIVIL REGISTRATION AND VITAL STATISTICS
           </h1>
 
-          <div class="w-full flex items-center justify-center px-2">
+          <div class="flex w-full items-center justify-center px-2">
             <div class="w-full sm:w-[70%]">
-              <div class="w-full py-8 rounded-sm">
+              <div class="w-full rounded-sm py-8">
                 <form
-                  class="space-y-8 w-full flex-col flex items-center xl:px-32"
+                  class="flex w-full flex-col items-center space-y-8 xl:px-32"
                 >
                   <label class="block w-full">
                     <span class="block text-base font-medium uppercase"
@@ -33,7 +33,7 @@
                     >
                     <input
                       type="text"
-                      class="border border-slate-300 h-12 w-full rounded-md px-4 mt-1 focus:outline-crvsblue-700"
+                      class="mt-1 h-12 w-full rounded-md border border-slate-300 px-4 focus:outline-crvsblue-700"
                       placeholder="Username"
                     />
                   </label>
@@ -44,14 +44,14 @@
                     >
                     <input
                       type="password"
-                      class="border border-slate-300 h-12 w-full rounded-md px-4 mt-1 focus:outline-crvsblue-700"
+                      class="mt-1 h-12 w-full rounded-md border border-slate-300 px-4 focus:outline-crvsblue-700"
                       placeholder="Password"
                     />
                   </label>
 
                   <a
                     href="./pages/dashboard.html"
-                    class="p-2 rounded-sm w-full bg-crvsblue-700 text-white hover:text-crvsblue-700 uppercase border hover:bg-transparent border-crvsblue-700 text-center font-bold"
+                    class="w-full rounded-sm border border-crvsblue-700 bg-crvsblue-700 p-2 text-center font-bold uppercase text-white hover:bg-transparent hover:text-crvsblue-700"
                   >
                     login
                   </a>
@@ -63,5 +63,4 @@
       </div>
     </main>
   </body>
-  
 </html>

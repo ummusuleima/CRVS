@@ -14,7 +14,7 @@
       <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
       <div
         id="sidebar"
-        class="hidden fixed flex inset-0 z-40"
+        class="fixed inset-0 z-40 flex hidden"
         role="dialog"
         aria-modal="true"
       >
@@ -24,13 +24,13 @@
         ></div>
 
         <div
-          class="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-crvsblue-700"
+          class="relative flex w-full max-w-xs flex-1 flex-col bg-crvsblue-700 pt-5 pb-4"
         >
           <div class="absolute top-0 right-0 -mr-12 pt-2">
             <button
               id="close_sidebar"
               type="button"
-              class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              class="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >
               <span class="sr-only">Close sidebar</span>
               <!-- Heroicon name: outline/x -->
@@ -64,17 +64,17 @@
       </div>
 
       <!-- Static sidebar for desktop -->
-      <div class="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
+      <div class="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
         <!-- Sidebar component, swap this element with another sidebar if you like -->
 
         <div
-          class="flex flex-col flex-grow bg-crvsblue-700 pt-5 pb-4 overflow-y-auto"
+          class="flex flex-grow flex-col overflow-y-auto bg-crvsblue-700 pt-5 pb-4"
         >
           <div
-            class="flex items-center justify-center flex-row space-x-3 flex-shrink-0 px-4 w-full"
+            class="flex w-full flex-shrink-0 flex-row items-center justify-center space-x-3 px-4"
           >
             <image src="../images/crvs-image.png" class="h-10 w-16" />
-            <h class="font-bold text-white text-2xl tracking-widest">CRVS</h>
+            <h class="text-2xl font-bold tracking-widest text-white">CRVS</h>
           </div>
 
           <!-- navigation section -->
@@ -82,7 +82,7 @@
         </div>
       </div>
 
-      <div class="lg:pl-64 flex flex-col flex-1">
+      <div class="flex flex-1 flex-col lg:pl-64">
         <main class="relative min-h-screen flex-1 pb-8">
           <!-- Header -->
           <section include="header.html"></section>
@@ -90,10 +90,10 @@
           <!-- Main Content -->
           <div class="px-6 py-2">
             <div
-              class="w-full border-b-2 border-black py-3 px-2 flex flex-row items-center"
+              class="flex w-full flex-row items-center border-b-2 border-black py-3 px-2"
             >
               <div class="flex flex-row items-center space-x-2">
-                <span class="px-3 py-3 bg-crvsicon-100 rounded-full">
+                <span class="rounded-full bg-crvsicon-100 px-3 py-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6 text-crvsicon-900"
@@ -110,7 +110,7 @@
                   </svg>
                 </span>
 
-                <h class="uppercase text-xl font-semibold"
+                <h class="text-xl font-semibold uppercase"
                   >assign user permissions</h
                 >
               </div>
@@ -119,11 +119,11 @@
             <!-- user list dropdown -->
             <div>
               <div
-                class="w-full bg-slate-200 py-4 px-16 mt-8 space-x-4 rounded-md flex flex-row items-center justify-center"
+                class="mt-8 flex w-full flex-row items-center justify-center space-x-4 rounded-md bg-slate-200 py-4 px-16"
               >
-                <h class="uppercase text-lg font-bold">user list:</h>
+                <h class="text-lg font-bold uppercase">user list:</h>
                 <select
-                  class="w-3/5 py-2.5 bg-white px-4 block shadow-sm text-gray-900 focus:outline-[#406B9C] border-slate-300 rounded-md"
+                  class="block w-3/5 rounded-md border-slate-300 bg-white py-2.5 px-4 text-gray-900 shadow-sm focus:outline-[#406B9C]"
                 >
                   <option>user names</option>
                 </select>
@@ -134,73 +134,73 @@
 
             <!-- selected user -->
             <div>
-              <div class="mt-4 px-8 space-y-3">
-                <h class="uppercase text-xl font-bold">selected user</h>
-                <table class="table-fixed w-full">
+              <div class="mt-4 space-y-3 px-8">
+                <h class="text-xl font-bold uppercase">selected user</h>
+                <table class="w-full table-fixed">
                   <thead>
-                    <tr class="uppercase text-lg bg-slate-300">
+                    <tr class="bg-slate-300 text-lg uppercase">
                       <th class="w-2/6">id</th>
                       <th>full name</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr class="text-center text-md">
+                    <tr class="text-md text-center">
                       <td class="py-4">1</td>
                       <td>Malcolm Lockyer</td>
                       <td>
                         <button
-                          class="uppercase text-sky-800 p-1.5 rounded-md font-semibold hover:bg-sky-600 hover:border-none hover:text-white border border-sky-700"
+                          class="rounded-md border border-sky-700 p-1.5 font-semibold uppercase text-sky-800 hover:border-none hover:bg-sky-600 hover:text-white"
                         >
-                        <span class="flex flex-row space-x-2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                            />
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                            />
-                          </svg>
-                          <h>unassigned </h>
-                        </span>
+                          <span class="flex flex-row space-x-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="h-6 w-6"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                              />
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                              />
+                            </svg>
+                            <h>unassigned </h>
+                          </span>
                         </button>
 
                         <button
-                          class="uppercase text-green-800 p-1.5 rounded-md font-semibold hover:bg-green-900 hover:border-none hover:text-white border border-green-900"
+                          class="rounded-md border border-green-900 p-1.5 font-semibold uppercase text-green-800 hover:border-none hover:bg-green-900 hover:text-white"
                         >
-                        <span class="flex flex-row space-x-2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                            />
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                            />
-                          </svg>
-                          <h>assigned </h>
-                        </span>
+                          <span class="flex flex-row space-x-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="h-6 w-6"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                              />
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                              />
+                            </svg>
+                            <h>assigned </h>
+                          </span>
                         </button>
                       </td>
                     </tr>
@@ -208,7 +208,6 @@
                 </table>
               </div>
             </div>
-            
           </div>
 
           <!-- Footer -->

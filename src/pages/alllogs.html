@@ -14,7 +14,7 @@
       <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
       <div
         id="sidebar"
-        class="hidden fixed flex inset-0 z-40"
+        class="fixed inset-0 z-40 flex hidden"
         role="dialog"
         aria-modal="true"
       >
@@ -24,13 +24,13 @@
         ></div>
 
         <div
-          class="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-crvsblue-700"
+          class="relative flex w-full max-w-xs flex-1 flex-col bg-crvsblue-700 pt-5 pb-4"
         >
           <div class="absolute top-0 right-0 -mr-12 pt-2">
             <button
               id="close_sidebar"
               type="button"
-              class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              class="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >
               <span class="sr-only">Close sidebar</span>
               <!-- Heroicon name: outline/x -->
@@ -58,23 +58,23 @@
           <section include="navigation.html"></section>
         </div>
 
-        <div class="flex-shrink-0 w-14" aria-hidden="true">
+        <div class="w-14 flex-shrink-0" aria-hidden="true">
           <!-- Dummy element to force sidebar to shrink to fit close icon -->
         </div>
       </div>
 
       <!-- Static sidebar for desktop -->
-      <div class="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
+      <div class="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
         <!-- Sidebar component, swap this element with another sidebar if you like -->
 
         <div
-          class="flex flex-col flex-grow bg-crvsblue-700 pt-5 pb-4 overflow-y-auto"
+          class="flex flex-grow flex-col overflow-y-auto bg-crvsblue-700 pt-5 pb-4"
         >
           <div
-            class="flex items-center flex-row space-x-3 flex-shrink-0 px-4 w-full"
+            class="flex w-full flex-shrink-0 flex-row items-center space-x-3 px-4"
           >
             <image src="../images/crvs-image.png" class="h-10 w-16" />
-            <h class="font-bold text-white text-2xl tracking-widest">CRVS</h>
+            <h class="text-2xl font-bold tracking-widest text-white">CRVS</h>
           </div>
 
           <!-- navigation section -->
@@ -82,7 +82,7 @@
         </div>
       </div>
 
-      <div class="lg:pl-64 flex flex-col flex-1">
+      <div class="flex flex-1 flex-col lg:pl-64">
         <main class="relative min-h-screen flex-1 pb-8">
           <!-- Header -->
           <section include="header.html"></section>
@@ -90,13 +90,13 @@
           <!-- Main Content -->
           <div class="px-6 py-2">
             <div
-              class="w-full border-b-2 border-black py-2 px-2 flex flex-row items-center"
+              class="flex w-full flex-row items-center border-b-2 border-black py-2 px-2"
             >
               <div class="flex flex-row items-center space-x-2">
-                <span class="px-3 py-3 bg-crvsicon-100 rounded-full">
+                <span class="rounded-full bg-crvsicon-100 px-3 py-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 text-crvs-900"
+                    class="text-crvs-900 h-6 w-6"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -110,22 +110,22 @@
                   </svg>
                 </span>
 
-                <h class="uppercase text-xl font-semibold">all logs</h>
+                <h class="text-xl font-semibold uppercase">all logs</h>
               </div>
             </div>
 
             <!-- Search -->
             <div
-              class="w-full bg-slate-200 py-4 px-16 mt-8 space-y-4 rounded-md"
+              class="mt-8 w-full space-y-4 rounded-md bg-slate-200 py-4 px-16"
             >
-              <div class="grid md:grid-cols-3 grid-cols-1 gap-8">
+              <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
                 <label class="space-y-2">
                   <h class="text-sm font-bold">START DATE</h>
                   <input
                     placeholder="Search by  Subject ID."
                     type="date"
                     id="end_date"
-                    class="w-full py-2 px-4 block shadow-sm text-gray-900 focus:outline-[#406B9C] border-slate-300 rounded-md"
+                    class="block w-full rounded-md border-slate-300 py-2 px-4 text-gray-900 shadow-sm focus:outline-[#406B9C]"
                   />
                 </label>
 
@@ -135,12 +135,12 @@
                     placeholder="Search by  Subject ID."
                     type="date"
                     id="start_date"
-                    class="w-full py-2 px-4 block shadow-sm text-gray-900 focus:outline-[#406B9C] border-slate-300 rounded-md"
+                    class="block w-full rounded-md border-slate-300 py-2 px-4 text-gray-900 shadow-sm focus:outline-[#406B9C]"
                   />
                 </label>
 
                 <button
-                  class="md:mt-8 uppercase h-10 w-full flex justify-center items-center rounded-md px-4 bg-crvsgreen-900 text-white font-bold text-xl hover:border-2 hover:border-crvsgreen-900 hover:bg-white hover:text-crvsgreen-900"
+                  class="flex h-10 w-full items-center justify-center rounded-md bg-crvsgreen-900 px-4 text-xl font-bold uppercase text-white hover:border-2 hover:border-crvsgreen-900 hover:bg-white hover:text-crvsgreen-900 md:mt-8"
                 >
                   Filter Report
                 </button>
@@ -148,9 +148,7 @@
             </div>
 
             <!-- table content -->
-            <div id="tablecontent" class="mt-6 h-auto">
-              
-            </div>
+            <div id="tablecontent" class="mt-6 h-auto"></div>
           </div>
 
           <!-- Footer -->
