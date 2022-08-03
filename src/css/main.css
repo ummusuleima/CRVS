@@ -3,3 +3,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dx-icon-trash{
+    @apply text-red-500 bg-emerald-600
+    /* color:"red" */
+}
