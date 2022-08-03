@@ -1514,10 +1514,8 @@ video {
 }
 
 .dx-icon-trash{
-  --tw-bg-opacity: 1;
-  background-color: rgb(5 150 105 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
+  --tw-text-opacity: 1 !important;
+  color: rgb(220 38 38 / var(--tw-text-opacity)) !important;
 }
 
 .hover\:border-2:hover{

@@ -9,15 +9,4 @@ $(document).ready(function () {
     $("#sidebar").removeClass("block");
   });
 
-  // $("#logout_button").focus(() => {
-  //   $("#logout_menu").show()
-  // });
-
-  // $("#logout_button").focusout(function () {
-  //   $("#logout_menu").hide()
-  // });
-
-  $("#logout_button").click(() => {
-    $("#logout_menu").toggle("slow")
-  });
 });
