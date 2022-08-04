@@ -7,3 +7,11 @@
 .dx-icon-trash{
     @apply text-red-600  !important
 }
+
+.dx-icon-save{
+    @apply text-green-600  !important
+}
+
+.dx-icon-revert{
+    @apply text-red-600  !important
+}
