@@ -185,7 +185,7 @@
               </svg>
             </summary>
             <div
-              class="mt-2 ml-2 space-y-2 border-l-2 border-white px-2 py-4 pl-6 font-medium"
+              class="mt-2 space-y-2 border-l-2 border-white py-4 pl-6 font-medium"
             >
               <ul class="list-disc space-y-1 pl-2">
                 <li>
@@ -193,6 +193,13 @@
                     class="groups flex rounded-md py-2 px-4 text-sm text-white hover:bg-crvsblue-800"
                     href="./groups.html"
                     >Group</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="assignGroupPermission flex  rounded-md py-2  text-sm px-1 whitespace-nowrap text-white hover:bg-crvsblue-800"
+                    href="./assigngrouppermission.html"
+                    >Assign Group Permission</a
                   >
                 </li>
                 <li>
@@ -389,6 +396,13 @@
         userManagementDetails();
 
         $(".all-logs").addClass("bg-crvsblue-900");
+      }
+
+      else if (pageURL.includes("/pages/assigngrouppermission.html")) {
+        sectionDetails("group-details");
+        userManagementDetails();
+
+        $(".assignGroupPermission").addClass("bg-crvsblue-900");
       }
     });
   </script>
