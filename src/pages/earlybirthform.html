@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <title>CRVS</title>
+    <!-- tailwindcss elements -->
+    <link rel="icon" type="image/x-icon" href="../images/crvs-image.png" />
+  </head>
+  <body>
+    <div class="min-h-full">
+      <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
+      <div
+        id="sidebar"
+        class="fixed inset-0 z-40 flex hidden"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div
+          class="fixed inset-0 bg-gray-600 bg-opacity-75"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          class="relative flex w-full max-w-xs flex-1 flex-col bg-crvsblue-700 pt-5 pb-4"
+        >
+          <div class="absolute top-0 right-0 -mr-12 pt-2">
+            <button
+              id="close_sidebar"
+              type="button"
+              class="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            >
+              <span class="sr-only">Close sidebar</span>
+              <!-- Heroicon name: outline/x -->
+              <svg
+                class="h-6 w-6 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- <div class="flex-shrink-0 flex items-center px-4"></div> -->
+
+          <!--nav bar place-->
+          <section include="navigation.html"></section>
+        </div>
+
+        <div class="w-14 flex-shrink-0" aria-hidden="true">
+          <!-- Dummy element to force sidebar to shrink to fit close icon -->
+        </div>
+      </div>
+
+      <!-- Static sidebar for desktop -->
+      <div class="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
+        <!-- Sidebar component, swap this element with another sidebar if you like -->
+
+        <div
+          class="flex flex-grow flex-col overflow-y-auto bg-crvsblue-700 pt-5 pb-4"
+        >
+          <div
+            class="flex w-full flex-shrink-0 flex-row items-center justify-center space-x-3 px-4"
+          >
+            <image src="../images/crvs-image.png" class="h-10 w-16" />
+            <h class="text-2xl font-bold tracking-widest text-white">CRVS</h>
+          </div>
+
+          <!-- navigation section -->
+          <section include="navigation.html"></section>
+        </div>
+      </div>
+
+      <div class="flex flex-1 flex-col lg:pl-64">
+        <main class="relative min-h-screen flex-1 pb-24">
+          <!-- Page header -->
+          <section include="header.html"></section>
+
+          <div class="mt-8 space-y-10 px-4 md:px-12 lg:px-10 xl:px-28">
+            <!-- journal information -->
+            <div class="space-y-4">
+              <div class="border-b-2 border-crvsblue-700 py-2 px-4">
+                <h class="text-xl font-semibold uppercase"
+                  >journal information</h
+                >
+              </div>
+
+              <form class="grid gap-4 px-4 md:grid-cols-3 lg:grid-cols-4">
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Document type</span
+                  >
+
+                  <select
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  >
+                    <option>Select Document type</option>
+                  </select>
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >b1 number</span
+                  >
+                  <input
+                    type="number"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="B1 Number"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >journal</span
+                  >
+                  <input
+                    type="number"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Journal Number"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >date of reception</span
+                  >
+                  <input
+                    type="date"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Date of reception"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >date of application</span
+                  >
+                  <input
+                    type="date"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Date of application"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Registration Number</span
+                  >
+                  <input
+                    type="number"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Registration Number"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Application Number</span
+                  >
+                  <input
+                    type="number"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Application Number"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase whitespace-nowrap"
+                    >Name of district register</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Name of district register"
+                  />
+                </label>
+              </form>
+            </div>
+
+            <!-- child information -->
+            <div class="space-y-4">
+              <div class="border-b-2 border-crvsblue-700 py-2 px-4">
+                <h class="text-xl font-semibold uppercase">child information</h>
+              </div>
+
+              <form class="grid gap-4 px-4 md:grid-cols-3 lg:grid-cols-4">
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >first name</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="First Name"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Middle Name</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Middle Name"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Last Name</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Last Name"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Gender</span
+                  >
+
+                  <select
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  >
+                    <option>Select gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >date of birth</span
+                  >
+                  <input
+                    type="date"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Date of birth"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Place of birth</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Place of birth"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Type of generation</span
+                  >
+                  <select
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  >
+                    <option>Select type of generation</option>
+                    <option>Single</option>
+                    <option>Twins</option>
+                    <option>More</option>
+                  </select>
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Generation status</span
+                  >
+                  <select
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  >
+                    <option>Select type of generation</option>
+                    <option>Born alive</option>
+                    <option>Born dead</option>
+                  </select>
+                </label>
+              </form>
+            </div>
+
+            <!-- father information -->
+            <div class="space-y-4">
+              <div
+                class="relative flex items-center border-b-2 border-crvsblue-700 py-4 px-4"
+              >
+                <h class="text-xl font-semibold uppercase"
+                  >father information</h
+                >
+
+                <button
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#searchFatherDetails"
+                  class="absolute right-6 flex items-center space-x-3 rounded bg-sky-700 px-4 py-2 font-semibold uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-white hover:text-sky-900"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+
+                  <h> search person</h>
+                </button>
+              </div>
+
+              <form class="grid gap-4 px-4 md:grid-cols-3 lg:grid-cols-4">
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >first name</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="First Name"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Middle Name</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Middle Name"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Last Name</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Last Name"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >citizenship</span
+                  >
+                  <select
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  >
+                    <option>Tanzania</option>
+                    <option>Kenya</option>
+                    <option>Uganda</option>
+                    <option>More</option>
+                  </select>
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Place of birth</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Place of birth"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Job Title</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Job Title"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >residency</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Residency"
+                  />
+                </label>
+              </form>
+            </div>
+
+            <!-- mother information -->
+            <div class="space-y-4">
+              <div
+                class="relative flex items-center border-b-2 border-crvsblue-700 py-4 px-4"
+              >
+                <h class="text-xl font-semibold uppercase"
+                  >mother information</h
+                >
+
+                <button
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#searchMotherDetails"
+                  class="absolute right-6 flex items-center space-x-3 rounded bg-sky-700 px-4 py-2 font-semibold uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-white hover:text-sky-900"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+
+                  <h> search person</h>
+                </button>
+              </div>
+
+              <form class="grid gap-4 px-4 md:grid-cols-3 lg:grid-cols-4">
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >first name</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="First Name"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Middle Name</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Middle Name"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Last Name</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Last Name"
+                  />
+                </label>
+
+                 <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Age</span
+                  >
+                  <input
+                    type="number"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Age"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Status</span
+                  >
+                  <select
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  >
+                    <option>Select Status</option>
+                    <option>Married</option>
+                    <option>Not Married</option>
+                    <option>A window</option>
+                  </select>
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >citizenship</span
+                  >
+                  <select
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  >
+                    <option>Tanzania</option>
+                    <option>Kenya</option>
+                    <option>Uganda</option>
+                    <option>More</option>
+                  </select>
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Place of birth</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Place of birth"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Job Title</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Job Title"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >residency</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Residency"
+                  />
+                </label>
+              </form>
+            </div>
+
+            <!-- informant information -->
+            <div class="space-y-4">
+              <div class="border-b-2 border-crvsblue-700 py-2 px-4">
+                <h class="text-xl font-semibold uppercase">informant information</h>
+              </div>
+
+              <form class="grid gap-4 px-4 md:grid-cols-3 lg:grid-cols-4">
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >first name</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="First Name"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Middle Name</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Middle Name"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Last Name</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Last Name"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase"
+                    >Provider's Position</span
+                  >
+
+                  <select
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  >
+                    <option>Select the Provider Position</option>
+                    <option>Traditional Midwife</option>
+                    <option>Servant of medicine</option>
+                    <option>Servant of anyone</option>
+
+                  </select>
+                </label>
+
+               
+
+                
+              </form>
+            </div>
+          </div>
+
+          <section include="footer.html"></section>
+        </main>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="../js/buttonControls.js"
+      type="text/javascript"
+      charset="utf8"
+    ></script>
+
+    <script src="../js/section.js"></script>
+
+    <!-- scripts for sections -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- DevExtreme theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn3.devexpress.com/jslib/21.2.7/css/dx.light.css"
+    />
+
+    <!-- DevExtreme library -->
+    <script
+      type="text/javascript"
+      src="https://cdn3.devexpress.com/jslib/21.2.7/js/dx.all.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.4.0/polyfill.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.1.1/exceljs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
+
+    <!-- toast message cdns -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+
+    <!-- modal-tailwindcss cnd script -->
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  </body>
+
+
+  <!-- father search form -->
+  <div
+    class="modal fade fixed top-0 left-0 hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+    id="searchFatherDetails"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg pointer-events-none relative w-auto">
+      <div
+        class="modal-content pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none"
+      >
+        <div
+          class="modal-header flex flex-shrink-0 items-center justify-between rounded-t-md border-b border-gray-200 p-4"
+        >
+          <h5
+            class="leading-norma l px-4 text-xl font-medium uppercase text-gray-800"
+            id="exampleModalLabel"
+          >
+            Search Father information
+          </h5>
+        </div>
+        <form>
+          <div class="modal-body relative p-4">
+            <div class="grid grid-cols-2 gap-2 py-4 px-6">
+              <div class="flex flex-col">
+                <label class="font-medium uppercase">pin:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="Pin"
+                  type="text"
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label class="font-medium uppercase">First name:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="First Name"
+                  type="text"
+                />
+              </div>
+
+              <div class="flex flex-col space-y-2">
+                <label class="font-medium uppercase">ZanID No:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="ZanID No"
+                  type="text"
+                />
+              </div>
+
+              <div class="flex flex-col space-y-2">
+                <label class="font-medium uppercase">Middle Name:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="Middle Name"
+                  type="text"
+                />
+              </div>
+
+              <div class="flex flex-col space-y-2">
+                <label class="font-medium uppercase">NationalID:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="National ID"
+                  type="number"
+                />
+              </div>
+
+              <div class="flex flex-col space-y-2">
+                <label class="font-medium uppercase">last name:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="Last Name"
+                  type="number"
+                />
+              </div>
+
+              <div class="flex flex-col space-y-2">
+                <label class="font-medium uppercase">Passport:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="Passport"
+                  type="number"
+                />
+              </div>
+
+              <div class="flex flex-col space-y-2">
+                <label class="font-medium uppercase">Date of birth:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="Zan ID No"
+                  type="date"
+                />
+              </div>
+              <div class="flex flex-col space-y-2">
+                <label class="font-medium uppercase">Resident Permit ID:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="Resident Permit ID"
+                  type="number"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end space-x-3 rounded-b-md border-t border-gray-200 p-4 px-4"
+          >
+            <button
+              type="button"
+              class="rounded-md bg-crvsgreen-300 px-5 py-2.5 text-sm font-medium text-crvsgreen-900 hover:bg-crvsgreen-800 hover:text-white"
+            >
+              Search
+            </button>
+
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              class="rounded-md bg-red-300 px-5 py-2.5 text-sm font-medium text-red-900 hover:bg-red-800 hover:text-white"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- mother search form -->
+  <div
+    class="modal fade fixed top-0 left-0 hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+    id="searchMotherDetails"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg pointer-events-none relative w-auto">
+      <div
+        class="modal-content pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none"
+      >
+        <div
+          class="modal-header flex flex-shrink-0 items-center justify-between rounded-t-md border-b border-gray-200 p-4"
+        >
+          <h5
+            class="leading-norma l px-4 text-xl font-medium uppercase text-gray-800"
+            id="exampleModalLabel"
+          >
+            Search mother information
+          </h5>
+        </div>
+        <form>
+          <div class="modal-body relative p-4">
+            <div class="grid grid-cols-2 gap-2 py-4 px-6">
+              <div class="flex flex-col">
+                <label class="font-medium uppercase">pin:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="Pin"
+                  type="text"
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label class="font-medium uppercase">First name:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="First Name"
+                  type="text"
+                />
+              </div>
+
+              <div class="flex flex-col space-y-2">
+                <label class="font-medium uppercase">ZanID No:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="ZanID No"
+                  type="text"
+                />
+              </div>
+
+              <div class="flex flex-col space-y-2">
+                <label class="font-medium uppercase">Middle Name:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="Middle Name"
+                  type="text"
+                />
+              </div>
+
+              <div class="flex flex-col space-y-2">
+                <label class="font-medium uppercase">NationalID:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="National ID"
+                  type="number"
+                />
+              </div>
+
+              <div class="flex flex-col space-y-2">
+                <label class="font-medium uppercase">last name:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="Last Name"
+                  type="number"
+                />
+              </div>
+
+              <div class="flex flex-col space-y-2">
+                <label class="font-medium uppercase">Passport:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="Passport"
+                  type="number"
+                />
+              </div>
+
+              <div class="flex flex-col space-y-2">
+                <label class="font-medium uppercase">Date of birth:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="Zan ID No"
+                  type="date"
+                />
+              </div>
+              <div class="flex flex-col space-y-2">
+                <label class="font-medium uppercase">Resident Permit ID:</label>
+                <input
+                  class="mt-2 h-12 w-full rounded border border-slate-400 px-2 focus:outline-crvsblue-700"
+                  placeholder="Resident Permit ID"
+                  type="number"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end space-x-3 rounded-b-md border-t border-gray-200 p-4 px-4"
+          >
+            <button
+              type="button"
+              class="rounded-md bg-crvsgreen-300 px-5 py-2.5 text-sm font-medium text-crvsgreen-900 hover:bg-crvsgreen-800 hover:text-white"
+            >
+              Search
+            </button>
+
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              class="rounded-md bg-red-300 px-5 py-2.5 text-sm font-medium text-red-900 hover:bg-red-800 hover:text-white"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</html>
