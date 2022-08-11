@@ -4,18 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
-.dx-icon-trash{
-    @apply text-red-600  !important
+.dx-icon-trash {
+  @apply text-red-600  !important;
 }
 
-.dx-icon-save{
-    @apply text-green-600  !important
+.dx-icon-save {
+  @apply text-green-600  !important;
 }
 
-.dx-icon-revert{
-    @apply text-red-600  !important
+.dx-icon-revert {
+  @apply text-red-600  !important;
 }
 
+.required:after {
+  content: "*";
+  color: red;
+}
 .stepper-active{
     @apply border-b-4 border-crvsblue-800
 }
