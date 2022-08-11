@@ -88,13 +88,48 @@
       </div>
 
       <div class="flex flex-1 flex-col lg:pl-64">
-        <main class="relative min-h-screen flex-1 pb-24">
+        <main class="relative min-h-screen flex-1 pb-24 ">
           <!-- Page header -->
           <section include="header.html"></section>
 
           <div class="mt-8 space-y-10 px-4 md:px-12 lg:px-10 xl:px-28">
+
+            <div class="w-full bg-crvsblue-700 grid grid-cols-4 rounded-md gap-2">
+              
+              
+              <a class="py-2 bg-sky-100 flex cursor-pointer  items-center border-b-4 border-crvsblue-700 px-4 space-x-4">
+                <span class="w-8 h-8 bg-crvsblue-700 rounded-full flex items-center justify-center text-white font-bold">
+                  1
+                </span>
+                <h class="uppercase text-crvsblue-700 font-semibold">child infromation</h>
+              </a>
+
+              <a class="py-2 group cursor-pointer hover:bg-sky-100 flex  items-center border-b-4 border-crvsblue-700 px-4 space-x-4">
+                <span class="w-8 h-8 bg-white group-hover:bg-crvsblue-700 rounded-full flex items-center justify-center text-crvsblue-700 group-hover:text-white font-bold">
+                  2
+                </span>
+                <h class="uppercase group-hover:text-crvsblue-700 text-white font-semibold">mother infromation</h>
+              </a>
+
+              <a class="py-2 group cursor-pointer hover:bg-sky-100 flex  items-center border-b-4 border-crvsblue-700 px-4 space-x-4">
+                <span class="w-8 h-8 bg-white group-hover:bg-crvsblue-700 rounded-full flex items-center justify-center text-crvsblue-700 group-hover:text-white font-bold">
+                  3
+                </span>
+                <h class="uppercase group-hover:text-crvsblue-700 text-white font-semibold">father infromation</h>
+              </a>
+
+              <a class="py-2 group cursor-pointer hover:bg-sky-100 flex  items-center border-b-4 border-crvsblue-700 px-4 space-x-4">
+                <span class="w-8 h-8 bg-white group-hover:bg-crvsblue-700 rounded-full flex items-center justify-center text-crvsblue-700 group-hover:text-white font-bold">
+                  4
+                </span>
+                <h class="uppercase group-hover:text-crvsblue-700 text-white font-semibold">informant infromation</h>
+              </a>
+
+              
+            </div>
+
             <!-- journal information -->
-            <div class="space-y-4">
+            <!-- <div class="space-y-4">
               <div class="border-b-2 border-crvsblue-700 py-2 px-4">
                 <h class="text-xl font-semibold uppercase"
                   >journal information</h
@@ -181,7 +216,8 @@
                 </label>
 
                 <label class="block w-full">
-                  <span class="block text-base font-medium uppercase whitespace-nowrap"
+                  <span
+                    class="block whitespace-nowrap text-base font-medium uppercase"
                     >Name of district register</span
                   >
                   <input
@@ -191,7 +227,7 @@
                   />
                 </label>
               </form>
-            </div>
+            </div> -->
 
             <!-- child information -->
             <div class="space-y-4">
@@ -201,8 +237,8 @@
 
               <form class="grid gap-4 px-4 md:grid-cols-3 lg:grid-cols-4">
                 <label class="block w-full">
-                  <span class="block text-base font-medium uppercase"
-                    >first name</span
+                  <span class="block text-base font-medium "
+                    >First Name</span
                   >
                   <input
                     type="text"
@@ -212,7 +248,7 @@
                 </label>
 
                 <label class="block w-full">
-                  <span class="block text-base font-medium uppercase"
+                  <span class="block text-base font-medium"
                     >Middle Name</span
                   >
                   <input
@@ -223,7 +259,7 @@
                 </label>
 
                 <label class="block w-full">
-                  <span class="block text-base font-medium uppercase"
+                  <span class="block text-base font-medium "
                     >Last Name</span
                   >
                   <input
@@ -234,7 +270,7 @@
                 </label>
 
                 <label class="block w-full">
-                  <span class="block text-base font-medium uppercase"
+                  <span class="block text-base font-medium "
                     >Gender</span
                   >
 
@@ -248,8 +284,8 @@
                 </label>
 
                 <label class="block w-full">
-                  <span class="block text-base font-medium uppercase"
-                    >date of birth</span
+                  <span class="block text-base font-medium "
+                    >Date of Birth</span
                   >
                   <input
                     type="date"
@@ -259,8 +295,8 @@
                 </label>
 
                 <label class="block w-full">
-                  <span class="block text-base font-medium uppercase"
-                    >Place of birth</span
+                  <span class="block text-base font-medium"
+                    >Country of Birth</span
                   >
                   <input
                     type="text"
@@ -270,8 +306,30 @@
                 </label>
 
                 <label class="block w-full">
-                  <span class="block text-base font-medium uppercase"
-                    >Type of generation</span
+                  <span class="block text-base font-medium"
+                    >Region of Birth</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Place of birth"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium"
+                    >District of Birth</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Place of birth"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium"
+                    >Type of Birth</span
                   >
                   <select
                     class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
@@ -299,7 +357,7 @@
             </div>
 
             <!-- father information -->
-            <div class="space-y-4">
+            <!-- <div class="space-y-4">
               <div
                 class="relative flex items-center border-b-2 border-crvsblue-700 py-4 px-4"
               >
@@ -413,10 +471,10 @@
                   />
                 </label>
               </form>
-            </div>
+            </div> -->
 
             <!-- mother information -->
-            <div class="space-y-4">
+            <!-- <div class="space-y-4">
               <div
                 class="relative flex items-center border-b-2 border-crvsblue-700 py-4 px-4"
               >
@@ -483,10 +541,8 @@
                   />
                 </label>
 
-                 <label class="block w-full">
-                  <span class="block text-base font-medium uppercase"
-                    >Age</span
-                  >
+                <label class="block w-full">
+                  <span class="block text-base font-medium uppercase">Age</span>
                   <input
                     type="number"
                     class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
@@ -555,12 +611,14 @@
                   />
                 </label>
               </form>
-            </div>
+            </div> -->
 
             <!-- informant information -->
-            <div class="space-y-4">
+            <!-- <div class="space-y-4">
               <div class="border-b-2 border-crvsblue-700 py-2 px-4">
-                <h class="text-xl font-semibold uppercase">informant information</h>
+                <h class="text-xl font-semibold uppercase"
+                  >informant information</h
+                >
               </div>
 
               <form class="grid gap-4 px-4 md:grid-cols-3 lg:grid-cols-4">
@@ -609,15 +667,30 @@
                     <option>Traditional Midwife</option>
                     <option>Servant of medicine</option>
                     <option>Servant of anyone</option>
-
                   </select>
                 </label>
-
-               
-
-                
               </form>
-            </div>
+            </div> -->
+
+            <!-- <div class="w-full flex justify-end h-24">
+              <button type="button" class="flex items-center space-x-3 rounded bg-crvsgreen-800 h-14 px-3 font-semibold uppercase text-white hover:border hover:border-crvsgreen-800 hover:bg-white hover:text-crvsgreen-800">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"
+                  />
+                </svg>
+                <h class="font-bold">SUBMIT & SAVE</h>
+              </button>
+            </div> -->
           </div>
 
           <section include="footer.html"></section>
@@ -668,7 +741,6 @@
     <!-- modal-tailwindcss cnd script -->
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   </body>
-
 
   <!-- father search form -->
   <div
@@ -927,6 +999,4 @@
       </div>
     </div>
   </div>
-
-
 </html>
