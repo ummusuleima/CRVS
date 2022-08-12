@@ -20,6 +20,17 @@
   content: "*";
   color: red;
 }
-.stepper-active{
-    @apply border-b-4 border-crvsblue-800
+
+.stepper-active .stepper-head-text{
+    @apply font-bold
 }
+
+.stepper-active {
+    @apply border-b-4 border-crvsblue-800 
+}
+
+
+.stepper-head{
+  @apply hover:bg-sky-100
+}
+
