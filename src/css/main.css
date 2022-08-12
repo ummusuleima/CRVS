@@ -26,11 +26,15 @@
 }
 
 .stepper-active {
-    @apply border-b-4 border-crvsblue-800 
+    @apply border-b-2 border-crvsblue-800 
 }
 
 
 .stepper-head{
   @apply hover:bg-sky-100
 }
+
+/* .heightstepper{
+  @apply h-[2050px] !important
+} */
 

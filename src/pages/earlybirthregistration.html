@@ -94,24 +94,24 @@
       </div>
 
       <div class="flex flex-1 flex-col lg:pl-64">
-        <main class="relative min-h-screen flex-1 pb-24">
+        <main id="mainpage" class=" relative min-h-screen flex-1 pb-24">
           <!-- Page header -->
           <section include="header.html"></section>
 
           <!-- main section -->
-          <div class="mx-2 mt-4 py-4 px-12">
-            <ul class="stepper" data-mdb-stepper="stepper">
+          <div class="mx-2 mt-4 py-4 px-12 h-auto">
+            <ul class="stepper heightstepper " data-mdb-stepper="stepper">
               <!-- child infromation -->
-              <li class="stepper-step stepper-active">
-                <div class="stepper-head flex items-center justify-center">
+              <li id="childInfoId" class="stepper-step">
+                <button class="stepper-head w-full">
                   <span class="stepper-head-icon"> 1 </span>
                   <span class="stepper-head-text text-xl uppercase text-black">
                     child infromation
                   </span>
-                </div>
+                </button>
 
                 <!-- child nfromation -->
-                <div class="stepper-content space-y-8">
+                <div id="childDiv" class="stepper-content space-y-8">
                   <!-- child information -->
                   <div class="space-y-4">
                     <div class="border-b-2 border-crvsblue-700 py-2 px-4">
@@ -137,7 +137,7 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
+                          <span class="required block text-base font-medium"
                             >Middle Name</span
                           >
                           <input
@@ -148,7 +148,7 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
+                          <span class="required block text-base font-medium"
                             >Last Name</span
                           >
                           <input
@@ -159,7 +159,7 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
+                          <span class="required block text-base font-medium"
                             >Gender</span
                           >
 
@@ -202,11 +202,11 @@
                           <span class="block text-base font-medium"
                             >District of Birth</span
                           >
-                          <input
-                            type="text"
-                            class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
-                            placeholder="District of Birth"
-                          />
+                          <select
+                            class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                          >
+                            <option></option>
+                          </select>
                         </label>
 
                         <label class="block w-full">
@@ -244,11 +244,11 @@
                           <span class="block text-base font-medium"
                             >Nationality</span
                           >
-                          <input
-                            type="text"
-                            class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
-                            placeholder="Nationality"
-                          />
+                          <select
+                            class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                          >
+                            <option></option>
+                          </select>
                         </label>
 
                         <label class="block w-full">
@@ -286,7 +286,7 @@
                           class="grid gap-8 px-6 md:grid-cols-3 lg:grid-cols-4"
                         >
                           <label class="block w-full">
-                            <span class="required block text-base font-medium"
+                            <span class="block text-base font-medium"
                               >First Name</span
                             >
                             <input
@@ -368,8 +368,9 @@
 
                       <!-- actions -->
                       <div class="flex h-20 w-full justify-end">
-                        <a
-                          href="./earlybirthform-motherInfo.html"
+                        <button
+                          type="button"
+                          id="motherNext"
                           class="flex h-12 items-center space-x-3 rounded bg-crvsgreen-800 px-4 font-semibold uppercase text-white hover:border hover:border-crvsgreen-800 hover:bg-white hover:text-crvsgreen-800"
                         >
                           <h class="font-bold">next</h>
@@ -390,7 +391,7 @@
                               clip-rule="evenodd"
                             />
                           </svg>
-                        </a>
+                        </button>
                       </div>
                     </form>
                   </div>
@@ -398,15 +399,15 @@
               </li>
 
               <!-- mother information -->
-              <li class="stepper-step ">
-                <div class="stepper-head">
+              <li id="motherInfoId" class="stepper-step">
+                <button type="button" class="stepper-head w-full">
                   <span class="stepper-head-icon"> 2 </span>
                   <span class="stepper-head-text text-xl uppercase">
                     mother infromation
                   </span>
-                </div>
+                </button>
 
-                <div class="stepper-content space-y-8">
+                <div id="motherDiv" class="stepper-content min-h-screen space-y-8">
                   <form class="space-y-8">
                     <div class="space-y-4">
                       <div class="border-b-2 border-crvsblue-700 py-2 px-4">
@@ -1019,8 +1020,9 @@
                     </div>
 
                     <div class="mt-12 flex h-20 w-full justify-between">
-                      <a
-                        href="./earlybirthform-motherInfo.html"
+                      <button
+                        type="button"
+                        id="prevChild"
                         class="flex h-12 items-center space-x-3 rounded bg-crvsgreen-800 px-3 font-semibold uppercase text-white hover:border hover:border-crvsgreen-800 hover:bg-white hover:text-crvsgreen-800"
                       >
                         <svg
@@ -1036,10 +1038,11 @@
                           />
                         </svg>
                         <h class="font-bold">prev</h>
-                      </a>
+                      </button>
 
-                      <a
-                        href="./earlybirthfrom-infromInfo.html"
+                      <button
+                        type="button"
+                        id="fatherNext"
                         class="flex h-12 items-center space-x-3 rounded bg-crvsgreen-800 px-4 font-semibold uppercase text-white hover:border hover:border-crvsgreen-800 hover:bg-white hover:text-crvsgreen-800"
                       >
                         <h class="font-bold">next</h>
@@ -1060,21 +1063,21 @@
                             clip-rule="evenodd"
                           />
                         </svg>
-                      </a>
+                      </button>
                     </div>
                   </form>
                 </div>
               </li>
 
               <!-- father infromation -->
-              <li class="stepper-step">
-                <div class="stepper-head">
+              <li id="fatherInfoId" class="stepper-step">
+                <button class="stepper-head w-full">
                   <span class="stepper-head-icon"> 3 </span>
                   <span class="stepper-head-text text-xl uppercase"
                     >father infromation</span
                   >
-                </div>
-                <div class="stepper-content space-y-8">
+                </button>
+                <div  id="fatherDiv" class="stepper-content space-y-8">
                   <form class="space-y-8">
                     <div class="space-y-4">
                       <div class="border-b-2 border-crvsblue-700 py-2 px-4">
@@ -1633,14 +1636,14 @@
               </li>
 
               <!-- infromant infromation -->
-              <li class="stepper-step">
-                <div class="stepper-head">
-                  <span class="stepper-head-icon"> 3 </span>
+              <li id="InfoId" class="stepper-step">
+                <button class="stepper-head w-full">
+                  <span class="stepper-head-icon"> 4 </span>
                   <span class="stepper-head-text text-xl uppercase"
                     >infromant infromation</span
                   >
-                </div>
-                <div class="stepper-content space-y-8">
+                </button>
+                <div   class="stepper-content space-y-8">
                   <!-- child information -->
                   <form class="space-y-8">
                     <div class="space-y-4">
