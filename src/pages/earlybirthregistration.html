@@ -103,7 +103,7 @@
             <ul class="stepper heightstepper" data-mdb-stepper="stepper">
               <!-- child infromation -->
               <li id="childInfoId" class="stepper-step">
-                <button class="stepper-head w-full">
+                <button class="stepper-head w-full" disabled>
                   <span class="stepper-head-icon"> 1 </span>
                   <span class="stepper-head-text text-xl uppercase text-black">
                     child infromation
@@ -126,9 +126,11 @@
                         class="grid gap-8 px-6 md:grid-cols-3 lg:grid-cols-4"
                       >
                         <label class="block w-full">
-                          <span class="required block text-base font-medium"
-                            >First Name</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Jina la kwanza /</span>
+                            First Name</span
                           >
+
                           <input
                             type="text"
                             class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
@@ -137,8 +139,9 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="required block text-base font-medium"
-                            >Middle Name</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Jina la kati /</span>
+                            Middle Name</span
                           >
                           <input
                             type="text"
@@ -148,37 +151,46 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="required block text-base font-medium"
-                            >Surname</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Jina la Ukoo /</span>
+                            SurName</span
                           >
                           <input
                             type="text"
                             class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
-                            placeholder="Last Name"
+                            placeholder="SurName"
                           />
                         </label>
 
                         <label class="block w-full">
-                          <span class="required block text-base font-medium"
-                            >Gender</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"> Jinsia /</span>
+                            Gender</span
                           >
 
                           <div class="mt-3 flex flex-row space-x-6">
                             <div class="flex flex-col items-center">
                               <input type="radio" class="h-4 w-4" />
-                              <label>Male</label>
+                              <span class="block text-base font-light">
+                                <span class="font-medium">Mume /</span>
+                                Male</span
+                              >
                             </div>
 
                             <div class="flex flex-col items-center">
                               <input type="radio" class="h-4 w-4" />
-                              <label>Female</label>
+                              <span class="block text-base font-light">
+                                <span class="font-medium">Mke /</span>
+                                Female</span
+                              >
                             </div>
                           </div>
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Date of Birth</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Tarehe ya kuzaliwa/</span>
+                            Date of birth</span
                           >
                           <input
                             type="date"
@@ -188,8 +200,9 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Number of Child</span
+                          <span class="block text-base font-light">
+                            <span class="font-medium">Idadi ya watoto /</span>
+                            Number of Children</span
                           >
                           <input
                             type="text"
@@ -199,8 +212,11 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >District of Birth</span
+                          <span class="block text-base font-light">
+                            <span class="font-medium">
+                              kutawanyika alipozaliwa/</span
+                            >
+                            District of birth</span
                           >
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
@@ -224,8 +240,11 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Place of Birth Occured</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"
+                              >Sehemu alipozaliwa /</span
+                            >
+                            Place of birth</span
                           >
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
@@ -235,8 +254,9 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Born Child Alive?</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Kazaliwa hai ? /</span>
+                            Born Alive ?</span
                           >
                           <div class="mt-3 flex flex-row space-x-6">
                             <div class="flex flex-col items-center">
@@ -252,8 +272,9 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Nationality</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Utaifa /</span>
+                            Nationality</span
                           >
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
@@ -263,8 +284,9 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Birth Weight(In Kg)</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Kilo /</span>
+                            Birth Weight</span
                           >
                           <input
                             type="number"
@@ -274,8 +296,9 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Legitimacy Status</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"> Uhalali /</span>
+                            Legitimacy status</span
                           >
                           <input
                             type="text"
@@ -297,9 +320,11 @@
                           class="grid gap-8 px-6 md:grid-cols-3 lg:grid-cols-4"
                         >
                           <label class="block w-full">
-                            <span class="block text-base font-medium"
-                              >First Name</span
+                            <span class="required block text-base font-light">
+                              <span class="font-medium">Jina la kwanza /</span>
+                              First Name</span
                             >
+
                             <input
                               type="text"
                               class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
@@ -308,8 +333,9 @@
                           </label>
 
                           <label class="block w-full">
-                            <span class="block text-base font-medium"
-                              >Middle Name</span
+                            <span class="required block text-base font-light">
+                              <span class="font-medium">Jina la kati /</span>
+                              Middle Name</span
                             >
                             <input
                               type="text"
@@ -319,37 +345,46 @@
                           </label>
 
                           <label class="block w-full">
-                            <span class="block text-base font-medium"
-                              >Surname</span
+                            <span class="required block text-base font-light">
+                              <span class="font-medium">Jina la Ukoo /</span>
+                              SurName</span
                             >
                             <input
                               type="text"
                               class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
-                              placeholder="Last Name"
+                              placeholder="SurName"
                             />
                           </label>
 
                           <label class="block w-full">
-                            <span class="block text-base font-medium"
-                              >Gender</span
+                            <span class="required block text-base font-light">
+                              <span class="font-medium"> Jinsia /</span>
+                              Gender</span
                             >
 
                             <div class="mt-3 flex flex-row space-x-6">
                               <div class="flex flex-col items-center">
                                 <input type="radio" class="h-4 w-4" />
-                                <label>Male</label>
+                                <span class="block text-base font-light">
+                                  <span class="font-medium">Mume /</span>
+                                  Male</span
+                                >
                               </div>
 
                               <div class="flex flex-col items-center">
                                 <input type="radio" class="h-4 w-4" />
-                                <label>Female</label>
+                                <span class="block text-base font-light">
+                                  <span class="font-medium">Mke /</span>
+                                  Female</span
+                                >
                               </div>
                             </div>
                           </label>
 
                           <label class="block w-full">
-                            <span class="block text-base font-medium"
-                              >Born Child Alive?</span
+                            <span class="required block text-base font-light">
+                              <span class="font-medium">Kazaliwa hai ? /</span>
+                              Born Alive ?</span
                             >
                             <div class="mt-3 flex flex-row space-x-6">
                               <div class="flex flex-col items-center">
@@ -365,8 +400,9 @@
                           </label>
 
                           <label class="block w-full">
-                            <span class="block text-base font-medium"
-                              >Birth Weight(In Kg)</span
+                            <span class="required block text-base font-light">
+                              <span class="font-medium">Kilo /</span>
+                              Birth Weight</span
                             >
                             <input
                               type="number"
@@ -411,7 +447,7 @@
 
               <!-- mother information -->
               <li id="motherInfoId" class="stepper-step">
-                <button type="button" class="stepper-head w-full">
+                <button  class="stepper-head w-full" disabled>
                   <span class="stepper-head-icon"> 2 </span>
                   <span class="stepper-head-text text-xl uppercase">
                     mother infromation
@@ -434,8 +470,11 @@
                         class="grid gap-8 px-6 md:grid-cols-3 lg:grid-cols-4"
                       >
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Type of ID</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"
+                              >Aina ya kitambulisho /</span
+                            >
+                            Type of id</span
                           >
 
                           <select
@@ -446,8 +485,11 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="required block text-base font-medium"
-                            >ID Number</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"
+                              >Number ya kitambulisho /</span
+                            >
+                            Id Number</span
                           >
                           <input
                             type="text"
@@ -457,9 +499,11 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="required block text-base font-medium"
-                            >First Name</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Jina la kwanza /</span>
+                            First Name</span
                           >
+
                           <input
                             type="text"
                             class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
@@ -468,8 +512,9 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Middle Name</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Jina la kati /</span>
+                            Middle Name</span
                           >
                           <input
                             type="text"
@@ -479,19 +524,23 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Surname</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Jina la Ukoo /</span>
+                            SurName</span
                           >
                           <input
                             type="text"
                             class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
-                            placeholder="Last Name"
+                            placeholder="SurName"
                           />
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Date of Birth</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"
+                              >Tarehe ya kuzaliwa /</span
+                            >
+                            Date of birth</span
                           >
                           <input
                             type="date"
@@ -501,8 +550,9 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Marital Status</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Hali ya ndoa /</span>
+                            Martial status</span
                           >
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
@@ -527,8 +577,9 @@
                         class="grid gap-8 px-6 md:grid-cols-3 lg:grid-cols-4"
                       >
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Country of Birth</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"> Nchi alipozaliwa /</span>
+                            Country of birth</span
                           >
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
@@ -538,8 +589,9 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Region of Birth</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Mkoa Alipozaliwa /</span>
+                            Region of birth</span
                           >
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
@@ -549,8 +601,11 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >District of Birth</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"
+                              >Wilaya Alipozaliwa /</span
+                            >
+                            District of birth</span
                           >
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
@@ -571,9 +626,10 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Enumeration area</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Eneo la kuhesabia /</span>
+                            Enumeration area
+                          </span>
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
@@ -582,9 +638,10 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Address</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"> Anwani /</span>
+                            Address
+                          </span>
                           <input
                             type="text"
                             class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
@@ -605,9 +662,10 @@
                         class="grid gap-8 px-6 md:grid-cols-3 lg:grid-cols-4"
                       >
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Country of Democile</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Nchi ya demokrasia/</span>
+                            Country of democile
+                          </span>
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
@@ -616,9 +674,10 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Region of Democile</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Mkoa ya demokrasia/</span>
+                            Region of democile
+                          </span>
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
@@ -627,9 +686,12 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >District of Democile</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"
+                              >Wilaya ya demokrasia/</span
+                            >
+                            District of democile
+                          </span>
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
@@ -638,9 +700,10 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Ward of Democile</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Kata ya demokrasia/</span>
+                            Ward of democile
+                          </span>
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
@@ -649,9 +712,10 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Enumeration Area</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Eneo la kuhesabia /</span>
+                            Enumeration area
+                          </span>
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
@@ -660,9 +724,10 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Address</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"> Anwani /</span>
+                            Address
+                          </span>
                           <input
                             type="text"
                             class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
@@ -682,9 +747,10 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Migrant Status</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">hali ya wahamiaji /</span>
+                            Migrant Status
+                          </span>
                           <input
                             type="text"
                             class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
@@ -964,7 +1030,7 @@
 
               <!-- father infromation -->
               <li id="fatherInfoId" class="stepper-step">
-                <button class="stepper-head w-full">
+                <button  class="stepper-head w-full" disabled>
                   <span class="stepper-head-icon"> 3 </span>
                   <span class="stepper-head-text text-xl uppercase"
                     >father infromation</span
@@ -983,8 +1049,11 @@
                         class="grid gap-8 px-6 md:grid-cols-3 lg:grid-cols-4"
                       >
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Type of ID</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"
+                              >Aina ya kitambulisho /</span
+                            >
+                            Type of id</span
                           >
 
                           <select
@@ -995,9 +1064,25 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="required block text-base font-medium"
-                            >ID Number</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"
+                              >Number ya kitambulisho /</span
+                            >
+                            Id Number</span
                           >
+                          <input
+                            type="text"
+                            class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                            placeholder="ID Number"
+                          />
+                        </label>
+
+                        <label class="block w-full">
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Jina la kwanza /</span>
+                            First Name</span
+                          >
+
                           <input
                             type="text"
                             class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
@@ -1006,19 +1091,9 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="required block text-base font-medium"
-                            >First Name</span
-                          >
-                          <input
-                            type="text"
-                            class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
-                            placeholder="First Name"
-                          />
-                        </label>
-
-                        <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Middle Name</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Jina la kati /</span>
+                            Middle Name</span
                           >
                           <input
                             type="text"
@@ -1028,40 +1103,48 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Surname</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Jina la Ukoo /</span>
+                            SurName</span
                           >
                           <input
                             type="text"
                             class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
-                            placeholder="Surname"
+                            placeholder="SurName"
                           />
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Date of birth</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"
+                              >Tarehe ya kuzaliwa /</span
+                            >
+                            Date of birth</span
                           >
                           <input
                             type="date"
                             class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
-                            placeholder="Last Name"
+                            placeholder="Date of birth"
                           />
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Marital Status</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Hali ya ndoa /</span>
+                            Martial status</span
                           >
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
-                            <option>Select Marital Status/option></option>
+                            <option>Select Marital Status</option>
                             <option>Married</option>
                             <option>Not Married</option>
                             <option>Devorced</option>
                           </select>
                         </label>
+
+
+                        
                       </div>
                     </div>
 
@@ -1076,8 +1159,9 @@
                         class="grid gap-8 px-6 md:grid-cols-3 lg:grid-cols-4"
                       >
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Country of Birth</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"> Nchi alipozaliwa /</span>
+                            Country of birth</span
                           >
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
@@ -1087,8 +1171,9 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Region of Birth</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Mkoa Alipozaliwa /</span>
+                            Region of birth</span
                           >
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
@@ -1098,8 +1183,11 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >District of Birth</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"
+                              >Wilaya Alipozaliwa /</span
+                            >
+                            District of birth</span
                           >
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
@@ -1120,9 +1208,10 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Enumeration area</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Eneo la kuhesabia /</span>
+                            Enumeration area
+                          </span>
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
@@ -1131,17 +1220,16 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Address</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"> Anwani /</span>
+                            Address
+                          </span>
                           <input
                             type="text"
                             class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
                             placeholder="Address"
                           />
                         </label>
-
-                        
                       </div>
                     </div>
 
@@ -1155,10 +1243,11 @@
                       <div
                         class="grid gap-8 px-6 md:grid-cols-3 lg:grid-cols-4"
                       >
-                        <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Country of Democile</span
-                          >
+                         <label class="block w-full">
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Nchi ya demokrasia/</span>
+                            Country of democile
+                          </span>
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
@@ -1167,9 +1256,10 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Region of Democile</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Mkoa ya demokrasia/</span>
+                            Region of democile
+                          </span>
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
@@ -1178,9 +1268,12 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >District of Democile</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"
+                              >Wilaya ya demokrasia/</span
+                            >
+                            District of democile
+                          </span>
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
@@ -1189,9 +1282,10 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Ward of Democile</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Kata ya demokrasia/</span>
+                            Ward of democile
+                          </span>
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
@@ -1200,9 +1294,10 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Enumeration Area</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Eneo la kuhesabia /</span>
+                            Enumeration area
+                          </span>
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
@@ -1211,9 +1306,10 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Address</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"> Anwani /</span>
+                            Address
+                          </span>
                           <input
                             type="text"
                             class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
@@ -1233,9 +1329,10 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Migrant Status</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">hali ya wahamiaji /</span>
+                            Migrant Status
+                          </span>
                           <input
                             type="text"
                             class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
@@ -1413,14 +1510,13 @@
 
               <!-- infromant infromation -->
               <li id="InfoId" class="stepper-step">
-                <button class="stepper-head w-full">
+                <button class="stepper-head w-full" disabled>
                   <span class="stepper-head-icon"> 4 </span>
                   <span class="stepper-head-text text-xl uppercase"
                     >infromant infromation</span
                   >
                 </button>
-                <div id="infomDiv" class= " stepper-content space-y-8">
-                 
+                <div id="infomDiv" class="stepper-content space-y-8">
                   <form class="space-y-8">
                     <div class="space-y-4">
                       <div class="border-b-2 border-crvsblue-700 py-2 px-4">
@@ -1432,10 +1528,12 @@
                       <div
                         class="grid gap-8 px-6 md:grid-cols-3 lg:grid-cols-4"
                       >
-                        <label class="block w-full">
-                          <span class="required block text-base font-medium"
-                            >First Name</span
+                       <label class="block w-full">
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Jina la kwanza /</span>
+                            First Name</span
                           >
+
                           <input
                             type="text"
                             class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
@@ -1444,8 +1542,9 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Middle Name</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Jina la kati /</span>
+                            Middle Name</span
                           >
                           <input
                             type="text"
@@ -1455,37 +1554,23 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Last Name</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Jina la Ukoo /</span>
+                            SurName</span
                           >
                           <input
                             type="text"
                             class="mt-1 h-10 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
-                            placeholder="Last Name"
+                            placeholder="SurName"
                           />
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Gender</span
-                          >
-
-                          <div class="mt-3 flex flex-row space-x-6">
-                            <div class="flex flex-col items-center">
-                              <input type="radio" class="h-4 w-4" />
-                              <label>Male</label>
-                            </div>
-
-                            <div class="flex flex-col items-center">
-                              <input type="radio" class="h-4 w-4" />
-                              <label>Female</label>
-                            </div>
-                          </div>
-                        </label>
-
-                        <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Date of Birth</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"
+                              >Tarehe ya kuzaliwa /</span
+                            >
+                            Date of birth</span
                           >
                           <input
                             type="date"
@@ -1493,6 +1578,33 @@
                             placeholder="Date of birth"
                           />
                         </label>
+
+                        <label class="block w-full">
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"> Jinsia /</span>
+                            Gender</span
+                          >
+
+                          <div class="mt-3 flex flex-row space-x-6">
+                            <div class="flex flex-col items-center">
+                              <input type="radio" class="h-4 w-4" />
+                              <span class="block text-base font-light">
+                                <span class="font-medium">Mume /</span>
+                                Male</span
+                              >
+                            </div>
+
+                            <div class="flex flex-col items-center">
+                              <input type="radio" class="h-4 w-4" />
+                              <span class="block text-base font-light">
+                                <span class="font-medium">Mke /</span>
+                                Female</span
+                              >
+                            </div>
+                          </div>
+                        </label>
+
+                        
                       </div>
                     </div>
 
@@ -1506,9 +1618,10 @@
                       <div
                         class="grid gap-8 px-6 md:grid-cols-3 lg:grid-cols-4"
                       >
-                        <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Country of Birth</span
+                         <label class="block w-full">
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"> Nchi alipozaliwa /</span>
+                            Country of birth</span
                           >
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
@@ -1518,8 +1631,9 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Region of Birth</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Mkoa Alipozaliwa /</span>
+                            Region of birth</span
                           >
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
@@ -1529,8 +1643,11 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >District of Birth</span
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"
+                              >Wilaya Alipozaliwa /</span
+                            >
+                            District of birth</span
                           >
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
@@ -1563,9 +1680,10 @@
                         class="grid gap-8 px-6 md:grid-cols-3 lg:grid-cols-4"
                       >
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Country of Democile</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Nchi ya demokrasia/</span>
+                            Country of democile
+                          </span>
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
@@ -1574,9 +1692,10 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Region of Democile</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Mkoa ya demokrasia/</span>
+                            Region of democile
+                          </span>
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
@@ -1585,9 +1704,12 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >District of Democile</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium"
+                              >Wilaya ya demokrasia/</span
+                            >
+                            District of democile
+                          </span>
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
@@ -1596,9 +1718,10 @@
                         </label>
 
                         <label class="block w-full">
-                          <span class="block text-base font-medium"
-                            >Ward of Democile</span
-                          >
+                          <span class="required block text-base font-light">
+                            <span class="font-medium">Kata ya demokrasia/</span>
+                            Ward of democile
+                          </span>
                           <select
                             class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                           >
@@ -1621,8 +1744,8 @@
 
                     <div class="flex h-20 w-full justify-between">
                       <button
-                       type="button"
-                       id="prevFather"
+                        type="button"
+                        id="prevFather"
                         class="flex h-12 items-center space-x-3 rounded bg-crvsgreen-800 px-4 font-semibold uppercase text-white hover:border hover:border-crvsgreen-800 hover:bg-white hover:text-crvsgreen-800"
                       >
                         <svg

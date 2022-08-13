@@ -50,7 +50,7 @@ $(document).ready(function () {
     // $("#fatherDiv").addClass(" slide-in-right animation fast");
     $("#fatherDiv").attr("style", "display: block");
     $("#motherDiv").attr("style", "display: none");
-    $("#fatherInfoId").addClass("stepper-completed");
+    $("#motherInfoId").addClass("stepper-completed");;
   });
 
   $("#prevMother").click(() => {
@@ -78,7 +78,7 @@ $(document).ready(function () {
     // $("#fatherDiv").addClass(" slide-in-right animation fast");
     $("#infomDiv").attr("style", "display: block");
     $("#fatherDiv").attr("style", "display: none");
-    // $("#fatherInfoId").addClass("stepper-completed");
+    $("#fatherInfoId").addClass("stepper-completed");
   });
 
   $("#prevFather").click(() => {
