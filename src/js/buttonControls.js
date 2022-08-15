@@ -114,7 +114,7 @@ $(document).ready(function () {
     $("#attId").removeClass("stepper-active");
     $("#decId").addClass("stepper-active ");
 
-    $(".heightstepper").attr("style", "height:3000px");
+    $(".heightstepper").attr("style", "height:1000px");
 
     // $("#fatherDiv").addClass(" slide-in-right animation fast");
     $("#decDiv").attr("style", "display: block");
