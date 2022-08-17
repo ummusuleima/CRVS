@@ -125,7 +125,7 @@ $(document).ready(function () {
   $("#prevInfro").click(() => {
     document.getElementById("mainpage").scrollIntoView();
     $("#InfoId").addClass("stepper-active");
-    $("#attId").removeClass("stepper-active");
+    $("#sumId").removeClass("stepper-active");
 
     $(".heightstepper").attr("style", "height: 1300px");
 
@@ -134,7 +134,7 @@ $(document).ready(function () {
     // $("#motherDiv").addClass(" slide-out-right animation fast");
 
     $("#infomDiv").attr("style", "display: block");
-    $("#attDiv").attr("style", "display: none");
+    $("#sumDiv").attr("style", "display: none");
   });
 
   $("#prevAtt").click(() => {
