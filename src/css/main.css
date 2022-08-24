@@ -38,3 +38,11 @@
   @apply min-h-screen !important
 }
 
+.view{
+  @apply text-crvsblue-800
+}
+
+.pay{
+  @apply text-green-800
+}
+

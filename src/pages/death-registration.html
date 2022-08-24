@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
+
+    <!-- tailwindcss elements -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <title>Death  Registration</title>
+    <link rel="icon" type="image/x-icon" href="../images/crvs-image.png" />
+  </head>
+  <body>
+    <div class="min-h-full">
+      <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
+      <div
+        id="sidebar"
+        class="fixed inset-0 z-40 flex hidden"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div
+          class="fixed inset-0 bg-gray-600 bg-opacity-75"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          class="relative flex w-full max-w-xs flex-1 flex-col bg-crvsblue-700 pt-5 pb-4"
+        >
+          <div class="absolute top-0 right-0 -mr-12 pt-2">
+            <button
+              id="close_sidebar"
+              type="button"
+              class="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            >
+              <span class="sr-only">Close sidebar</span>
+              <!-- Heroicon name: outline/x -->
+              <svg
+                class="h-6 w-6 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- <div class="flex-shrink-0 flex items-center px-4"></div> -->
+
+          <!--nav bar place-->
+          <section include="navigation.html"></section>
+        </div>
+
+        <div class="w-14 flex-shrink-0" aria-hidden="true">
+          <!-- Dummy element to force sidebar to shrink to fit close icon -->
+        </div>
+      </div>
+
+      <!-- Static sidebar for desktop -->
+      <div class="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
+        <!-- Sidebar component, swap this element with another sidebar if you like -->
+
+        <div
+          class="flex flex-grow flex-col overflow-y-auto bg-crvsblue-700 pt-5 pb-4"
+        >
+          <div
+            class="flex w-full flex-shrink-0 flex-row items-center justify-center space-x-3 px-4"
+          >
+            <image src="../images/crvs-image.png" class="h-10 w-16" />
+            <h class="text-2xl font-bold tracking-widest text-white">CRVS</h>
+          </div>
+
+          <!-- navigation section -->
+          <section include="navigation.html"></section>
+        </div>
+      </div>
+
+      <div class="flex flex-1 flex-col lg:pl-64">
+        <main class="relative min-h-screen flex-1 pb-8">
+          <!-- Header -->
+          <section include="header.html"></section>
+
+          <!-- Main Content -->
+          <div class="px-6 py-2">
+            <div
+              class="flex w-full flex-row items-center border-b-2 border-black py-2 px-2"
+            >
+              <div class="flex flex-row items-center space-x-2">
+                <span class="rounded-full bg-crvsicon-100 px-3 py-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 text-crvsicon-900"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
+                  </svg>
+                </span>
+
+                <h class="text-xl font-semibold uppercase"
+                  >early - death registration</h
+                >
+
+                <!-- data-modal-toggle="newStaff" -->
+                <a
+                  href="./deathregistrationform.html"
+                  class="absolute right-10 rounded border border-crvsgreen-900 bg-transparent py-2 px-4 font-semibold uppercase text-crvsgreen-700 hover:border-transparent hover:bg-crvsgreen-900 hover:text-white"
+                >
+                  add event
+                </a>
+              </div>
+            </div>
+
+            
+
+            <!-- card -->
+
+            <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+             
+              <div
+                class="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
+              >
+                <!-- Cardh -->
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                  <div class="p-5">
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <!-- Heroicon name: outline/scale -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-6 w-6 text-gray-500"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="ml-5 w-0 flex-1">
+                        <dl>
+                          <dt class="font-bold text-gray-500 truncate">
+                           Approved
+                          </dt>
+                          <dd>
+                            <div class="text-xl font-bold text-gray-900">
+                              300,609
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-sky-400 px-5 py-3"></div>
+                </div>
+
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                  <div class="p-5">
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <!-- Heroicon name: outline/scale -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-6 w-6 text-gray-500"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="ml-5 w-0 flex-1">
+                        <dl>
+                          <dt class="font-bold text-gray-500 truncate">
+                            Rejected
+                          </dt>
+                          <dd>
+                            <div class="text-xl font-bold text-gray-900">
+                              300,000
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-red-200 px-5 py-3"></div>
+                </div>
+
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                  <div class="p-5">
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <!-- Heroicon name: outline/scale -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-6 w-6 text-gray-500"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="ml-5 w-0 flex-1">
+                        <dl>
+                          <dt class=" font-bold text-gray-500 truncate">
+                            Pending
+                          </dt>
+                          <dd>
+                            <div class="text-xl font-bold text-gray-900">
+                              300,659
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-orange-200 px-5 py-3"></div>
+                </div>
+
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                  <div class="p-5">
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <!-- Heroicon name: outline/scale -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-6 w-6 text-gray-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="ml-5 w-0 flex-1">
+                        <dl>
+                          <dt class=" font-bold text-gray-500 truncate">
+                            Something Else
+                          </dt>
+                          <dd>
+                            <div class="text-xl font-bold text-gray-900">
+                              400,659
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-emerald-300 px-5 py-3"></div>
+                </div>
+
+                <!-- More items... -->
+              </div>
+            </div>
+            <!-- table content -->  
+            <div class="rounded mt-4 bg-slate-200 px-4 md:px-14 xl:px-28 py-2">
+              <div></div>
+              <div class="w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-3 pt-4 grid gap-4 ">
+                <label class="block w-full">
+                  <span class="block text-base font-medium">Vitual Event</span>
+                  <input
+                    type="text"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Vitaul Event"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium"
+                    >Journal Number</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Journal Number"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium">B1 Number</span>
+                  <input
+                    type="text"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="B1 Number"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium"
+                    >Registration Number</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Registration Number"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium">Personal Data</span>
+                  <input
+                    type="text"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Personal Data"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium"
+                    >Application Number</span
+                  >
+                  <input
+                    type="number"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Application Number"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium"
+                    >Date of occurence</span
+                  >
+                  <input
+                    type="date"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium"
+                    >Date of registration</span
+                  >
+                  <input
+                    type="date"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium"
+                    >Date of approval</span
+                  >
+                  <input
+                    type="date"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                  />
+                </label>
+              </div>
+
+              <div class="flex h-10 justify-end space-x-4 mt-4">
+                <button
+                  type="button"
+                  class="rounded font-bold bg-crvsblue-700 px-4 uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-white hover:text-crvsblue-700"
+                >
+                  filter
+                </button>
+
+                <button
+                  type="button"
+                  class="rounded  font-bold bg-crvsblue-700 px-4  uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-white hover:text-crvsblue-700"
+                >
+                  show all
+                </button>
+              </div>
+            </div>
+
+            
+            <div id="tablecontent" class="mt-6 mb-6 h-auto"></div>
+          </div>
+
+          <!-- Footer -->
+          <section include="footer.html"></section>
+        </main>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      elect+User+type
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- pdf cdn -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> -->
+
+    <script src="../js/section.js"></script>
+
+    <!-- scripts for sections -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+    <!-- DevExtreme theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn3.devexpress.com/jslib/21.2.7/css/dx.light.css"
+    />
+
+    <!-- DevExtreme library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn3.devexpress.com/jslib/22.1.3/js/dx.all.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+    ></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.4.0/polyfill.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.0.0/jspdf.umd.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.1.1/exceljs.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script> -->
+
+    <!-- <script
+      src="../js/buttonControls.js"
+      type="text/javascript"
+      charset="utf8"
+    ></script> -->
+
+    <script>
+      const data = [
+        {
+          ID: 1,
+          FirstName: "Alli",
+          MiddleName: "name",
+          LastName: "Someoone",
+          PhoneNumber: "071809908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 3,
+          FirstName: "Kanye",
+          MiddleName: "West",
+          LastName: "Someoone",
+          PhoneNumber: "04891180008",
+          Email: "kanyelse@gmail.com",
+        },
+        {
+          ID: 4,
+          FirstName: "Jay",
+          MiddleName: "Name",
+          LastName: "Someoone",
+          PhoneNumber: "079837783",
+          Email: "JohnDoelse@gmail.com",
+        },
+      ];
+
+      window.jsPDF = window.jspdf.jsPDF;
+
+      $(() => {
+        const dataGrid = $("#tablecontent").dxDataGrid({
+          dataSource: data,
+          showColumnLines: true,
+          showRowLines: true,
+          rowAlternationEnabled: true,
+          showBorders: true,
+          keyExpr: "ID",
+          columnsAutoWidth: true,
+          headerFilter: { visible: true },
+          showBorders: true,
+          filterRow: {
+            visible: true,
+            applyFilter: "auto",
+          },
+
+          columnChooser: {
+            enabled: true,
+            mode: "select",
+          },
+
+          export: {
+            enabled: true,
+            formats: ["pdf"],
+            // allowExportSelectedData: true,
+          },
+
+          searchPanel: {
+            visible: true,
+            // with: 700,
+            // position: left,
+          },
+
+          pager: {
+            visible: true,
+            pageSize: 1,
+            allowedPageSizes: ["10", "20", "all"],
+            infoText: "Page {0} of  {1} [ Total {2} items ]",
+            showPageSizeSelector: true,
+            showInfo: true,
+            showNavigationButtons: true,
+          },
+
+          editing: {
+            // allowEditing:true,
+            allowUpdating: true,
+            allowAdding: true,
+            allowDeleting: true,
+            useIcons: true,
+            mode: "form", // 'batch' | 'cell' | 'form' | 'popup'
+          },
+
+          columns: [
+            { dataField: "FirstName", allowEditing: false },
+            { dataField: "MiddleName" },
+            { dataField: "LastName" },
+            { dataField: "PhoneNumber" },
+            { dataField: "Email" },
+          ],
+
+          onInitNewRow: function (e) {},
+
+          onEditingStart: function () {},
+
+          onExporting(e) {
+            const doc = new jsPDF();
+
+            DevExpress.pdfExporter
+              .exportDataGrid({
+                margin: { top: 40, right: 10, bottom: 10, left: 10 },
+                jsPDFDocument: doc,
+                component: e.component,
+                indent: 5,
+              })
+              .then(() => {
+                const header = `STAFF MANAGEMENT REPORT`;
+                const subheader = "something";
+                const pageWidth = doc.internal.pageSize.getWidth();
+                doc.setFontSize(15);
+                const headerWidth = doc.getTextDimensions(header).w;
+                doc.text(header, (pageWidth - headerWidth) / 2, 20);
+                // doc.text(subheader, (pageWidth - headerWidth) / 2, 40);
+                doc.save("Staff Management Report.pdf");
+              });
+          },
+        });
+      });
+    </script>
+
+    <!-- modal-tailwindcss cnd script -->
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  </body>
+</html>
