@@ -130,41 +130,54 @@
               </div>
             </div>
 
-            
-
             <!-- card -->
 
-            <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-             
+            <div class="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
               <div
                 class="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
               >
                 <!-- Cardh -->
-                <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="overflow-hidden rounded-lg bg-white shadow">
                   <div class="p-5">
                     <div class="flex items-center">
                       <div class="flex-shrink-0">
                         <!-- Heroicon name: outline/scale -->
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="h-6 w-6 text-gray-500"
+                          width="20"
+                          height="29"
+                          viewBox="0 0 20 29"
                           fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          stroke-width="2"
+                          class="text-gray-500"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
+                            d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z"
+                            stroke="black"
+                            stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"
+                          />
+                          <path
+                            d="M10 19V28"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M5 24H15"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
                           />
                         </svg>
                       </div>
 
                       <div class="ml-5 w-0 flex-1">
                         <dl>
-                          <dt class="font-bold text-gray-500 truncate">
-                           Approved
+                          <dt class="truncate font-bold text-gray-500">
+                            Approved
                           </dt>
                           <dd>
                             <div class="text-xl font-bold text-gray-900">
@@ -178,7 +191,7 @@
                   <div class="bg-sky-400 px-5 py-3"></div>
                 </div>
 
-                <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="overflow-hidden rounded-lg bg-white shadow">
                   <div class="p-5">
                     <div class="flex items-center">
                       <div class="flex-shrink-0">
@@ -201,7 +214,7 @@
 
                       <div class="ml-5 w-0 flex-1">
                         <dl>
-                          <dt class="font-bold text-gray-500 truncate">
+                          <dt class="truncate font-bold text-gray-500">
                             Rejected
                           </dt>
                           <dd>
@@ -216,7 +229,7 @@
                   <div class="bg-red-200 px-5 py-3"></div>
                 </div>
 
-                <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="overflow-hidden rounded-lg bg-white shadow">
                   <div class="p-5">
                     <div class="flex items-center">
                       <div class="flex-shrink-0">
@@ -239,7 +252,7 @@
 
                       <div class="ml-5 w-0 flex-1">
                         <dl>
-                          <dt class=" font-bold text-gray-500 truncate">
+                          <dt class="truncate font-bold text-gray-500">
                             Pending
                           </dt>
                           <dd>
@@ -254,7 +267,7 @@
                   <div class="bg-orange-200 px-5 py-3"></div>
                 </div>
 
-                <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="overflow-hidden rounded-lg bg-white shadow">
                   <div class="p-5">
                     <div class="flex items-center">
                       <div class="flex-shrink-0">
@@ -273,7 +286,7 @@
 
                       <div class="ml-5 w-0 flex-1">
                         <dl>
-                          <dt class=" font-bold text-gray-500 truncate">
+                          <dt class="truncate font-bold text-gray-500">
                             Something Else
                           </dt>
                           <dd>
@@ -291,10 +304,12 @@
                 <!-- More items... -->
               </div>
             </div>
-            <!-- table content -->  
-            <div class="rounded mt-4 bg-slate-200 px-4 md:px-14 xl:px-28 py-2">
+            <!-- table content -->
+            <div class="mt-4 rounded bg-slate-200 px-4 py-2 md:px-14 xl:px-28">
               <div></div>
-              <div class="w-full grid-cols-1 md:grid-cols-2 xl:grid-cols-3 pt-4 grid gap-4 ">
+              <div
+                class="grid w-full grid-cols-1 gap-4 pt-4 md:grid-cols-2 xl:grid-cols-3"
+              >
                 <label class="block w-full">
                   <span class="block text-base font-medium">Vitual Event</span>
                   <input
@@ -386,24 +401,23 @@
                 </label>
               </div>
 
-              <div class="flex h-10 justify-end space-x-4 mt-4">
+              <div class="mt-4 flex h-10 justify-end space-x-4">
                 <button
                   type="button"
-                  class="rounded font-bold bg-crvsblue-700 px-4 uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-white hover:text-crvsblue-700"
+                  class="rounded bg-crvsblue-700 px-4 font-bold uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-white hover:text-crvsblue-700"
                 >
                   filter
                 </button>
 
                 <button
                   type="button"
-                  class="rounded  font-bold bg-crvsblue-700 px-4  uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-white hover:text-crvsblue-700"
+                  class="rounded bg-crvsblue-700 px-4 font-bold uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-white hover:text-crvsblue-700"
                 >
                   show all
                 </button>
               </div>
             </div>
 
-            
             <div id="tablecontent" class="mt-6 mb-6 h-auto"></div>
           </div>
 

@@ -15,10 +15,6 @@ $(document).ready(function () {
     $("#motherInfoId").addClass("stepper-active ");
 
     $(".heightstepper").attr("style", "height: 2010px");
-
-    // $("#motherDiv").addClass(" slide-in-right animation fast");
-
-    // $("#childDiv").addClass(" slide-out-left animation fast");
     $("#motherDiv").attr("style", "display: block");
 
     $("#childDiv").attr("style", "display: none");
@@ -31,10 +27,6 @@ $(document).ready(function () {
     $("#motherInfoId").removeClass("stepper-active");
 
     $(".heightstepper").attr("style", "height: 1000px");
-
-    // $("#childDiv").addClass(" slide-in-left animation fast");
-
-    // $("#motherDiv").addClass(" slide-out-right animation fast");
 
     $("#childDiv").attr("style", "display: block");
     $("#motherDiv").attr("style", "display: none");
@@ -60,10 +52,6 @@ $(document).ready(function () {
 
     $(".heightstepper").attr("style", "height: 2010px");
 
-    // $("#childDiv").addClass(" slide-in-left animation fast");
-
-    // $("#motherDiv").addClass(" slide-out-right animation fast");
-
     $("#motherDiv").attr("style", "display: block");
     $("#fatherDiv").attr("style", "display: none");
   });
@@ -88,10 +76,6 @@ $(document).ready(function () {
 
     $(".heightstepper").attr("style", "height: 1300px");
 
-    // $("#childDiv").addClass(" slide-in-left animation fast");
-
-    // $("#motherDiv").addClass(" slide-out-right animation fast");
-
     $("#fatherDiv").attr("style", "display: block");
     $("#infomDiv").attr("style", "display: none");
   });
@@ -103,7 +87,6 @@ $(document).ready(function () {
 
      $(".heightstepper").attr("style", "height:3000px");
 
-     // $("#fatherDiv").addClass(" slide-in-right animation fast");
      $("#attDiv").attr("style", "display: block");
      $("#infomDiv").attr("style", "display: none");
      $("#InfoId").addClass("stepper-completed");
@@ -116,7 +99,6 @@ $(document).ready(function () {
 
     $(".heightstepper").attr("style", "height:1000px");
 
-    // $("#fatherDiv").addClass(" slide-in-right animation fast");
     $("#decDiv").attr("style", "display: block");
     $("#attDiv").attr("style", "display: none");
     $("#attId").addClass("stepper-completed");
@@ -129,10 +111,6 @@ $(document).ready(function () {
 
     $(".heightstepper").attr("style", "height: 1300px");
 
-    // $("#childDiv").addClass(" slide-in-left animation fast");
-
-    // $("#motherDiv").addClass(" slide-out-right animation fast");
-
     $("#infomDiv").attr("style", "display: block");
     $("#sumDiv").attr("style", "display: none");
   });
@@ -144,19 +122,87 @@ $(document).ready(function () {
 
     $(".heightstepper").attr("style", "height: 1300px");
 
-    // $("#childDiv").addClass(" slide-in-left animation fast");
-
-    // $("#motherDiv").addClass(" slide-out-right animation fast");
 
     $("#attDiv").attr("style", "display: block");
     $("#decDiv").attr("style", "display: none");
   });
 
 
+  // Death control
+  $("#inforNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#InforId").addClass("stepper-active");
+    $("#decId").removeClass("stepper-active");
+
+    $(".heightstepper").attr("style", "height: 900px");
+
+    $("#inforDiv").attr("style", "display: block");
+    $("#decDiv").attr("style", "display: none");
+  });
+
+  $("#prevDec").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#decId").addClass("stepper-active");
+    $("#InforId").removeClass("stepper-active");
+
+    $(".heightstepper").attr("style", "height: 2500px");
+
+    $("#decDiv").attr("style", "display: block");
+    $("#inforDiv").attr("style", "display: none");
+  });
+
+  $("#attdecNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#attdecId").addClass("stepper-active");
+    $("#InforId").removeClass("stepper-active");
+
+    // $(".heightstepper").attr("style", "height: 900px");
+
+    $("#attdecDiv").attr("style", "display: block");
+    $("#inforDiv").attr("style", "display: none");
+  });
+
+  $("#prevInfor").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#InforId").addClass("stepper-active");
+    $("#attdecId").removeClass("stepper-active");
+
+    // $(".heightstepper").attr("style", "height: 2500px");
+
+    $("#inforDiv").attr("style", "display: block");
+    $("#attdecDiv").attr("style", "display: none");
+  });
+
+  $("#desNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#desId").addClass("stepper-active");
+    $("#attdecId").removeClass("stepper-active");
+
+    $(".heightstepper").attr("style", "height: 1000px");
+
+    $("#desDiv").attr("style", "display: block");
+    $("#attdecDiv").attr("style", "display: none");
+  });
+
+  $("#prevInfor").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#InforId").addClass("stepper-active");
+    $("#attdecId").removeClass("stepper-active");
+
+    // $(".heightstepper").attr("style", "height: 2500px");
+
+    $("#inforDiv").attr("style", "display: block");
+    $("#attdecDiv").attr("style", "display: none");
+  });
+
+  
+
+
+
+
+
 
   const input = document.getElementById("fileInput");
-  // const avatar = document.getElementById("avatar");
-  // const textArea = document.getElementById("textAreaExample");
 
   const convertBase64 = (file) => {
     return new Promise((resolve, reject) => {
