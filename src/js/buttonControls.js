@@ -129,27 +129,61 @@ $(document).ready(function () {
 
 
   // Death control
-  $("#inforNext").click(() => {
+  $("#gerNext").click(() => {
     document.getElementById("mainpage").scrollIntoView();
-    $("#InforId").addClass("stepper-active");
+    $("#gerId").addClass("stepper-active");
     $("#decId").removeClass("stepper-active");
 
-    $(".heightstepper").attr("style", "height: 900px");
+    $(".heightstepper").attr("style", "height: 1100px");
 
-    $("#inforDiv").attr("style", "display: block");
+    $("#gerDiv").attr("style", "display: block");
     $("#decDiv").attr("style", "display: none");
   });
 
   $("#prevDec").click(() => {
     document.getElementById("mainpage").scrollIntoView();
     $("#decId").addClass("stepper-active");
-    $("#InforId").removeClass("stepper-active");
+    $("#gerId").removeClass("stepper-active");
 
     $(".heightstepper").attr("style", "height: 2500px");
 
     $("#decDiv").attr("style", "display: block");
+    $("#gerDiv").attr("style", "display: none");
+  });
+
+  $("#gerNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#gerId").addClass("stepper-active");
+    $("#decId").removeClass("stepper-active");
+
+    $(".heightstepper").attr("style", "height: 1100px");
+
+    $("#gerDiv").attr("style", "display: block");
+    $("#decDiv").attr("style", "display: none");
+  });
+
+  $("#inforNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#InforId").addClass("stepper-active");
+    $("#gerId").removeClass("stepper-active");
+
+    $(".heightstepper").attr("style", "height: 1100px");
+
+    $("#inforDiv").attr("style", "display: block");
+    $("#gerDiv").attr("style", "display: none");
+  });
+
+  $("#prevGer").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#gerId").addClass("stepper-active");
+    $("#InforId").removeClass("stepper-active");
+
+    $(".heightstepper").attr("style", "height: 2500px");
+
+    $("#gerDiv").attr("style", "display: block");
     $("#inforDiv").attr("style", "display: none");
   });
+
 
   $("#attdecNext").click(() => {
     document.getElementById("mainpage").scrollIntoView();
@@ -195,6 +229,16 @@ $(document).ready(function () {
     $("#attdecDiv").attr("style", "display: none");
   });
 
+  $("#prevAttdec").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#attdecIdId").addClass("stepper-active");
+    $("#desId").removeClass("stepper-active");
+
+    // $(".heightstepper").attr("style", "height: 2500px");
+
+    $("#attdecDiv").attr("style", "display: block");
+    $("#desDiv").attr("style", "display: none");
+  });
   
 
 
