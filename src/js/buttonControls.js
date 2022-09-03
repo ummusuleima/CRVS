@@ -149,6 +149,7 @@ $(document).ready(function () {
 
     $("#decDiv").attr("style", "display: block");
     $("#gerDiv").attr("style", "display: none");
+    $("#gerId").addClass("stepper-completed");
   });
 
   $("#gerNext").click(() => {
@@ -160,6 +161,7 @@ $(document).ready(function () {
 
     $("#gerDiv").attr("style", "display: block");
     $("#decDiv").attr("style", "display: none");
+    $("#decId").addClass("stepper-completed");
   });
 
   $("#inforNext").click(() => {
@@ -171,6 +173,7 @@ $(document).ready(function () {
 
     $("#inforDiv").attr("style", "display: block");
     $("#gerDiv").attr("style", "display: none");
+    $("#gerId").addClass("stepper-completed");
   });
 
   $("#prevGer").click(() => {
@@ -182,6 +185,7 @@ $(document).ready(function () {
 
     $("#gerDiv").attr("style", "display: block");
     $("#inforDiv").attr("style", "display: none");
+    $("#InforId").addClass("stepper-completed");
   });
 
 
@@ -194,6 +198,7 @@ $(document).ready(function () {
 
     $("#attdecDiv").attr("style", "display: block");
     $("#inforDiv").attr("style", "display: none");
+    $("#InforId").addClass("stepper-completed");
   });
 
   $("#prevInfor").click(() => {
@@ -205,6 +210,7 @@ $(document).ready(function () {
 
     $("#inforDiv").attr("style", "display: block");
     $("#attdecDiv").attr("style", "display: none");
+    $("#attdecId").addClass("stepper-completed");
   });
 
   $("#desNext").click(() => {
@@ -216,6 +222,7 @@ $(document).ready(function () {
 
     $("#desDiv").attr("style", "display: block");
     $("#attdecDiv").attr("style", "display: none");
+    $("#attdecId").addClass("stepper-completed");
   });
 
   $("#prevInfor").click(() => {
