@@ -1409,7 +1409,208 @@
                 </div>
               </li>
 
-              
+              <!-- attachment infromation -->
+              <li id="attdecId" class="stepper-step">
+                <button class="stepper-head w-full" disabled>
+                  <span class="stepper-head-icon"> 4 </span>
+                  <span class="stepper-head-text text-xl uppercase"
+                    >attachment
+                  </span>
+                </button>
+                <div id="attdecDiv" class="stepper-content space-y-8">
+                  <div class="h-screen w-full p-6">
+                    <div class="flex w-full justify-center bg-slate-100 py-4">
+                      <div class="">
+                        <div
+                          class="mx-auto block items-center justify-center space-y-8 pt-8"
+                        >
+                          <label class="block">
+                            <span class="required block text-base font-light">
+                              <span class="font-medium">Viambatisho /</span>
+                              Attachment Name</span
+                            >
+                            <select
+                              class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                            ></select>
+                          </label>
+
+                          <div
+                            class="flex h-12 items-center justify-center space-x-6"
+                          >
+                            <label class="block items-baseline">
+                              <input
+                                type="file"
+                                id="fileInput"
+                                class="block w-full text-slate-500 file:mr-4 file:cursor-pointer file:rounded-full file:border-0 file:bg-sky-100 file:py-2 file:px-4 file:text-base file:font-semibold file:text-crvsblue-700 hover:file:bg-sky-700 hover:file:text-white"
+                              />
+                            </label>
+
+                            <button
+                              type="button"
+                              class="rounded bg-sky-700 px-4 py-1.5 text-lg font-bold uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-transparent hover:text-crvsblue-700"
+                            >
+                              add
+                            </button>
+                          </div>
+                        </div>
+
+                        <button
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#fileView"
+                          class="rounded border border-crvsgreen-700 bg-transparent py-2 px-4 font-semibold uppercase text-crvsgreen-700 hover:border-transparent hover:bg-crvsgreen-900 hover:text-white"
+                        >
+                          show
+                        </button>
+                      </div>
+
+                      <!-- table content -->
+                    </div>
+
+                    <!-- <div id="tablecontent" class="mt-6 mb-6 h-auto"></div> -->
+
+                    <div class="flex h-20 w-full justify-between">
+                      <button
+                        type="button"
+                        id="prevInfor"
+                        class="flex h-12 items-center space-x-3 rounded bg-crvsgreen-800 px-4 font-semibold uppercase text-white hover:border hover:border-crvsgreen-800 hover:bg-white hover:text-crvsgreen-800"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M15.707 15.707a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 010 1.414zm-6 0a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 1.414L5.414 10l4.293 4.293a1 1 0 010 1.414z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <h class="font-bold">prev</h>
+                      </button>
+
+                      <button
+                        type="button"
+                        id="desNext"
+                        class="flex h-12 items-center space-x-3 rounded bg-crvsgreen-800 px-4 font-semibold uppercase text-white hover:border hover:border-crvsgreen-800 hover:bg-white hover:text-crvsgreen-800"
+                      >
+                        <h class="font-bold">next</h>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- decision  -->
+              <li id="desId" class="stepper-step">
+                <button class="stepper-head w-full" disabled>
+                  <span class="stepper-head-icon"> 5 </span>
+                  <span class="stepper-head-text text-xl uppercase"
+                    >Decision
+                  </span>
+                </button>
+
+                <div id="desDiv" class="stepper-content space-y-8">
+                  <div class="rounded bg-slate-100 px-96 py-4">
+                    <div class="mx-auto gap-8 space-y-4 py-8">
+                      <label class="block">
+                        <span class="required block text-base font-light">
+                          <span class="font-medium">Uamuzi /</span>
+                          Decision</span
+                        >
+                        <select
+                          class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                        ></select>
+                      </label>
+
+                      <label class="block">
+                        <span class="required block text-base font-light">
+                          <span class="font-medium">Maoni /</span>
+                          Remark</span
+                        >
+                        <textarea
+                          type="text"
+                          class="mt-1 h-20 w-full rounded border border-slate-400 py-2 px-4 focus:outline-crvsblue-700"
+                          placeholder="Remark"
+                        ></textarea>
+                      </label>
+                    </div>
+
+                    <div class="flex w-full justify-end pb-4">
+                      <button
+                        type="button"
+                        class="rounded bg-crvsblue-700 px-3 py-2 font-semibold uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-transparent hover:text-crvsblue-700"
+                      >
+                        add
+                      </button>
+                    </div>
+                  </div>
+
+                  <div id="tablecontent" class="mt-6 mb-6 h-auto"></div>
+
+                  <div class="flex h-20 w-full justify-between">
+                    <button
+                      type="button"
+                      id="prevAttdec"
+                      class="flex h-12 items-center space-x-3 rounded bg-crvsgreen-800 px-4 font-semibold uppercase text-white hover:border hover:border-crvsgreen-800 hover:bg-white hover:text-crvsgreen-800"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M15.707 15.707a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 010 1.414zm-6 0a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 1.414L5.414 10l4.293 4.293a1 1 0 010 1.414z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <h class="font-bold">prev</h>
+                    </button>
+
+                    <button
+                      type="button"
+                      id="decNext"
+                      class="flex h-12 items-center space-x-3 rounded bg-crvsgreen-800 px-4 font-semibold uppercase text-white hover:border hover:border-crvsgreen-800 hover:bg-white hover:text-crvsgreen-800"
+                    >
+                      <h class="font-bold">submit</h>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="h-6 w-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 3.75H6.912a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H15M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859M12 3v8.25m0 0l-3-3m3 3l3-3"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
 
