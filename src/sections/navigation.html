@@ -435,9 +435,9 @@
             Registration
           </a>
 
-            <a
+          <a
             href="./death-assessment.html"
-            class="deathRegistration group flex items-center rounded-md px-2 py-2 text-sm font-bold leading-6 text-white hover:bg-crvsblue-900"
+            class="deathAssessment group flex items-center rounded-md px-2 py-2 text-sm font-bold leading-6 text-white hover:bg-crvsblue-900"
             aria-current="page"
           >
             <svg
@@ -547,15 +547,14 @@
         sectionDetails("registration-toggle");
 
         $(".earlyRegistration").addClass("bg-crvsblue-900");
-      }
-
-      else if (
-        pageURL.includes("/pages/death-registration.html")
-      ) {
-        
+      } else if (pageURL.includes("/pages/death-registration.html")) {
         sectionDetails("death-toggle");
 
         $(".deathRegistration").addClass("bg-crvsblue-900");
+      } else if (pageURL.includes("/pages/death-assessment.html")) {
+        sectionDetails("death-toggle");
+
+        $(".deathAssessment").addClass("bg-crvsblue-900");
       }
     });
   </script>
