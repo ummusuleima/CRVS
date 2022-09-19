@@ -42,7 +42,7 @@ $(document).ready(function () {
     // $("#fatherDiv").addClass(" slide-in-right animation fast");
     $("#fatherDiv").attr("style", "display: block");
     $("#motherDiv").attr("style", "display: none");
-    $("#motherInfoId").addClass("stepper-completed");;
+    $("#motherInfoId").addClass("stepper-completed");
   });
 
   $("#prevMother").click(() => {
@@ -80,17 +80,17 @@ $(document).ready(function () {
     $("#infomDiv").attr("style", "display: none");
   });
 
-   $("#attNext").click(() => {
-     document.getElementById("mainpage").scrollIntoView();
-     $("#InfoId").removeClass("stepper-active");
-     $("#attId").addClass("stepper-active ");
+  $("#attNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#InfoId").removeClass("stepper-active");
+    $("#attId").addClass("stepper-active ");
 
-     $(".heightstepper").attr("style", "height:3000px");
+    $(".heightstepper").attr("style", "height:3000px");
 
-     $("#attDiv").attr("style", "display: block");
-     $("#infomDiv").attr("style", "display: none");
-     $("#InfoId").addClass("stepper-completed");
-   });
+    $("#attDiv").attr("style", "display: block");
+    $("#infomDiv").attr("style", "display: none");
+    $("#InfoId").addClass("stepper-completed");
+  });
 
   $("#decNext").click(() => {
     document.getElementById("mainpage").scrollIntoView();
@@ -122,11 +122,9 @@ $(document).ready(function () {
 
     $(".heightstepper").attr("style", "height: 1300px");
 
-
     $("#attDiv").attr("style", "display: block");
     $("#decDiv").attr("style", "display: none");
   });
-
 
   // Death control
   $("#gerNext").click(() => {
@@ -188,7 +186,6 @@ $(document).ready(function () {
     $("#InforId").addClass("stepper-completed");
   });
 
-
   $("#attdecNext").click(() => {
     document.getElementById("mainpage").scrollIntoView();
     $("#attdecId").addClass("stepper-active");
@@ -246,11 +243,85 @@ $(document).ready(function () {
     $("#attdecDiv").attr("style", "display: block");
     $("#desDiv").attr("style", "display: none");
   });
-  
 
+  // Marriage
+  $("#brideNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    
+    $("#brideId").addClass("stepper-active");
+    $("#groomId").removeClass("stepper-active");
 
+    // $(".heightstepper").attr("style", "height: 1100px");
 
+    $("#brideDiv").attr("style", "display: block");
+    $("#groomDiv").attr("style", "display: none");
+    $("#groomId").addClass("stepper-completed");
+  });
 
+  $("#prevGroom").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+   
+    $("#groomId").addClass("stepper-active");
+    $("#brideId").removeClass("stepper-active");
+
+    $(".heightstepper").attr("style", "height: 1100px");
+
+    $("#groomDiv").attr("style", "display: block");
+    $("#brideDiv ").attr("style", "display: none");
+    
+  });
+
+   $("#regNext").click(() => {
+     document.getElementById("mainpage").scrollIntoView();
+
+     $("#regId").addClass("stepper-active");
+     $("#brideId").removeClass("stepper-active");
+
+     $(".heightstepper").attr("style", "height: 400px");
+
+     $("#regDiv").attr("style", "display: block");
+     $("#brideDiv").attr("style", "display: none");
+     $("#brideId").addClass("stepper-completed");
+   });
+
+   $("#prevBride").click(() => {
+     document.getElementById("mainpage").scrollIntoView();
+
+     $("#brideId").addClass("stepper-active");
+     $("#regId").removeClass("stepper-active");
+
+    //  $(".heightstepper").attr("style", "height: 400px");
+
+     $("#brideDiv").attr("style", "display: block");
+     $("#regDiv ").attr("style", "display: none");
+     
+   });
+
+   $("#witNext").click(() => {
+     document.getElementById("mainpage").scrollIntoView();
+
+     $("#witId").addClass("stepper-active");
+     $("#regId").removeClass("stepper-active");
+
+     $(".heightstepper").attr("style", "height: 400px");
+
+     $("#witDiv").attr("style", "display: block");
+     $("#regDiv").attr("style", "display: none");
+     $("#regId").addClass("stepper-completed");
+   });
+
+   $("#prevReg").click(() => {
+     document.getElementById("mainpage").scrollIntoView();
+
+     $("#regId").addClass("stepper-active");
+     $("#witId").removeClass("stepper-active");
+
+     $(".heightstepper").attr("style", "height: 400px");
+
+     $("#regDiv").attr("style", "display: block");
+     $("#witDiv").attr("style", "display: none");
+     
+   });
 
 
   const input = document.getElementById("fileInput");
@@ -275,12 +346,10 @@ $(document).ready(function () {
     const base64 = await convertBase64(file);
 
     $("#fileview").attr("src", base64);
-    console.log(base64)
+    console.log(base64);
   };
 
   input.addEventListener("change", (e) => {
     uploadImage(e);
   });
-
-
 });
