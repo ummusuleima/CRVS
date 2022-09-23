@@ -264,7 +264,7 @@ $(document).ready(function () {
     $("#groomId").addClass("stepper-active");
     $("#brideId").removeClass("stepper-active");
 
-    $(".heightstepper").attr("style", "height: 1100px");
+    $(".heightstepper").attr("style", "height: 1600px");
 
     $("#groomDiv").attr("style", "display: block");
     $("#brideDiv ").attr("style", "display: none");
@@ -290,7 +290,7 @@ $(document).ready(function () {
      $("#brideId").addClass("stepper-active");
      $("#regId").removeClass("stepper-active");
 
-    //  $(".heightstepper").attr("style", "height: 400px");
+     $(".heightstepper").attr("style", "height: 1600px");
 
      $("#brideDiv").attr("style", "display: block");
      $("#regDiv ").attr("style", "display: none");
@@ -322,6 +322,58 @@ $(document).ready(function () {
      $("#witDiv").attr("style", "display: none");
      
    });
+
+   $("#attmarrNext").click(() => {
+     document.getElementById("mainpage").scrollIntoView();
+
+     $("#attmarrId").addClass("stepper-active");
+     $("#witId").removeClass("stepper-active");
+
+     $(".heightstepper").attr("style", "height: 400px");
+
+     $("#attmarrDiv").attr("style", "display: block");
+     $("#witDiv").attr("style", "display: none");
+     $("#witId").addClass("stepper-completed");
+   });
+
+   $("#prevWit").click(() => {
+     document.getElementById("mainpage").scrollIntoView();
+
+     $("#witId").addClass("stepper-active");
+     $("#attmarrId").removeClass("stepper-active");
+
+     $(".heightstepper").attr("style", "height: 400px");
+
+     $("#witDiv").attr("style", "display: block");
+     $("#attmarrDiv").attr("style", "display: none");
+   });
+
+   $("#desmarrNext").click(() => {
+     document.getElementById("mainpage").scrollIntoView();
+
+     $("#desmarrId").addClass("stepper-active");
+     $("#attmarrId").removeClass("stepper-active");
+
+     $(".heightstepper").attr("style", "height: 1000px");
+
+     $("#desmarrDiv").attr("style", "display: block");
+     $("#attmarrDiv").attr("style", "display: none");
+     $("#attmarrId").addClass("stepper-completed");
+   });
+
+   $("#prevAttmarr").click(() => {
+     document.getElementById("mainpage").scrollIntoView();
+
+     $("#attmarrId").addClass("stepper-active");
+     $("#desmarrId").removeClass("stepper-active");
+
+     $(".heightstepper").attr("style", "height: 800px");
+
+     $("#attmarrDiv").attr("style", "display: block");
+     $("#desmarrDiv").attr("style", "display: none");
+     $("#attmarrId").addClass("stepper-completed");
+   });
+
 
 
   const input = document.getElementById("fileInput");
