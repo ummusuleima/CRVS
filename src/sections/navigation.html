@@ -572,7 +572,23 @@
   ></script>
 
   <script>
+
     $(document).ready(function () {
+
+      const All_Details = document.querySelectorAll("details");
+
+      All_Details.forEach((deet) => {
+        deet.addEventListener("toggle", toggleOpenOneOnly);
+      });
+
+      function toggleOpenOneOnly(e) {
+        if (this.open) {
+          All_Details.forEach((deet) => {
+            if (deet != this && deet.open) deet.open = false;
+          });
+        }
+      }
+      
       function userManagementDetails() {
         var details = document.getElementsByClassName("details-toggle");
         for (let index = 0; index < details.length; index++) {
@@ -665,19 +681,7 @@
         $(".marriageRegistration").addClass("bg-crvsblue-900");
       }
 
-      const All_Details = document.querySelectorAll("details");
-
-      All_Details.forEach((deet) => {
-        deet.addEventListener("toggle", toggleOpenOneOnly);
-      });
-
-      function toggleOpenOneOnly(e) {
-        if (this.open) {
-          All_Details.forEach((deet) => {
-            if (deet != this && deet.open) deet.open = false;
-          });
-        }
-      }
+      
     });
   </script>
 </body>
