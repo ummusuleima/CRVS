@@ -102,30 +102,21 @@
                 <span class="rounded-full bg-crvsicon-100 px-3 py-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 text-crvsicon-900"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor"
                     stroke-width="2"
+                    stroke="currentColor"
+                    class="h-6 w-6 text-crvsicon-900"
                   >
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                      d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
                     />
                   </svg>
                 </span>
 
-                <h class="text-xl font-semibold uppercase">staff Management</h>
-
-                <!-- data-modal-toggle="newStaff" -->
-                <button
-                  data-bs-toggle="modal"
-                  data-bs-target="#newStaff"
-                  class="absolute right-10 rounded border border-crvsgreen-900 bg-transparent py-2 px-4 font-semibold uppercase text-crvsgreen-700 hover:border-transparent hover:bg-crvsgreen-900 hover:text-white"
-                >
-                  add staff
-                </button>
+                <h class="text-xl font-semibold uppercase">Books Management</h>
               </div>
             </div>
 
@@ -387,172 +378,6 @@
         });
       });
     </script>
-
-    <!-- Add staff modal -->
-    <div
-      class="modal fade fixed top-0 left-0 hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-      id="newStaff"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-xl pointer-events-none relative w-auto">
-        <div
-          class="modal-content pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none"
-        >
-          <div
-            class="modal-header flex flex-shrink-0 items-center justify-between rounded-t-md border-b border-gray-200 p-4"
-          >
-            <h5
-              class="text-xl font-medium uppercase leading-normal text-gray-800"
-              id="exampleModalLabel"
-            >
-              add new staff
-            </h5>
-            <button
-              type="button"
-              class="btn-close box-content h-4 w-4 rounded-none border-none p-1 text-black opacity-50 hover:text-black hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body relative p-4">
-            <form>
-              <div class="grid grid-cols-2 gap-2 py-4 px-6">
-                <div class="flex flex-col">
-                  <label class="font-medium uppercase">first name:</label>
-                  <input
-                    class="mt-2 h-12 w-full rounded-md border-2 border-slate-300 px-2 focus:outline-crvsblue-700"
-                    placeholder="First Name"
-                    type="text"
-                  />
-                </div>
-
-                <div class="flex flex-col">
-                  <label class="font-medium uppercase">middle name:</label>
-                  <input
-                    class="mt-2 h-12 w-full rounded-md border-2 border-slate-300 px-2 focus:outline-crvsblue-700"
-                    placeholder="Middle Name"
-                    type="text"
-                  />
-                </div>
-
-                <div class="flex flex-col space-y-2">
-                  <label class="font-medium uppercase">last name:</label>
-                  <input
-                    class="mt-2 h-12 w-full rounded-md border-2 border-slate-300 px-2 focus:outline-crvsblue-700"
-                    placeholder="Last Name"
-                    type="text"
-                  />
-                </div>
-
-                <div class="flex flex-col space-y-2">
-                  <label class="font-medium uppercase">email:</label>
-                  <input
-                    class="mt-2 h-12 w-full rounded-md border-2 border-slate-300 px-2 focus:outline-crvsblue-700"
-                    placeholder="Email"
-                    type="email"
-                  />
-                </div>
-
-                <div class="flex flex-col space-y-2">
-                  <label class="font-medium uppercase">zan id number:</label>
-                  <input
-                    class="mt-2 h-12 w-full rounded-md border-2 border-slate-300 px-2 focus:outline-crvsblue-700"
-                    placeholder="Zan ID No"
-                    type="number"
-                  />
-                </div>
-
-                <div class="flex flex-col space-y-2">
-                  <label class="font-medium uppercase">phone number:</label>
-                  <input
-                    class="mt-2 h-12 w-full rounded-md border-2 border-slate-300 px-2 focus:outline-crvsblue-700"
-                    placeholder="Zan ID No"
-                    type="number"
-                  />
-                </div>
-
-                <div class="flex flex-col space-y-2">
-                  <label class="font-medium uppercase">user type:</label>
-                  <select
-                    class="mt-2 h-12 w-full rounded-md border-2 bg-white px-2 focus:outline-crvsblue-700"
-                  >
-                    <option>Select User type</option>
-                  </select>
-                </div>
-
-                <div class="flex flex-row items-center space-x-9 pl-6">
-                  <div>
-                    <label class="font-medium uppercase"> is active: </label>
-                    <div class="flex flex-row space-x-4">
-                      <div class="flex flex-row items-center space-x-2">
-                        <input
-                          type="radio"
-                          value="yes"
-                          class="text-crvsblue-600 h-4 w-4 border-gray-300 bg-gray-100 focus:outline-none"
-                        />
-                        <label>Yes</label>
-                      </div>
-                      <div class="flex flex-row items-center space-x-2">
-                        <input
-                          type="radio"
-                          value="no"
-                          class="text-crvsblue-600 h-4 w-4 border-gray-300 bg-gray-100 focus:outline-none"
-                        />
-                        <label>No</label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="border-l-2 border-black pl-4">
-                    <label class="font-medium uppercase">
-                      User must change password:
-                    </label>
-                    <div class="flex flex-row space-x-8">
-                      <div class="flex flex-row items-center space-x-2">
-                        <input
-                          type="radio"
-                          value="yes"
-                          class="text-crvsblue-600 h-4 w-4 border-gray-300 bg-gray-100 focus:outline-none"
-                        />
-                        <label>Yes</label>
-                      </div>
-                      <div class="flex flex-row items-center space-x-2">
-                        <input
-                          type="radio"
-                          value="no"
-                          class="text-crvsblue-600 h-4 w-4 border-gray-300 bg-gray-100 focus:outline-none"
-                        />
-                        <label>No</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div
-            class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end space-x-3 rounded-b-md border-t border-gray-200 p-4 px-4"
-          >
-            <button
-              type="button"
-              class="rounded-md bg-crvsgreen-300 px-5 py-2.5 text-sm font-medium text-crvsgreen-900 hover:bg-crvsgreen-800 hover:text-white"
-            >
-              Add Staff
-            </button>
-
-            <button
-              type="button"
-              data-bs-dismiss="modal"
-              class="rounded-md bg-red-300 px-5 py-2.5 text-sm font-medium text-red-900 hover:bg-red-800 hover:text-white"
-            >
-              Cancel
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- modal-tailwindcss cnd script -->
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
