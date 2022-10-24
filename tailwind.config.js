@@ -20,9 +20,13 @@ module.exports = {
           900: "#0f172a",
         },
       },
+      fontSize: {
+        xx: "0.7rem",
+      },
     },
     fontFamily: {
       sans: ["DM Sans", "sans-serif"],
+      robot: ["Roboto Mono", "monospace"],
     },
   },
   plugins: [],
