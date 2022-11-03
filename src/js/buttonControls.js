@@ -247,7 +247,7 @@ $(document).ready(function () {
   // Marriage
   $("#brideNext").click(() => {
     document.getElementById("mainpage").scrollIntoView();
-    
+
     $("#brideId").addClass("stepper-active");
     $("#groomId").removeClass("stepper-active");
 
@@ -260,7 +260,7 @@ $(document).ready(function () {
 
   $("#prevGroom").click(() => {
     document.getElementById("mainpage").scrollIntoView();
-   
+
     $("#groomId").addClass("stepper-active");
     $("#brideId").removeClass("stepper-active");
 
@@ -268,113 +268,122 @@ $(document).ready(function () {
 
     $("#groomDiv").attr("style", "display: block");
     $("#brideDiv ").attr("style", "display: none");
-    
   });
 
-   $("#regNext").click(() => {
-     document.getElementById("mainpage").scrollIntoView();
+  $("#regNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
 
-     $("#regId").addClass("stepper-active");
-     $("#brideId").removeClass("stepper-active");
+    $("#regId").addClass("stepper-active");
+    $("#witId").removeClass("stepper-active");
 
-     $(".heightstepper").attr("style", "height: 400px");
+    $(".heightstepper").attr("style", "height: 400px");
 
-     $("#regDiv").attr("style", "display: block");
-     $("#brideDiv").attr("style", "display: none");
-     $("#brideId").addClass("stepper-completed");
-   });
+    $("#regDiv").attr("style", "display: block");
+    $("#witDiv").attr("style", "display: none");
+    $("#witId").addClass("stepper-completed");
+  });
 
-   $("#prevBride").click(() => {
-     document.getElementById("mainpage").scrollIntoView();
+  $("#prevBride").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
 
-     $("#brideId").addClass("stepper-active");
-     $("#regId").removeClass("stepper-active");
+    $("#brideId").addClass("stepper-active");
+    $("#witId").removeClass("stepper-active");
 
-     $(".heightstepper").attr("style", "height: 1600px");
+    $(".heightstepper").attr("style", "height: 1600px");
 
-     $("#brideDiv").attr("style", "display: block");
-     $("#regDiv ").attr("style", "display: none");
-     
-   });
+    $("#brideDiv").attr("style", "display: block");
+    $("#witDiv ").attr("style", "display: none");
+  });
 
-   $("#witNext").click(() => {
-     document.getElementById("mainpage").scrollIntoView();
+  $("#witNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
 
-     $("#witId").addClass("stepper-active");
-     $("#regId").removeClass("stepper-active");
+    $("#witId").addClass("stepper-active");
+    $("#brideId").removeClass("stepper-active");
 
-     $(".heightstepper").attr("style", "height: 400px");
+    $(".heightstepper").attr("style", "height: 400px");
 
-     $("#witDiv").attr("style", "display: block");
-     $("#regDiv").attr("style", "display: none");
-     $("#regId").addClass("stepper-completed");
-   });
+    $("#witDiv").attr("style", "display: block");
+    $("#brideDiv").attr("style", "display: none");
+    $("#brideId").addClass("stepper-completed");
+  });
 
-   $("#prevReg").click(() => {
-     document.getElementById("mainpage").scrollIntoView();
+  $("#prevReg").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
 
-     $("#regId").addClass("stepper-active");
-     $("#witId").removeClass("stepper-active");
+    $("#regId").addClass("stepper-active");
+    $("#attmarrId").removeClass("stepper-active");
 
-     $(".heightstepper").attr("style", "height: 400px");
+    $(".heightstepper").attr("style", "height: 400px");
 
-     $("#regDiv").attr("style", "display: block");
-     $("#witDiv").attr("style", "display: none");
-     
-   });
+    $("#regDiv").attr("style", "display: block");
+    $("#attmarrDiv").attr("style", "display: none");
+  });
 
-   $("#attmarrNext").click(() => {
-     document.getElementById("mainpage").scrollIntoView();
+  $("#attmarrNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
 
-     $("#attmarrId").addClass("stepper-active");
-     $("#witId").removeClass("stepper-active");
+    $("#attmarrId").addClass("stepper-active");
+    $("#regId").removeClass("stepper-active");
 
-     $(".heightstepper").attr("style", "height: 400px");
+    $(".heightstepper").attr("style", "height: 400px");
 
-     $("#attmarrDiv").attr("style", "display: block");
-     $("#witDiv").attr("style", "display: none");
-     $("#witId").addClass("stepper-completed");
-   });
+    $("#attmarrDiv").attr("style", "display: block");
+    $("#regDiv").attr("style", "display: none");
+    $("#regId").addClass("stepper-completed");
+  });
 
-   $("#prevWit").click(() => {
-     document.getElementById("mainpage").scrollIntoView();
+  $("#prevWit").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
 
-     $("#witId").addClass("stepper-active");
-     $("#attmarrId").removeClass("stepper-active");
+    $("#witId").addClass("stepper-active");
+    $("#regId").removeClass("stepper-active");
 
-     $(".heightstepper").attr("style", "height: 400px");
+    $(".heightstepper").attr("style", "height: 400px");
 
-     $("#witDiv").attr("style", "display: block");
-     $("#attmarrDiv").attr("style", "display: none");
-   });
+    $("#witDiv").attr("style", "display: block");
+    $("#regDiv").attr("style", "display: none");
+  });
 
-   $("#desmarrNext").click(() => {
-     document.getElementById("mainpage").scrollIntoView();
+  $("#desmarrNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
 
-     $("#desmarrId").addClass("stepper-active");
-     $("#attmarrId").removeClass("stepper-active");
+    $("#desmarrId").addClass("stepper-active");
+    $("#attmarrId").removeClass("stepper-active");
 
-     $(".heightstepper").attr("style", "height: 1000px");
+    $(".heightstepper").attr("style", "height: 1000px");
 
-     $("#desmarrDiv").attr("style", "display: block");
-     $("#attmarrDiv").attr("style", "display: none");
-     $("#attmarrId").addClass("stepper-completed");
-   });
+    $("#desmarrDiv").attr("style", "display: block");
+    $("#attmarrDiv").attr("style", "display: none");
+    $("#attmarrId").addClass("stepper-completed");
+  });
 
-   $("#prevAttmarr").click(() => {
-     document.getElementById("mainpage").scrollIntoView();
+  $("#prevAttmarr").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
 
-     $("#attmarrId").addClass("stepper-active");
-     $("#desmarrId").removeClass("stepper-active");
+    $("#attmarrId").addClass("stepper-active");
+    $("#desmarrId").removeClass("stepper-active");
 
-     $(".heightstepper").attr("style", "height: 800px");
+    $(".heightstepper").attr("style", "height: 800px");
 
-     $("#attmarrDiv").attr("style", "display: block");
-     $("#desmarrDiv").attr("style", "display: none");
-     $("#attmarrId").addClass("stepper-completed");
-   });
+    $("#attmarrDiv").attr("style", "display: block");
+    $("#desmarrDiv").attr("style", "display: none");
+    $("#attmarrId").addClass("stepper-completed");
+  });
 
+  const All_Details = document.querySelectorAll("details");
 
+  All_Details.forEach((deet) => {
+    deet.addEventListener("toggle", toggleOpenOneOnly);
+  });
+
+  function toggleOpenOneOnly(e) {
+    if (this.open) {
+      All_Details.forEach((deet) => {
+        if (deet != this && deet.open) deet.open = false;
+      });
+    }
+  }
 
   const input = document.getElementById("fileInput");
 
