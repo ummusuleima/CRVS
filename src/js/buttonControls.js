@@ -335,7 +335,6 @@ $(document).ready(function () {
 
   $("#prevWit").click(() => {
     document.getElementById("mainpage").scrollIntoView();
-
     $("#witId").addClass("stepper-active");
     $("#regId").removeClass("stepper-active");
 
