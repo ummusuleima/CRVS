@@ -900,6 +900,10 @@ video {
   width: 6rem;
 }
 
+.w-3\/4{
+  width: 75%;
+}
+
 .w-48{
   width: 12rem;
 }
@@ -914,14 +918,6 @@ video {
 
 .w-\[308px\]{
   width: 308px;
-}
-
-.w-12{
-  width: 3rem;
-}
-
-.w-3\/4{
-  width: 75%;
 }
 
 .min-w-full{
@@ -1555,6 +1551,11 @@ video {
   padding-right: 24rem;
 }
 
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .py-12{
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -1568,16 +1569,6 @@ video {
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-}
-
-.py-24{
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
-.py-20{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
 }
 
 .pt-5{
@@ -1710,9 +1701,9 @@ video {
   letter-spacing: 0.1em;
 }
 
-.text-sky-700{
+.text-sky-600{
   --tw-text-opacity: 1;
-  color: rgb(3 105 161 / var(--tw-text-opacity));
+  color: rgb(2 132 199 / var(--tw-text-opacity));
 }
 
 .text-white{
@@ -1827,11 +1818,6 @@ video {
 .text-red-800{
   --tw-text-opacity: 1;
   color: rgb(153 27 27 / var(--tw-text-opacity));
-}
-
-.text-sky-600{
-  --tw-text-opacity: 1;
-  color: rgb(2 132 199 / var(--tw-text-opacity));
 }
 
 .opacity-50{
@@ -2104,12 +2090,13 @@ video {
   background-color: rgb(7 89 133 / var(--tw-bg-opacity));
 }
 
-.hover\:font-bold:hover{
-  font-weight: 700;
-}
-
 .hover\:font-semibold:hover{
   font-weight: 600;
+}
+
+.hover\:text-sky-800:hover{
+  --tw-text-opacity: 1;
+  color: rgb(7 89 133 / var(--tw-text-opacity));
 }
 
 .hover\:text-crvsblue-700:hover{
@@ -2140,16 +2127,6 @@ video {
 .hover\:text-black:hover{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.hover\:text-sky-900:hover{
-  --tw-text-opacity: 1;
-  color: rgb(12 74 110 / var(--tw-text-opacity));
-}
-
-.hover\:text-sky-800:hover{
-  --tw-text-opacity: 1;
-  color: rgb(7 89 133 / var(--tw-text-opacity));
 }
 
 .hover\:no-underline:hover{
@@ -2363,6 +2340,10 @@ video {
 
   .lg\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:flex-col{
