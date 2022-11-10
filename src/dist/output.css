@@ -646,6 +646,18 @@ video {
   right: 1.5rem;
 }
 
+.bottom-4{
+  bottom: 1rem;
+}
+
+.bottom-3{
+  bottom: 0.75rem;
+}
+
+.bottom-2{
+  bottom: 0.5rem;
+}
+
 .z-40{
   z-index: 40;
 }
@@ -830,6 +842,10 @@ video {
 
 .h-96{
   height: 24rem;
+}
+
+.max-h-96{
+  max-height: 24rem;
 }
 
 .min-h-full{
@@ -1695,6 +1711,10 @@ video {
 
 .leading-6{
   line-height: 1.5rem;
+}
+
+.leading-10{
+  line-height: 2.5rem;
 }
 
 .tracking-widest{
