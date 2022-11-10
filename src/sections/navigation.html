@@ -647,6 +647,28 @@
           </a>
         </div>
       </details>
+      <a
+        href="./searching.html"
+        class="search group flex items-center rounded-md px-2 py-2 text-sm font-bold leading-6 text-white hover:bg-crvsblue-900"
+        aria-current="page"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="mr-4 h-6 w-6 flex-shrink-0"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+          />
+        </svg>
+
+        Searching
+      </a>
     </div>
   </nav>
 
@@ -655,7 +677,6 @@
     type="text/javascript"
     charset="utf8"
   ></script>
-
   <script>
     $(document).ready(function () {
       // const All_Details = document.querySelectorAll("details");
@@ -696,7 +717,9 @@
 
         $(".staff").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/dashboard.html")) {
-        $(".dashboard").addClass("bg-crvsblue-900 ");
+        $(".dashboard").addClass("bg-crvsblue-900 ");}
+        else if (pageURL.includes("/pages/searching.html")) {
+        $(".search").addClass("bg-crvsblue-900 ");
       } else if (pageURL.includes("/pages/permissions.html")) {
         sectionDetails("perm-details");
         userManagementDetails();

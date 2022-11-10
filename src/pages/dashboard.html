@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <!-- tailwindcss elements -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
     <link href="../dist/output.css" rel="stylesheet" />
     <title>CRVS</title>
     <link rel="icon" type="image/x-icon" href="../images/crvs-image.png" />
@@ -139,6 +143,157 @@
       rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
     />
+
+    <div
+      class="modal fade fixed top-0 left-0 hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+      id="personSearch"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl pointer-events-none relative w-auto">
+        <div
+          class="modal-content pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none"
+        >
+          <div
+            class="modal-header flex flex-shrink-0 items-center justify-between rounded-t-md border-b border-gray-200 p-4"
+          >
+            <h5
+              class="text-xl font-medium uppercase leading-normal text-gray-800"
+              id="exampleModalLabel"
+            >
+              Search Mother
+            </h5>
+          </div>
+          <div class="modal-body relative p-4">
+            <form>
+              <div class="grid grid-cols-3 gap-4 py-4 px-6">
+                <label class="block">
+                  <span class="block text-base font-light">
+                    <span class="font-medium">First Name:</span>
+                  </span>
+                  <input
+                    type="number"
+                    placeholder="First Name"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  />
+                </label>
+
+                <label class="block">
+                  <span class="block text-base font-light">
+                    <span class="font-medium">Middle Name:</span>
+                  </span>
+                  <input
+                    type="number"
+                    placeholder="Middle Name"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  />
+                </label>
+
+                <label class="block">
+                  <span class="block text-base font-light">
+                    <span class="font-medium">Last Name:</span>
+                  </span>
+                  <input
+                    type="number"
+                    placeholder="Last Name"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  />
+                </label>
+                <label class="block">
+                  <span class="block text-base font-light">
+                    <span class="font-medium">PIN:</span>
+                  </span>
+                  <input
+                    type="number"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  />
+                </label>
+
+                <label class="block">
+                  <span class="block text-base font-light">
+                    <span class="font-medium">Zan ID:</span>
+                  </span>
+                  <input
+                    type="number"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  />
+                </label>
+
+                <label class="block">
+                  <span class="block text-base font-light">
+                    <span class="font-medium">National ID:</span>
+                  </span>
+                  <input
+                    type="number"
+                    placeholder="National ID"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  />
+                </label>
+
+                <label class="block">
+                  <span class="block text-base font-light">
+                    <span class="font-medium">Passport ID:</span>
+                  </span>
+                  <input
+                    type="number"
+                    placeholder="Passport ID"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  />
+                </label>
+
+                <label class="block">
+                  <span class="block text-base font-light">
+                    <span class="font-medium">Resident Permit ID:</span>
+                  </span>
+                  <input
+                    type="number"
+                    placeholder="Resident Permit ID"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  />
+                </label>
+                <label class="block">
+                  <span class="block text-base font-light">
+                    <span class="font-medium">Birth Date:</span>
+                  </span>
+                  <input
+                    type="date"
+                    class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  />
+                </label>
+              </div>
+            </form>
+
+            <!-- The data table -->
+            <div class="max-h-96"></div>
+          </div>
+          <div
+            class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end space-x-3 rounded-b-md border-t border-gray-200 p-4 px-4"
+          >
+            <button
+              type="button"
+              class="rounded-md border border-crvsgreen-900 px-5 py-2.5 text-sm font-medium text-crvsgreen-900 hover:bg-crvsgreen-800 hover:text-white"
+            >
+              Search
+            </button>
+            <button
+              type="button"
+              class="rounded-md bg-crvsgreen-300 px-5 py-2.5 text-sm font-medium text-crvsgreen-900 hover:bg-crvsgreen-800 hover:text-white"
+            >
+              Search From Zan ID
+            </button>
+
+            <button
+              type="button"
+              data-bs-dismiss="modal"
+              class="rounded-md bg-red-300 px-5 py-2.5 text-sm font-medium text-red-900 hover:bg-red-800 hover:text-white"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 
   <!-- Adding toast message -->
