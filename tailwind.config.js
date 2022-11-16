@@ -29,5 +29,5 @@ module.exports = {
       robot: ["Roboto Mono", "monospace"],
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
 };
