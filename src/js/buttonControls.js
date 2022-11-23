@@ -370,6 +370,111 @@ $(document).ready(function () {
     $("#attmarrId").addClass("stepper-completed");
   });
 
+  //Adoption
+  $("#adoFatherNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+
+    $("#adoFatherId").addClass("stepper-active");
+    $("#childId").removeClass("stepper-active");
+
+    $(".heightstepper").attr("style", "height: 1300px");
+
+    $("#adoFatherDiv").attr("style", "display: block");
+    $("#childDiv").attr("style", "display: none");
+    $("#childId").addClass("stepper-completed");
+  });
+
+  $("#prevadoChild").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+
+    $("#childId").addClass("stepper-active");
+    $("#adoFatherId").removeClass("stepper-active");
+
+    // $(".heightstepper").attr("style", "height: 1100px");
+
+    $("#childDiv").attr("style", "display: block");
+    $("#adoFatherDiv").attr("style", "display: none");
+    $("#adoFatherId").addClass("stepper-completed");
+  });
+
+  $("#adoMotherNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+
+    $("#adoMotherId").addClass("stepper-active");
+    $("#adoFatherId").removeClass("stepper-active");
+
+    // $(".heightstepper").attr("style", "height: 1100px");
+
+    $("#adoMotherDiv").attr("style", "display: block");
+    $("#adoFatherDiv").attr("style", "display: none");
+    $("#adoFatherId").addClass("stepper-completed");
+  });
+
+  $("#prevadoFather").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+
+    $("#adoFatherId ").addClass("stepper-active");
+    $("#adoMotherId").removeClass("stepper-active");
+
+    // $(".heightstepper").attr("style", "height: 1100px");
+
+    $("#adoFatherDiv").attr("style", "display: block");
+    $("#adoMotherDiv").attr("style", "display: none");
+    $("#adoMotherId").addClass("stepper-completed");
+  });
+
+  $("#adoAttNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+
+    $("#attadopId ").addClass("stepper-active");
+    $("#adoMotherId").removeClass("stepper-active");
+
+    // $(".heightstepper").attr("style", "height: 1100px");
+
+    $("#attadopDiv").attr("style", "display: block");
+    $("#adoMotherDiv").attr("style", "display: none");
+    $("#adoMotherId").addClass("stepper-completed");
+  });
+
+  $("#prevadoMother").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+
+    $("#adoMotherId").addClass("stepper-active");
+    $("#attadopId").removeClass("stepper-active");
+
+    // $(".heightstepper").attr("style", "height: 1100px");
+
+    $("#adoMotherDiv").attr("style", "display: block");
+    $("#attadopDiv").attr("style", "display: none");
+    $("#adoMotherId").addClass("stepper-completed");
+  });
+
+  $("#desadopNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+
+    $("#desadopId ").addClass("stepper-active");
+    $("#attadopId").removeClass("stepper-active");
+
+    // $(".heightstepper").attr("style", "height: 1100px");
+
+    $("#desadopDiv").attr("style", "display: block");
+    $("#attadopDiv").attr("style", "display: none");
+    $("#attadopId").addClass("stepper-completed");
+  });
+
+  $("#prevAttadop").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+
+    $("#attadopId ").addClass("stepper-active");
+    $("#desadopId").removeClass("stepper-active");
+
+    // $(".heightstepper").attr("style", "height: 1100px");
+
+    $("#attadopDiv").attr("style", "display: block");
+    $("#desadopDiv").attr("style", "display: none");
+    $("#desadopId").addClass("stepper-completed");
+  });
+
   // const All_Details = document.querySelectorAll("details");
 
   // All_Details.forEach((deet) => {

@@ -470,9 +470,24 @@
                           type="button"
                           data-bs-toggle="modal"
                           data-bs-target="#motherSearch"
-                          class="absolute right-10 bottom-2 rounded border border-crvsgreen-900  py-2 px-2 font-semibold uppercase hover:bg-transparent hover:text-crvsgreen-900 text-white  bg-crvsgreen-900 "
+                          class="absolute flex space-x-2 right-10 bottom-2 rounded border border-crvsgreen-900 bg-crvsgreen-900 py-2 px-2 font-semibold uppercase text-white hover:bg-transparent hover:text-crvsgreen-900"
                         >
-                          search
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="h-6 w-6"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                            />
+                          </svg>
+
+                          <h>search</h>
                         </button>
                       </div>
 
@@ -1049,7 +1064,9 @@
                 <div id="fatherDiv" class="stepper-content space-y-8">
                   <form class="space-y-8">
                     <div class="space-y-4">
-                      <div class=" relative border-b-2 border-crvsblue-700 py-2 px-4">
+                      <div
+                        class="relative border-b-2 border-crvsblue-700 py-2 px-4"
+                      >
                         <h class="text-xl font-semibold uppercase"
                           >father information</h
                         >
@@ -1057,7 +1074,7 @@
                           type="button"
                           data-bs-toggle="modal"
                           data-bs-target="#motherSearch"
-                          class="absolute right-10 bottom-2 rounded border border-crvsgreen-900  py-2 px-2 font-semibold uppercase hover:bg-transparent hover:text-crvsgreen-900 text-white  bg-crvsgreen-900 "
+                          class="absolute right-10 bottom-2 rounded border border-crvsgreen-900 bg-crvsgreen-900 py-2 px-2 font-semibold uppercase text-white hover:bg-transparent hover:text-crvsgreen-900"
                         >
                           search
                         </button>
@@ -3539,7 +3556,7 @@
 
     <!-- FileView  -->
     <div
-      class="modal fade fixed top-0 left-0 hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+      class="modal fade fixed top-0 left-0 hidden h-full w-full overflow-y-auto outline-none overflow-x-hidden"
       id="fileView"
       tabindex="-1"
       aria-modal="true"
@@ -3798,7 +3815,7 @@
   </script>
 
   <div
-    class="modal fade fixed top-0 left-0 hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+    class="modal fade fixed top-0 left-0 hidden h-full w-full overflow-y-auto outline-none overflow-x-hidden"
     id="motherSearch"
     tabindex="-1"
     aria-labelledby="exampleModalLabel"
