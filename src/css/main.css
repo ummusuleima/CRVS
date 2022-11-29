@@ -22,28 +22,34 @@
   color: red;
 }
 
-.stepper-active .stepper-head-text{
-    @apply font-bold
+.stepper-active .stepper-head-text {
+  @apply font-bold;
 }
 
 .stepper-active {
-    @apply border-b-4 border-crvsblue-800 
+  @apply border-b-4 border-crvsblue-800;
 }
 
-
-.stepper-head{
-  @apply hover:bg-sky-100
+.stepper-head {
+  @apply hover:bg-sky-100;
 }
 
-.heightstepper{
-  @apply min-h-screen !important
+.heightstepper {
+  @apply min-h-screen !important;
 }
 
-.view{
-  @apply text-crvsblue-800
+.view {
+  @apply text-crvsblue-800;
 }
 
-.pay{
-  @apply text-green-800
+.pay {
+  @apply text-green-800;
+}
+.verticaltext {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 }
 
+.tablehead{
+  @apply border border-black px-2 py-2 font-normal
+}
