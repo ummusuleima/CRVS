@@ -585,6 +585,14 @@ video {
   top: 11rem;
 }
 
+.bottom-0{
+  bottom: 0px;
+}
+
+.left-2{
+  left: 0.5rem;
+}
+
 .right-10{
   right: 2.5rem;
 }
@@ -603,14 +611,6 @@ video {
 
 .right-2{
   right: 0.5rem;
-}
-
-.bottom-0{
-  bottom: 0px;
-}
-
-.left-2{
-  left: 0.5rem;
 }
 
 .right-6{
@@ -819,14 +819,6 @@ video {
   height: 24rem;
 }
 
-.h-0{
-  height: 0px;
-}
-
-.h-32{
-  height: 8rem;
-}
-
 .max-h-96{
   max-height: 24rem;
 }
@@ -907,12 +899,16 @@ video {
   width: 3rem;
 }
 
-.w-7{
-  width: 1.75rem;
-}
-
 .w-24{
   width: 6rem;
+}
+
+.w-64{
+  width: 16rem;
+}
+
+.w-7{
+  width: 1.75rem;
 }
 
 .w-3\/4{
@@ -967,6 +963,10 @@ video {
   flex-grow: 1;
 }
 
+.table-auto{
+  table-layout: auto;
+}
+
 .table-fixed{
   table-layout: fixed;
 }
@@ -980,18 +980,8 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.rotate-90{
-  --tw-rotate: 90deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .-rotate-180{
   --tw-rotate: -180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-rotate-45{
-  --tw-rotate: -45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1037,6 +1027,10 @@ video {
 
 .items-baseline{
   align-items: baseline;
+}
+
+.justify-start{
+  justify-content: flex-start;
 }
 
 .justify-end{
@@ -1658,6 +1652,10 @@ video {
   padding-bottom: 2rem;
 }
 
+.pt-3{
+  padding-top: 0.75rem;
+}
+
 .pt-4{
   padding-top: 1rem;
 }
@@ -1740,12 +1738,20 @@ video {
   font-weight: 300;
 }
 
+.font-extralight{
+  font-weight: 200;
+}
+
 .uppercase{
   text-transform: uppercase;
 }
 
 .normal-case{
   text-transform: none;
+}
+
+.italic{
+  font-style: italic;
 }
 
 .leading-normal{
@@ -2068,8 +2074,9 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  vertical-align: text-top;
   font-weight: 400;
 }
 
