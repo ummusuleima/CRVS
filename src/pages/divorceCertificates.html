@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../dist/output.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="../images/crvs-image.png" />
-    <title>Marriage Certificate</title>
+    <title>Divorce Certificate</title>
+    <style type="text/css" media="print"> body { margin:0px; } </style>
   </head>
   <body class="mx-auto h-auto bg-slate-100 lg:px-24">
     <main class="mb-6 px-2 lg:px-24">
@@ -51,7 +52,7 @@
   <div class="flex justify-center">
     <div
       id="form"
-      class="relative h-[561.25984252px] w-[795px] bg-[url('../images/backgroundcover.jpg')] bg-contain bg-no-repeat py-1 px-6 "
+      class="relative m-0 h-[561.25984252px] w-[795px] bg-[url('../images/backgroundcover.jpg')] bg-contain bg-no-repeat py-1 px-6 "
     >
       <h class="absolute right-20 top-8 pt-2 z-10 font-timesbold text-xx"
         >No. 22-0627839
@@ -60,7 +61,7 @@
         <div class="block">
           <div class="flex items-center justify-center pt-9">
             <h class="text-center font-timesbold text-lg uppercase"
-              >shahada ya ndoa - Certificate of marriage</h
+              >shahada ya talaka - Certificate of divorce</h
             >
           </div>
 
@@ -74,14 +75,14 @@
                 </th>
                 <th class="tablehead w-24">
                   <div class="flex flex-col space-y-2">
-                    <h>Tarehe na mahali ilifungwa Ndoa</h>
-                    <h>Date and place of marriage</h>
+                    <h>Tarehe na mahali ilipotamkwa talaka</h>
+                    <h>Date and place of Pronouncement of Divorce</h>
                   </div>
                 </th>
                 <th class="tablehead">
                   <div class="flex flex-col space-y-2">
-                    <h>Majina ya Wanandoa Kabla ya Ndoa</h>
-                    <h>Maiden Names of Spouses.</h>
+                    <h>Majina ya Walioachana</h>
+                    <h>Maiden Names of Divorce and Divorcee</h>
                   </div>
                 </th>
                 <th class="tablehead">
@@ -91,24 +92,19 @@
                 </th>
                 <th class="tablehead w-24">
                   <div class="flex flex-col space-y-2">
-                    <h>Hali ya Ndoa Kabla ya Ndoa hii</h>
-                    <h>Marital Status Before this Marriage</h>
+                    <h>Majina ya Mashahidi (Wakiwepo)</h>
+                    <h>Name of Witnesses (if any)</h>
                   </div>
                 </th>
                 <th class="tablehead w-20">
                   <div class="flex flex-col space-y-2">
-                    <h>Majina Wanapoishi Wanandoa</h>
-                    <h>Place of Residence at the time of marriage</h>
+                    <h>Mtu aliyethibitisha Talaka</h>
+                    <h>Person who acknowledge the divorce</h>
                   </div>
                 </th>
                 <th class="tablehead">
                   <div class="flex flex-col space-y-2">
-                    <h>Majina ya Mashahidi</h> <h>Name of Witenesses.</h>
-                  </div>
-                </th>
-                <th class="tablehead">
-                  <div class="flex flex-col space-y-2">
-                    <h>Mfungishaji Ndoa</h> <h> Marriage Officiant.</h>
+                    <h>Tarehe ya usajili</h> <h>Date of Registration</h>
                   </div>
                 </th>
               </tr>
@@ -143,9 +139,7 @@
                 <td class="relative border border-black font-bold">
                   <h class="tabledata"> mchangani, zanzibar </h>
                 </td>
-                <td class="relative border border-black font-bold">
-                  <h class="tabledata"> sd, Someone Jane </h>
-                </td>
+               
               </tr>
             </tbody>
           </table>
@@ -159,23 +153,6 @@
             </h>
           </div>
 
-          <div class="mt-2 flex flex-col font-times text-sx">
-            <div class=" space-x-1">
-
-                <h
-                  >Tarehe ya kusajilwa
-                </h>
-                <h>22/3/2001</h>
-            </div>
-
-            <div class=" space-x-1">
-
-                <h
-                 >Date of Registration
-               </h>
-               <h>22/3/2001</h>
-            </div>
-          </div>
           <div class="flex justify-end">
             <div
               class="flex flex-col items-center space-y-1 px-4 font-times"
@@ -205,14 +182,15 @@
       $(makepdf).printThis({
         importCSS: true,
         importStyle: true,
-        pageTitle: "Marriage Detail Update Form",
+      
       });
 
-    //   printJS({
-    //     printable: "form",
-    //     type: "html",
-    //     css: "../dist/output.css",
-    //   });
+      // printJS({
+      //   printable: "form",
+      //   type: "html",
+      //   style:"../dist/output.css",
+      //   css: "../dist/output.css",
+      // });
     });
   </script>
 </html>
