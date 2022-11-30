@@ -5,6 +5,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: "Times New Roman";
+  src: url("../assets/fonts/times_new_roman.ttf");
+}
+
+@font-face {
+  font-family: "Times New Roman Bold";
+  src: url("../assets/fonts/times_new_roman_bold.ttf");
+}
+
 .dx-icon-trash {
   @apply text-red-600  !important;
 }
@@ -51,5 +62,9 @@
 }
 
 .tablehead{
-  @apply border border-black px-2 py-1 align-text-top  font-normal
+  @apply border border-black px-2 py-1 align-text-top font-normal font-times
+}
+
+.tabledata{
+  @apply verticaltext absolute bottom-0 left-2 flex -rotate-180 justify-start pt-2 uppercase
 }
