@@ -68,3 +68,7 @@
 .tabledata{
   @apply verticaltext absolute bottom-0 left-2 flex -rotate-180 justify-start pt-2 uppercase py-2
 }
+
+.dx-datagrid-text-content{
+  @apply font-semibold font-robot text-black 
+}
