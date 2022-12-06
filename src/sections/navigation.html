@@ -766,22 +766,13 @@
         }
       }
 
-      function userManagementDetails() {
-        var details = document.getElementsByClassName("details-toggle");
-        for (let index = 0; index < details.length; index++) {
-          details[1].setAttribute("open", true);
-        }
-      }
-
       function sectionDetails(cls) {
         var details = document.getElementsByClassName(cls);
-        console.log(details.length);
-        // for (let index = 0; index < details.length; index++) {
-        // details[0].setAttribute("open", true);
+        console.log(details.length);       
         details[1].setAttribute("open", true);
-        // }
       }
 
+      
       var pageURL = window.location.href;
 
       if (pageURL.includes("/pages/staffmanagement.html")) {
@@ -789,7 +780,7 @@
         $(".staff").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/dashboard.html")) {
         $(".dashboard").addClass("bg-crvsblue-900 ");
-        
+
       } else if (pageURL.includes("/pages/searching.html")) {
         $(".search").addClass("bg-crvsblue-900 ");
       } else if (pageURL.includes("/pages/permissions.html")) {
@@ -814,7 +805,7 @@
         $(".groups").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/groupusers.html")) {
         sectionDetails("group-details");
-        userManagementDetails();
+        sectionDetails("details-toggle");
 
         $(".usergroups").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/registration.html")) {
