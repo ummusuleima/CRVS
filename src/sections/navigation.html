@@ -786,10 +786,7 @@
       var pageURL = window.location.href;
       
       if (pageURL.includes("/pages/staffmanagement.html")) {
-        var details = document.getElementsByClassName("details-toggle");
-        for (let index = 0; index < details.length; index++) {
-          details[index].setAttribute("open", true);
-        }
+        sectionDetails("details-toggle")
 
         $(".staff").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/dashboard.html")) {
