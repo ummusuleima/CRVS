@@ -738,32 +738,32 @@
   ></script>
   <script>
     $(document).ready(function () {
-      const parentDetails = document.querySelectorAll(".parentDetails");
-      const childDetails = document.querySelectorAll(".childDetails");
+      // const parentDetails = document.querySelectorAll(".parentDetails");
+      // const childDetails = document.querySelectorAll(".childDetails");
 
-      parentDetails.forEach((dt) => {
-        dt.addEventListener("toggle", toggleOpenOneOnly_);
-      });
+      // parentDetails.forEach((dt) => {
+      //   dt.addEventListener("toggle", toggleOpenOneOnly_);
+      // });
 
-      function toggleOpenOneOnly_(e) {
-        if (this.open) {
-          parentDetails.forEach((deet) => {
-            if (deet != this && deet.open) deet.open = false;
-          });
-        }
-      }
+      // function toggleOpenOneOnly_(e) {
+      //   if (this.open) {
+      //     parentDetails.forEach((deet) => {
+      //       if (deet != this && deet.open) deet.open = false;
+      //     });
+      //   }
+      // }
 
-      childDetails.forEach((dt) => {
-        dt.addEventListener("toggle", toggleOpenOneOnly);
-      });
+      // childDetails.forEach((dt) => {
+      //   dt.addEventListener("toggle", toggleOpenOneOnly);
+      // });
 
-      function toggleOpenOneOnly(e) {
-        if (this.open) {
-          childDetails.forEach((deet) => {
-            if (deet != this && deet.open) deet.open = false;
-          });
-        }
-      }
+      // function toggleOpenOneOnly(e) {
+      //   if (this.open) {
+      //     childDetails.forEach((deet) => {
+      //       if (deet != this && deet.open) deet.open = false;
+      //     });
+      //   }
+      // }
 
       function userManagementDetails() {
         var details = document.getElementsByClassName("details-toggle");
