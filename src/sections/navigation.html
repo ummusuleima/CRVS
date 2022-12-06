@@ -766,7 +766,6 @@
         }
       }
 
-
       function userManagementDetails() {
         var details = document.getElementsByClassName("details-toggle");
         for (let index = 0; index < details.length; index++) {
@@ -784,33 +783,33 @@
       }
 
       var pageURL = window.location.href;
-      
-      if (pageURL.includes("/pages/staffmanagement.html")) {
-        sectionDetails("details-toggle")
 
+      if (pageURL.includes("/pages/staffmanagement.html")) {
+        sectionDetails("details-toggle");
         $(".staff").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/dashboard.html")) {
         $(".dashboard").addClass("bg-crvsblue-900 ");
+        
       } else if (pageURL.includes("/pages/searching.html")) {
         $(".search").addClass("bg-crvsblue-900 ");
       } else if (pageURL.includes("/pages/permissions.html")) {
         sectionDetails("perm-details");
-        userManagementDetails();
+        sectionDetails("details-toggle");
 
         $(".permission").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/assignuserpermission.html")) {
         sectionDetails("perm-details");
-        userManagementDetails();
+        sectionDetails("details-toggle");
 
         $(".assignpermission").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/userspermissions.html")) {
         sectionDetails("perm-details");
-        userManagementDetails();
+        sectionDetails("details-toggle");
 
         $(".userspermissions").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/groups.html")) {
         sectionDetails("group-details");
-        userManagementDetails();
+        sectionDetails("details-toggle");
 
         $(".groups").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/groupusers.html")) {
@@ -820,17 +819,16 @@
         $(".usergroups").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/registration.html")) {
         sectionDetails("registration-toggle");
-        // userManagementDetails();
 
         $(".registration").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/alllogs.html")) {
         sectionDetails("logs-details");
-        userManagementDetails();
+        sectionDetails("details-toggle");
 
         $(".all-logs").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("/pages/assigngrouppermission.html")) {
         sectionDetails("group-details");
-        userManagementDetails();
+        sectionDetails("details-toggle");
 
         $(".assignGroupPermission").addClass("bg-crvsblue-900");
       } else if (pageURL.includes("pages/earlyregistration.html")) {
@@ -877,5 +875,4 @@
       }
     });
   </script>
-
 </body>
