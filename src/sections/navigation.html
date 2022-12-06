@@ -775,9 +775,11 @@
 
       function sectionDetails(cls) {
         var details = document.getElementsByClassName(cls);
-        for (let index = 0; index < details.length; index++) {
-          details[index].setAttribute("open", true);
-        }
+        console.log(details.length)
+        // for (let index = 0; index < details.length; index++) {
+          details[0].setAttribute("open", true);
+          details[1].setAttribute("open", true);
+        // }
       }
 
 
