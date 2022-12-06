@@ -765,10 +765,12 @@
           });
         }
       }
+
+
       function userManagementDetails() {
         var details = document.getElementsByClassName("details-toggle");
         for (let index = 0; index < details.length; index++) {
-          details[index].setAttribute("open", true);
+          details[1].setAttribute("open", true);
         }
       }
 
@@ -782,6 +784,7 @@
       }
 
       var pageURL = window.location.href;
+      
       if (pageURL.includes("/pages/staffmanagement.html")) {
         var details = document.getElementsByClassName("details-toggle");
         for (let index = 0; index < details.length; index++) {
