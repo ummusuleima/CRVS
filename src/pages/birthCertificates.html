@@ -108,7 +108,7 @@
                   </div>
                 </td>
                 <td class="relative border border-black font-bold">
-                  <h class="tabledata"> </h>
+                  <h class="tabledata"> Someone Son</h>
                 </td>
                 <td class="relative border border-black font-bold">
                   <h class="tabledata"> Male </h>
@@ -170,11 +170,8 @@
   </div>
 
   <script src="../js/printThis.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.js"></script> -->
-  <!-- 
-  <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
-  <script src="https://printjs-4de6.kxcdn.com/print.min.css"></script> -->
 
+  
   <script>
     var button = document.getElementById("download");
     var makepdf = document.getElementById("form");
@@ -183,17 +180,29 @@
       $(makepdf).printThis({
         importCSS: true,
         importStyle: true,
-        pageTitle: "Marriage Detail Update Form",
+        printDelay: 1000,
       });
+
+      // var cloudinary = new cloudinary.Cloudinary({
+      //   cloud_name: "dblbuwxpe",
+      //   api_key: "452958321871565",
+      //   api_secret: "90mWp_INZIVFj88XYm7tJp7IqOw",
+      // });
+      // cloudinary.to_pdf(makepdf, function (error, result) {
+      //   if (error) {
+      //     // Handle error
+      //     console.log(error);
+      //   } else {
+      //     // Print PDF
+      //     console.log("Printing");
+      //   }
+      // });
 
       // printJS({
       //   printable: "form",
       //   type: "html",
       //   css: "../dist/output.css",
-      // });
-
-      // html2canvas(document.querySelector("#form")).then((canvas) => {
-      //   document.body.appendChild(canvas);
+      //   style: "../dist/output.css",
       // });
     });
   </script>

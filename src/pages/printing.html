@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
+
+    <!-- tailwindcss elements -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <title>Death Registration</title>
+    <link rel="icon" type="image/x-icon" href="../images/crvs-image.png" />
+  </head>
+  <body>
+    <div class="min-h-full">
+      <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
+      <div
+        id="sidebar"
+        class="fixed inset-0 z-40 flex hidden"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div
+          class="fixed inset-0 bg-gray-600 bg-opacity-75"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          class="relative flex w-full max-w-xs flex-1 flex-col bg-crvsblue-700 pt-5 pb-4"
+        >
+          <div class="absolute top-0 right-0 -mr-12 pt-2">
+            <button
+              id="close_sidebar"
+              type="button"
+              class="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            >
+              <span class="sr-only">Close sidebar</span>
+              <!-- Heroicon name: outline/x -->
+              <svg
+                class="h-6 w-6 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- <div class="flex-shrink-0 flex items-center px-4"></div> -->
+
+          <!--nav bar place-->
+          <section include="navigation.html"></section>
+        </div>
+
+        <div class="w-14 flex-shrink-0" aria-hidden="true">
+          <!-- Dummy element to force sidebar to shrink to fit close icon -->
+        </div>
+      </div>
+
+      <!-- Static sidebar for desktop -->
+      <div class="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
+        <!-- Sidebar component, swap this element with another sidebar if you like -->
+
+        <div
+          class="flex flex-grow flex-col overflow-y-auto bg-crvsblue-700 pt-5 pb-4"
+        >
+          <div
+            class="flex w-full flex-shrink-0 flex-row items-center justify-center space-x-3 px-4"
+          >
+            <image src="../images/crvs-image.png" class="h-10 w-16" />
+            <h class="text-2xl font-bold tracking-widest text-white">CRVS</h>
+          </div>
+
+          <!-- navigation section -->
+          <section include="navigation.html"></section>
+        </div>
+      </div>
+
+      <div class="flex flex-1 flex-col lg:pl-64">
+        <main class="relative min-h-screen flex-1 pb-8">
+          <!-- Header -->
+          <section include="header.html"></section>
+
+          <!-- Main Content -->
+          <div class="px-6 py-2">
+            <div
+              class="flex w-full flex-row items-center border-b-2 border-black py-2 px-2"
+            >
+              <div class="flex flex-row items-center space-x-2">
+                <span class="rounded-full bg-crvsicon-100 px-3 py-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                    stroke="currentColor"
+                    class="h-6 w-6 text-crvsicon-900"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0110.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0l.229 2.523a1.125 1.125 0 01-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0021 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 00-1.913-.247M6.34 18H5.25A2.25 2.25 0 013 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 011.913-.247m10.5 0a48.536 48.536 0 00-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5zm-3 0h.008v.008H15V10.5z"
+                    />
+                  </svg>
+                </span>
+
+                <h class="text-xl font-semibold uppercase">printing</h>
+                <button
+                  class="flex space-x-2 rounded bg-crvsblue-700 px-4 py-4 font-semibold uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-transparent hover:text-crvsblue-700"
+                  type="button"
+                  id="download"
+                >
+                  <h> printing</h>
+                </button>
+              </div>
+            </div>
+
+            <!-- card -->
+
+            <div class="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
+              <div
+                class="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
+              >
+                <!-- Cardh -->
+                <div class="overflow-hidden rounded-lg bg-white shadow">
+                  <div class="p-5">
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <!-- Heroicon name: outline/scale -->
+                        <svg
+                          class="h-6 w-6 text-gray-500"
+                          viewBox="0 0 24 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1 1.5H23"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M4 6.5H20"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M1 11.5H23"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M4 16.5H20"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="ml-5 w-0 flex-1">
+                        <dl>
+                          <dt class="truncate font-bold text-gray-500">
+                            Total Events
+                          </dt>
+                          <dd>
+                            <div class="text-xl font-bold text-gray-900">
+                              300,609
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-lime-700 px-5 py-3"></div>
+                </div>
+
+                <div class="overflow-hidden rounded-lg bg-white shadow">
+                  <div class="p-5">
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <!-- Heroicon name: outline/scale -->
+                        <svg
+                          class="h-7 w-7 text-gray-500"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10 24C14.9706 24 19 19.9706 19 15C19 10.0294 14.9706 6 10 6C5.02944 6 1 10.0294 1 15C1 19.9706 5.02944 24 10 24Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M16.3625 8.6375L24 1"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M18 1H24V7"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="ml-5 w-0 flex-1">
+                        <dl>
+                          <dt class="truncate font-bold text-gray-500">
+                            Male Event
+                          </dt>
+                          <dd>
+                            <div class="text-xl font-bold text-gray-900">
+                              300,000
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-sky-400 px-5 py-3"></div>
+                </div>
+
+                <div class="overflow-hidden rounded-lg bg-white shadow">
+                  <div class="p-5">
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <!-- Heroicon name: outline/scale -->
+                        <svg
+                          class="h-8 w-8 text-gray-500"
+                          viewBox="0 0 20 29"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M10 19V28"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M5 24H15"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="ml-5 w-0 flex-1">
+                        <dl>
+                          <dt class="truncate font-bold text-gray-500">
+                            Female
+                          </dt>
+                          <dd>
+                            <div class="text-xl font-bold text-gray-900">
+                              300,659
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-green-400 px-5 py-3"></div>
+                </div>
+
+                <div class="overflow-hidden rounded-lg bg-white shadow">
+                  <div class="p-5">
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <!-- Heroicon name: outline/scale -->
+                        <svg
+                          class="h-8 w-8 text-gray-500"
+                          viewBox="0 0 26 26"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M13 25C19.6274 25 25 19.6274 25 13C25 6.37258 19.6274 1 13 1C6.37258 1 1 6.37258 1 13C1 19.6274 6.37258 25 13 25Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-miterlimit="10"
+                          />
+                          <path
+                            d="M20 9L16 13"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M20 13L16 9"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M10 9L6 13"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M10 13L6 9"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M13 21C13.8284 21 14.5 20.3284 14.5 19.5C14.5 18.6716 13.8284 18 13 18C12.1716 18 11.5 18.6716 11.5 19.5C11.5 20.3284 12.1716 21 13 21Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="ml-5 w-0 flex-1">
+                        <dl>
+                          <dt class="truncate font-bold text-gray-500">
+                            Still Death
+                          </dt>
+                          <dd>
+                            <div class="text-xl font-bold text-gray-900">
+                              400,659
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-red-400 px-5 py-3"></div>
+                </div>
+
+                <!-- More items... -->
+              </div>
+            </div>
+            <!-- table content -->
+            <div class="mt-4 rounded bg-slate-100 px-4 py-2 md:px-14 xl:px-28">
+              <div></div>
+              <div
+                class="grid w-full grid-cols-1 gap-4 pt-4 md:grid-cols-2 xl:grid-cols-3"
+              >
+                <label class="block w-full">
+                  <span class="block text-base font-medium">Form Number</span>
+                  <input
+                    type="text"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Form Number"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium">PIN Number</span>
+                  <input
+                    type="text"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="PIN Number"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium">Event Number</span>
+                  <input
+                    type="text"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Event Number"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium"
+                    >Registration Number</span
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="Registration Number"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium"
+                    >Id Informant Type</span
+                  >
+                  <select
+                    type="text"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                    placeholder="Id Informant Type"
+                  ></select>
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium">Id Number</span>
+                  <input
+                    type="number"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="ID Number"
+                  />
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium"
+                    >Date of registration</span
+                  >
+                  <input
+                    type="date"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                  />
+                </label>
+              </div>
+
+              <div class="mt-4 flex h-10 justify-end space-x-4">
+                <button
+                  type="button"
+                  class="rounded bg-crvsblue-700 px-4 font-bold uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-white hover:text-crvsblue-700"
+                >
+                  filter
+                </button>
+
+                <button
+                  type="button"
+                  class="rounded bg-crvsblue-700 px-4 font-bold uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-white hover:text-crvsblue-700"
+                >
+                  show all
+                </button>
+              </div>
+            </div>
+
+            <div id="tablecontent" class="mt-6 mb-6 h-auto"></div>
+          </div>
+
+          <!-- Footer -->
+          <section include="footer.html"></section>
+        </main>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      elect+User+type
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="../js/section.js"></script>
+
+    <!-- DevExtreme theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn3.devexpress.com/jslib/21.2.7/css/dx.light.css"
+    />
+
+    <!-- DevExtreme library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn3.devexpress.com/jslib/22.1.3/js/dx.all.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+    ></script>
+
+    <script>
+      const data = [
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+        {
+          ID: 2,
+          FirstName: "Kid",
+          MiddleName: "name",
+          LastName: "Colle",
+          PhoneNumber: "08748908",
+          Email: "someoneelse@gmail.com",
+        },
+      ];
+
+      window.jsPDF = window.jspdf.jsPDF;
+
+      $(() => {
+        const dataGrid = $("#tablecontent").dxDataGrid({
+          dataSource: data,
+          showColumnLines: true,
+          showRowLines: true,
+          rowAlternationEnabled: true,
+          showBorders: true,
+          keyExpr: "ID",
+          columnsAutoWidth: true,
+          headerFilter: { visible: true },
+          showBorders: true,
+          filterRow: {
+            visible: true,
+            applyFilter: "auto",
+          },
+
+          columnChooser: {
+            enabled: true,
+            mode: "select",
+          },
+
+          export: {
+            enabled: true,
+            formats: ["pdf"],
+            // allowExportSelectedData: true,
+          },
+
+          searchPanel: {
+            visible: true,
+            // with: 700,
+            // position: left,
+          },
+
+          pager: {
+            visible: true,
+            pageSize: 1,
+            allowedPageSizes: ["10", "20", "all"],
+            infoText: "Page {0} of  {1} [ Total {2} items ]",
+            showPageSizeSelector: true,
+            showInfo: true,
+            showNavigationButtons: true,
+          },
+
+          editing: {
+            // allowEditing:true,
+            allowUpdating: true,
+            allowAdding: true,
+            allowDeleting: true,
+            useIcons: true,
+            mode: "form", // 'batch' | 'cell' | 'form' | 'popup'
+          },
+
+          columns: [
+            { dataField: "FirstName", allowEditing: false },
+            { dataField: "MiddleName" },
+            { dataField: "LastName" },
+            { dataField: "PhoneNumber" },
+            { dataField: "Email" },
+          ],
+
+          onInitNewRow: function (e) {},
+
+          onEditingStart: function () {},
+
+          onExporting(e) {
+            const doc = new jsPDF();
+
+            DevExpress.pdfExporter
+              .exportDataGrid({
+                margin: { top: 40, right: 10, bottom: 10, left: 10 },
+                jsPDFDocument: doc,
+                component: e.component,
+                indent: 5,
+              })
+              .then(() => {
+                const header = `STAFF MANAGEMENT REPORT`;
+                const subheader = "something";
+                const pageWidth = doc.internal.pageSize.getWidth();
+                doc.setFontSize(15);
+                const headerWidth = doc.getTextDimensions(header).w;
+                doc.text(header, (pageWidth - headerWidth) / 2, 20);
+                // doc.text(subheader, (pageWidth - headerWidth) / 2, 40);
+                doc.save("Staff Management Report.pdf");
+              });
+          },
+        });
+      });
+    </script>
+
+    <!-- modal-tailwindcss cnd script -->
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  </body>
+
+  <script src="../js/printThis.js"></script>
+  <div
+    class="modal fade fixed top-0 left-0 hidden h-full w-full overflow-y-auto outline-none overflow-x-hidden"
+    id="newStaff"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-xl pointer-events-none relative w-auto">
+      <div
+        id="form"
+        class="relative h-[561.25984252px] w-[795px] bg-[url('../images/backgroundcover.jpg')] bg-cover px-6 py-6"
+      >
+        <!-- <div class="flex flex-col items-center justify-center space-y-2">
+        <img src="../images/crvs-image.png" class="h-24 w-32" alt="" />
+        <h class="font-semibold uppercase"
+          >The revolutionary goverment of zanzibar</h
+        >
+      </div> -->
+        <h class="absolute right-20 top-8 z-10 pt-2 font-timesbold text-xx"
+          >No. 22-0627839
+        </h>
+        <div class="mt-20">
+          <div class="block">
+            <div class="flex items-center justify-center pt-7">
+              <h class="text-center font-timesbold text-[21.5px]"
+                >Certified Copy of an entry in a Register of Births</h
+              >
+            </div>
+
+            <table class="mt-2 table-auto border-collapse border border-black">
+              <thead>
+                <tr class="text-xx">
+                  <th class="tablehead">Serial No.</th>
+                  <th class="tablehead w-20">Date and place of birth</th>
+                  <th class="tablehead w-24">Name (if any) child</th>
+                  <th class="tablehead">Sex</th>
+                  <th class="tablehead w-20">Name of father</th>
+                  <th class="tablehead w-20">Name of mother</th>
+                  <th class="tablehead">
+                    Residence of parent (if separate residence both must be
+                    stated)
+                  </th>
+                  <th class="tablehead">
+                    Signature, residence and qualification of informant
+                  </th>
+                  <th class="tablehead">
+                    Date of registration and signature of registering officer
+                  </th>
+                  <th class="tablehead">Name if given after registration</th>
+                </tr>
+              </thead>
+              <tbody class="">
+                <tr class="h-40 text-xs">
+                  <td class="relative border border-black font-bold">
+                    <h class="tabledata"> A/263/1990 </h>
+                  </td>
+                  <td class="relative border border-black font-bold">
+                    <div>
+                      <h class="tabledata"> 30/11/2011 </h>
+                      <h
+                        class="verticaltext absolute bottom-0 left-6 flex -rotate-180 justify-start pt-2 uppercase"
+                      >
+                        Somewhere Else
+                      </h>
+                    </div>
+                  </td>
+                  <td class="relative border border-black font-bold">
+                    <h class="tabledata"> Someone Son</h>
+                  </td>
+                  <td class="relative border border-black font-bold">
+                    <h class="tabledata"> Male </h>
+                  </td>
+                  <td class="relative border border-black font-bold">
+                    <h class="tabledata"> Alawi adbal someone </h>
+                  </td>
+                  <td class="relative border border-black font-bold">
+                    <h class="tabledata"> ummy mustafa </h>
+                  </td>
+                  <td class="relative border border-black font-bold">
+                    <h class="tabledata"> mchangani, zanzibar </h>
+                  </td>
+                  <td class="relative border border-black font-bold">
+                    <h class="tabledata"> sd, Someone Jane </h>
+                  </td>
+                  <td class="relative border border-black font-bold">
+                    <h class="tabledata"> 30/11/2010 </h>
+                  </td>
+                  <td class="relative border border-black font-bold">
+                    <h class="tabledata"> --------- </h>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="mt-2 flex flex-col space-y-1 font-times">
+              <h class="whitespace-nowrap text-sx font-extralight"
+                ><h class="font-semibold uppercase">Certified </h>to be a true
+                copy Entry (Serial No. <h>A/434/1990</h>) of a Birth in Register
+                of Births within the Town/District of <h>somewhere</h> island of
+                zanzibar
+              </h>
+              <h class="text-sx"
+                ><h class="font-semibold uppercase">Free paid</h> Shs
+                <h>30000</h> Given at the zanzibar Civil Status Registration
+                Agency this <h>23rd</h> day of <h>June</h> <h>2022</h>
+              </h>
+            </div>
+
+            <div class="mt-2 flex items-center font-times text-sx">
+              <h
+                >Revenue Receipt No. <h>22178374883992837</h> of
+                <h>17/06/2022</h>
+              </h>
+            </div>
+            <div class="flex justify-end">
+              <div
+                class="mt-1 flex flex-col items-center space-y-1 px-4 font-times"
+              >
+                <div class="w-80 border-b border-dashed border-black"></div>
+                <h1 class="text-ss">
+                  <h class="italic">For</h> Registar General of Births and
+                  Deaths
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var button = document.getElementById("download");
+    var makepdf = document.getElementById("form");
+
+    button.addEventListener("click", function () {
+      $(makepdf).printThis({
+        importCSS: true,
+        importStyle: true,
+        printDelay: 1000,
+      });
+    });
+  </script>
+</html>
