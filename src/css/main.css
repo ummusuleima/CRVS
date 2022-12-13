@@ -72,3 +72,7 @@
 .dx-datagrid-text-content{
   @apply font-semibold font-robot text-black 
 }
+
+.birthform{
+  print-color-adjust: inherit;
+}

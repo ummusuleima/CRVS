@@ -663,6 +663,34 @@ video {
   right: 1.5rem;
 }
 
+.top-7{
+  top: 1.75rem;
+}
+
+.bottom-8{
+  bottom: 2rem;
+}
+
+.bottom-6{
+  bottom: 1.5rem;
+}
+
+.bottom-4{
+  bottom: 1rem;
+}
+
+.bottom-1{
+  bottom: 0.25rem;
+}
+
+.bottom-7{
+  bottom: 1.75rem;
+}
+
+.-bottom-1{
+  bottom: -0.25rem;
+}
+
 .z-40{
   z-index: 40;
 }
@@ -677,6 +705,10 @@ video {
 
 .m-0{
   margin: 0px;
+}
+
+.m-36{
+  margin: 9rem;
 }
 
 .mx-2{
@@ -881,6 +913,10 @@ video {
   height: 24rem;
 }
 
+.h-28{
+  height: 7rem;
+}
+
 .max-h-96{
   max-height: 24rem;
 }
@@ -985,6 +1021,14 @@ video {
   width: 308px;
 }
 
+.w-12{
+  width: 3rem;
+}
+
+.w-28{
+  width: 7rem;
+}
+
 .min-w-full{
   min-width: 100%;
 }
@@ -1031,6 +1075,10 @@ video {
 
 .-rotate-180{
   --tw-rotate: -180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1519,12 +1567,26 @@ video {
   background-color: rgb(12 74 110 / var(--tw-bg-opacity));
 }
 
+.bg-blue-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 224 71 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-75{
   --tw-bg-opacity: 0.75;
 }
 
 .bg-\[url\(\'\.\.\/images\/backgroundcover\.jpg\'\)\]{
   background-image: url('../images/backgroundcover.jpg');
+}
+
+.bg-none{
+  background-image: none;
 }
 
 .bg-gradient-to-r{
@@ -1986,6 +2048,21 @@ video {
   color: rgb(153 27 27 / var(--tw-text-opacity));
 }
 
+.text-blue-700{
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
+.text-blue-900{
+  --tw-text-opacity: 1;
+  color: rgb(30 58 138 / var(--tw-text-opacity));
+}
+
+.text-blue-800{
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+}
+
 .opacity-50{
   opacity: 0.5;
 }
@@ -2200,6 +2277,11 @@ video {
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.birthform{
+  -webkit-print-color-adjust: inherit;
+          print-color-adjust: inherit;
 }
 
 .file\:mr-4::file-selector-button{
