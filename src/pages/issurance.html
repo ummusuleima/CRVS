@@ -12,7 +12,7 @@
       href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
     />
     <link href="../dist/output.css" rel="stylesheet" />
-    <title>Printing</title>
+    <title>Issuance</title>
     <link rel="icon" type="image/x-icon" href="../images/crvs-image.png" />
   </head>
   <body>
@@ -116,24 +116,14 @@
                   </svg>
                 </span>
 
-                <h class="text-xl font-semibold uppercase">printing</h>
-                <button
-                  class="flex space-x-2 rounded bg-crvsblue-700 px-4 py-4 font-semibold uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-transparent hover:text-crvsblue-700"
-                  type="button"
-                  id="download"
-                >
-                  <h> printing</h>
-                </button>
-
+                <h class="text-xl font-semibold uppercase">Issurance</h>
                 <button
                   class="flex space-x-2 rounded bg-crvsblue-700 px-4 py-4 font-semibold uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-transparent hover:text-crvsblue-700"
                   data-bs-toggle="modal"
-                  data-bs-target="#rePrint"
+                  data-bs-target="#issurance"
                 >
-                  <h> reason </h>
+                  <h> issurance </h>
                 </button>
-
-                
               </div>
             </div>
 
@@ -651,204 +641,84 @@
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
   </body>
 
-  <script src="../js/printThis.js"></script>
-
   <div
     class="modal fade fixed top-0 left-0 hidden h-full w-full overflow-y-auto outline-none overflow-x-hidden"
-    id="newStaff"
+    id="issurance"
     tabindex="-1"
     aria-labelledby="exampleModalLabel"
     aria-hidden="true"
   >
     <div class="modal-dialog modal-xl pointer-events-none relative w-auto">
-      <!-- bg-[url('../images/backgroundcover.jpg')] -->
       <div
-        id="form"
-        class="relative h-[561.25984252px] w-[795px] bg-cover px-6 py-6"
+        class="modal-content pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none"
       >
-        <h class="absolute right-20 top-8 z-10 pt-2 font-timesbold text-xx"
-          >No. 22-0627839
-        </h>
-        <div class="mt-20">
-          <div class="block">
-            <div class="flex items-center justify-center pt-7">
-              <h class="text-center font-timesbold text-[21.5px]"
-                >Certified Copy of an entry in a Register of Births</h
-              >
+        <div
+          class="modal-header flex flex-shrink-0 items-center justify-between rounded-t-md border-b border-gray-200 p-4"
+        >
+          <h5
+            class="text-xl font-medium uppercase leading-normal text-gray-800"
+            id="exampleModalLabel"
+          >
+            Details for issurance
+          </h5>
+        </div>
+        <div class="modal-body relative p-4">
+          <form>
+            <div class="grid grid-cols-3 gap-2 py-4 px-6">
+              <label class="block w-full">
+                <span class="block text-base font-light">First Name:</span>
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                />
+              </label>
+              <label class="block w-full">
+                <span class="block text-base font-light">Second Name:</span>
+                <input
+                  type="text"
+                  placeholder="Second Name"
+                  class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                />
+              </label>
+              <label class="block w-full">
+                <span class="block text-base font-light">Last Name:</span>
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                />
+              </label>
+              <label class="block w-full">
+                <span class="block text-base font-light">Phone Number:</span>
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  class="mt-1 h-10 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                />
+              </label>
             </div>
+          </form>
+        </div>
+        <div
+          class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end space-x-3 rounded-b-md border-t border-gray-200 p-4 px-4"
+        >
+          <button
+            type="button"
+            class="rounded-md bg-crvsgreen-300 px-5 py-2.5 text-sm font-medium text-crvsgreen-900 hover:bg-crvsgreen-800 hover:text-white"
+          >
+            Issue
+          </button>
 
-            <table class="mt-2 table-auto border-collapse border border-black">
-              <thead>
-                <tr class="text-xx">
-                  <th class="tablehead">Serial No.</th>
-                  <th class="tablehead w-20">Date and place of birth</th>
-                  <th class="tablehead w-24">Name (if any) child</th>
-                  <th class="tablehead">Sex</th>
-                  <th class="tablehead w-20">Name of father</th>
-                  <th class="tablehead w-20">Name of mother</th>
-                  <th class="tablehead">
-                    Residence of parent (if separate residence both must be
-                    stated)
-                  </th>
-                  <th class="tablehead">
-                    Signature, residence and qualification of informant
-                  </th>
-                  <th class="tablehead">
-                    Date of registration and signature of registering officer
-                  </th>
-                  <th class="tablehead">Name if given after registration</th>
-                </tr>
-              </thead>
-              <tbody class="">
-                <tr class="h-40 text-xs">
-                  <td class="relative border border-black font-bold">
-                    <h class="tabledata"> A/263/1990 </h>
-                  </td>
-                  <td class="relative border border-black font-bold">
-                    <div>
-                      <h class="tabledata"> 30/11/2011 </h>
-                      <h
-                        class="verticaltext absolute bottom-0 left-6 flex -rotate-180 justify-start pt-2 uppercase"
-                      >
-                        Somewhere Else
-                      </h>
-                    </div>
-                  </td>
-                  <td class="relative border border-black font-bold">
-                    <h class="tabledata"> Someone Son</h>
-                  </td>
-                  <td class="relative border border-black font-bold">
-                    <h class="tabledata"> Male </h>
-                  </td>
-                  <td class="relative border border-black font-bold">
-                    <h class="tabledata"> Alawi adbal someone </h>
-                  </td>
-                  <td class="relative border border-black font-bold">
-                    <h class="tabledata"> ummy mustafa </h>
-                  </td>
-                  <td class="relative border border-black font-bold">
-                    <h class="tabledata"> mchangani, zanzibar </h>
-                  </td>
-                  <td class="relative border border-black font-bold">
-                    <h class="tabledata"> sd, Someone Jane </h>
-                  </td>
-                  <td class="relative border border-black font-bold">
-                    <h class="tabledata"> 30/11/2010 </h>
-                  </td>
-                  <td class="relative border border-black font-bold">
-                    <h class="tabledata"> --------- </h>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-            <div class="mt-2 flex flex-col space-y-1 font-times">
-              <h class="whitespace-nowrap text-sx font-extralight"
-                ><h class="font-semibold uppercase">Certified </h>to be a true
-                copy Entry (Serial No. <h>A/434/1990</h>) of a Birth in Register
-                of Births within the Town/District of <h>somewhere</h> island of
-                zanzibar
-              </h>
-              <h class="text-sx"
-                ><h class="font-semibold uppercase">Free paid</h> Shs
-                <h>30000</h> Given at the zanzibar Civil Status Registration
-                Agency this <h>23rd</h> day of <h>June</h> <h>2022</h>
-              </h>
-            </div>
-
-            <div class="mt-2 flex items-center font-times text-sx">
-              <h
-                >Revenue Receipt No. <h>22178374883992837</h> of
-                <h>17/06/2022</h>
-              </h>
-            </div>
-            <div class="flex justify-end">
-              <div
-                class="mt-1 flex flex-col items-center space-y-1 px-4 font-times"
-              >
-                <div class="w-80 border-b border-dashed border-black"></div>
-                <h1 class="text-ss">
-                  <h class="italic">For</h> Registar General of Births and
-                  Deaths
-                </h1>
-              </div>
-            </div>
-          </div>
+          <button
+            type="button"
+            data-bs-dismiss="modal"
+            class="rounded-md bg-red-300 px-5 py-2.5 text-sm font-medium text-red-900 hover:bg-red-800 hover:text-white"
+          >
+            Cancel
+          </button>
         </div>
       </div>
     </div>
   </div>
-
-  <script>
-    var button = document.getElementById("download");
-    var makepdf = document.getElementById("form");
-
-    button.addEventListener("click", function () {
-      $(makepdf).printThis({
-        importCSS: true,
-        importStyle: true,
-        afterPrint: function () {
-          console.log("Printed");
-        },
-      });
-    });
-  </script>
 </html>
-
-<div
-  class="modal fade fixed top-0 left-0 hidden h-full w-full overflow-y-auto outline-none overflow-x-hidden"
-  id="rePrint"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-lg pointer-events-none relative w-auto">
-    <div
-      class="modal-content pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none"
-    >
-      <div
-        class="modal-header flex flex-shrink-0 items-center justify-between rounded-t-md border-b border-gray-200 p-4"
-      >
-        <h5
-          class="text-xl font-medium uppercase leading-normal text-gray-800"
-          id="exampleModalLabel"
-        >
-          Reprinting
-        </h5>
-      </div>
-      <div class="modal-body relative p-4">
-        <form>
-          <div class=" py-4 px-6">
-            <label class="block w-full">
-              <span class="block text-base font-light">Reason for reprinting:</span>
-              <textarea
-                type="text"
-                placeholder="Reason....."
-                class="mt-1 h-24 w-full rounded border border-slate-400 bg-white p-4 focus:outline-crvsblue-700"
-              ></textarea>
-            </label>
-          
-          </div>
-        </form>
-      </div>
-      <div
-        class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end space-x-3 rounded-b-md border-t border-gray-200 p-4 px-4"
-      >
-        <button
-          type="button"
-          class="rounded-md bg-crvsgreen-300 px-5 py-2.5 text-sm font-medium text-crvsgreen-900 hover:bg-crvsgreen-800 hover:text-white"
-        >
-          Print
-        </button>
-
-        <button
-          type="button"
-          data-bs-dismiss="modal"
-          class="rounded-md bg-red-300 px-5 py-2.5 text-sm font-medium text-red-900 hover:bg-red-800 hover:text-white"
-        >
-          Cancel
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
