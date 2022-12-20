@@ -800,7 +800,9 @@
   aria-labelledby="exampleModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog modal-lg pointer-events-none relative w-auto">
+  <div
+    class="modal-dialog modal-lg pointer-events-none relative w-auto bg-white"
+  >
     <div
       class="modal-content pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none"
     >
@@ -916,6 +918,50 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div
+        class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-between space-x-3 rounded-b-md border-t border-gray-200 p-4 px-4"
+      >
+        <button
+          type="button"
+          class="flex items-center space-x-2 rounded-md border border-green-800 px-5 py-2.5 text-sm font-medium text-green-800 hover:border-white hover:bg-green-800 hover:text-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-5 w-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
+            />
+          </svg>
+
+          <h> Return for correction </h>
+        </button>
+
+        <div class="flex space-x-2">
+
+          <button
+            type="button"
+            class="rounded-md bg-crvsgreen-300 px-5 py-2.5 text-sm font-medium text-crvsgreen-900 hover:bg-crvsgreen-800 hover:text-white"
+          >
+            Print
+          </button>
+  
+          <button
+            type="button"
+            data-bs-dismiss="modal"
+            class="rounded-md bg-red-300 px-5 py-2.5 text-sm font-medium text-red-900 hover:bg-red-800 hover:text-white"
+          >
+            Cancel
+          </button>
         </div>
       </div>
     </div>
