@@ -885,6 +885,10 @@ video {
   height: 12rem;
 }
 
+.h-1\/2{
+  height: 50%;
+}
+
 .h-1\/5{
   height: 20%;
 }
@@ -899,14 +903,6 @@ video {
 
 .h-96{
   height: 24rem;
-}
-
-.h-1{
-  height: 0.25rem;
-}
-
-.h-1\/2{
-  height: 50%;
 }
 
 .max-h-96{
