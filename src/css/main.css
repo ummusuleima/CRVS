@@ -73,6 +73,8 @@
   @apply font-semibold font-robot text-black 
 }
 
-.birthform{
-  print-color-adjust: inherit;
+
+
+.backgroundimg {
+    background-image: url('/remote_wwwroot/images/backgroundcover.jpg');
 }
