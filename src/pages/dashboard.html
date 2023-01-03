@@ -308,11 +308,19 @@
               </div>
             </div>
 
-            <canvas id="lineGraph" height="90" class="px-8 py-4 mt-6"></canvas>
+            <canvas id="lineGraph" height="90" class="mt-6 px-8 py-4"></canvas>
+
             <div
-              class="mx-auto grid max-w-full grid-cols-1 gap-4 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-8"
+              class="mx-auto grid max-w-full grid-cols-1 gap-4 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-2 lg:px-8"
             >
               <div class="w-full space-y-6">
+                <h class="text-xl font-bold uppercase">registrations</h>
+                <canvas id="pieChart"></canvas>
+              </div>
+
+              <div height="90" id="barMulti"></div>
+
+              <!-- <div class="w-full space-y-6">
                 <h class="text-xl font-bold uppercase">Births registrations</h>
                 <canvas id="birthChart"></canvas>
               </div>
@@ -339,9 +347,13 @@
                   >Adaption registrations</h
                 >
                 <canvas id="adaptionChart"></canvas>
-              </div>
+              </div> -->
+
+              <!-- <div id="sample"></div> -->
             </div>
           </div>
+
+          <div id="sampleTable" height="90" class="mt-6 px-8 py-4"></div>
 
           <section include="footer.html"></section>
         </main>
@@ -390,124 +402,126 @@
   </body>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <script
     src="../js/buttonControls.js"
     type="text/javascript"
     charset="utf8"
   ></script>
 
+  <!-- Line Chart.js -->
   <script>
-    const labels = ["Male", "Female"];
+    // const labels = ["Male", "Female"];
 
-    const data = {
-      labels: labels,
-      datasets: [
-        {
-          label: "Birth Registration",
-          backgroundColor: ["#075985", "#38bdf8"],
-          borderColor: "#EBF2FA",
-          data: [109, 229],
-        },
-      ],
-    };
-    const deathData = {
-      labels: labels,
-      datasets: [
-        {
-          label: "Death Registration",
-          backgroundColor: ["#D44D5C", "#fca5a5"],
-          borderColor: "#EBF2FA",
-          data: [109, 500],
-        },
-      ],
-    };
+    // const data = {
+    //   labels: labels,
+    //   datasets: [
+    //     {
+    //       label: "Birth Registration",
+    //       backgroundColor: ["#075985", "#38bdf8"],
+    //       borderColor: "#EBF2FA",
+    //       data: [109, 229],
+    //     },
+    //   ],
+    // };
+    // const deathData = {
+    //   labels: labels,
+    //   datasets: [
+    //     {
+    //       label: "Death Registration",
+    //       backgroundColor: ["#D44D5C", "#fca5a5"],
+    //       borderColor: "#EBF2FA",
+    //       data: [109, 500],
+    //     },
+    //   ],
+    // };
 
-    const marriageData = {
-      labels: labels,
-      datasets: [
-        {
-          label: "Marriage Registration",
-          backgroundColor: ["#a16207", "#fed7aa"],
-          borderColor: "#EBF2FA",
-          data: [109, 500],
-        },
-      ],
-    };
+    // const marriageData = {
+    //   labels: labels,
+    //   datasets: [
+    //     {
+    //       label: "Marriage Registration",
+    //       backgroundColor: ["#a16207", "#fed7aa"],
+    //       borderColor: "#EBF2FA",
+    //       data: [109, 500],
+    //     },
+    //   ],
+    // };
 
-    const divorceData = {
-      labels: labels,
-      datasets: [
-        {
-          label: "Divorce Registration",
-          backgroundColor: ["#ea580c", "#fcd34d"],
-          borderColor: "#EBF2FA",
-          data: [109, 500],
-        },
-      ],
-    };
+    // const divorceData = {
+    //   labels: labels,
+    //   datasets: [
+    //     {
+    //       label: "Divorce Registration",
+    //       backgroundColor: ["#ea580c", "#fcd34d"],
+    //       borderColor: "#EBF2FA",
+    //       data: [109, 500],
+    //     },
+    //   ],
+    // };
 
-    const adaptionData = {
-      labels: labels,
-      datasets: [
-        {
-          label: " Adaption Registration",
-          backgroundColor: ["#4f46e5", "#c4b5fd"],
-          borderColor: "#EBF2FA",
-          data: [109, 500],
-        },
-      ],
-    };
+    // const adaptionData = {
+    //   labels: labels,
+    //   datasets: [
+    //     {
+    //       label: " Adaption Registration",
+    //       backgroundColor: ["#4f46e5", "#c4b5fd"],
+    //       borderColor: "#EBF2FA",
+    //       data: [109, 500],
+    //     },
+    //   ],
+    // };
 
-    const birthConfig = {
-      type: "doughnut",
-      data: data,
-      options: {},
-    };
+    // const birthConfig = {
+    //   type: "doughnut",
+    //   data: data,
+    //   options: {},
+    // };
 
-    const deathConfig = {
-      type: "doughnut",
-      data: deathData,
-      options: {},
-    };
+    // const deathConfig = {
+    //   type: "doughnut",
+    //   data: deathData,
+    //   options: {},
+    // };
 
-    const marriageConfig = {
-      type: "doughnut",
-      data: marriageData,
-      options: {},
-    };
+    // const marriageConfig = {
+    //   type: "doughnut",
+    //   data: marriageData,
+    //   options: {},
+    // };
 
-    const divorceConfig = {
-      type: "doughnut",
-      data: divorceData,
-      options: {},
-    };
+    // const divorceConfig = {
+    //   type: "doughnut",
+    //   data: divorceData,
+    //   options: {},
+    // };
 
-    const adaptionConfig = {
-      type: "doughnut",
-      data: adaptionData,
-      options: {},
-    };
+    // const adaptionConfig = {
+    //   type: "doughnut",
+    //   data: adaptionData,
+    //   options: {},
+    // };
 
-    const birthChart = new Chart(
-      document.getElementById("birthChart"),
-      birthConfig
-    );
-    const deathChart = new Chart(
-      document.getElementById("deathChart"),
-      deathConfig
-    );
-    const marrigeChart = new Chart(
-      document.getElementById("marriageChart"),
-      marriageConfig
-    );
-    const divorceChart = new Chart(
-      document.getElementById("divorceChart"),
-      divorceConfig
-    );
-    const adaptionChart = new Chart(
-      document.getElementById("adaptionChart"),
-      adaptionConfig
-    );
+    // const birthChart = new Chart(
+    //   document.getElementById("birthChart"),
+    //   birthConfig
+    // );
+    // const deathChart = new Chart(
+    //   document.getElementById("deathChart"),
+    //   deathConfig
+    // );
+    // const marrigeChart = new Chart(
+    //   document.getElementById("marriageChart"),
+    //   marriageConfig
+    // );
+    // const divorceChart = new Chart(
+    //   document.getElementById("divorceChart"),
+    //   divorceConfig
+    // );
+    // const adaptionChart = new Chart(
+    //   document.getElementById("adaptionChart"),
+    //   adaptionConfig
+    // );
 
     // Line Graph
     const _labels = [
@@ -572,11 +586,377 @@
           legend: {
             position: "top",
           },
-
         },
       },
     };
 
     const lineGraph = new Chart(document.getElementById("lineGraph"), _config);
+  </script>
+
+  <!-- Pie Chart DevExtreme -->
+  <script>
+    $(() => {
+      const legendSettings = {
+        verticalAlignment: "bottom",
+        horizontalAlignment: "center",
+        itemTextPosition: "right",
+        rowCount: 2,
+      };
+      const seriesOptions = [
+        {
+          argumentField: "name",
+          valueField: "area",
+          label: {
+            visible: true,
+            format: "percent",
+          },
+        },
+      ];
+      const sizeGroupName = "piesGroup";
+
+      $("#sample").dxPieChart({
+        export: {
+          enabled: true,
+        },
+        sizeGroup: sizeGroupName,
+        palette: "Soft Pastel",
+        title: "Birth Registration",
+        legend: legendSettings,
+        dataSource: [
+          {
+            name: "Male",
+            area: 0.29,
+          },
+          {
+            name: "Water",
+            area: 0.71,
+          },
+        ],
+        series: seriesOptions,
+      });
+    });
+  </script>
+
+  <!-- Line Devextreme -->
+  <script>
+    const dataSource = [
+      {
+        country: "January",
+        Birth: 101.2,
+        Death: 900.4,
+        Adoption: 283.2,
+        Marriage: 164.3,
+        Divorce: 206.1,
+      },
+      {
+        country: "Febuary",
+        Birth: 101.2,
+        Death: 800.4,
+        Adoption: 383.2,
+        Marriage: 464.3,
+        Divorce: 316.1,
+      },
+      {
+        country: "March",
+        Birth: 71.2,
+        Death: 910.4,
+        Adoption: 483.2,
+        Marriage: 564.3,
+        Divorce: 216.1,
+      },
+      {
+        country: "April",
+        Birth: 71.2,
+        Death: 910.4,
+        Adoption: 483.2,
+        Marriage: 564.3,
+        Divorce: 216.1,
+      },
+      {
+        country: "May",
+        Birth: 71.2,
+        Death: 910.4,
+        Adoption: 483.2,
+        Marriage: 564.3,
+        Divorce: 216.1,
+      },
+      {
+        country: "June",
+        Birth: 71.2,
+        Death: 910.4,
+        Adoption: 483.2,
+        Marriage: 564.3,
+        Divorce: 216.1,
+      },
+      {
+        country: "July",
+        Birth: 71.2,
+        Death: 910.4,
+        Adoption: 483.2,
+        Marriage: 564.3,
+        Divorce: 216.1,
+      },
+      {
+        country: "August",
+        Birth: 71.2,
+        Death: 910.4,
+        Adoption: 483.2,
+        Marriage: 524.3,
+        Divorce: 216.1,
+      },
+      {
+        country: "September",
+        Birth: 11.2,
+        Death: 930.4,
+        Adoption: 430.2,
+        Marriage: 564.3,
+        Divorce: 21,
+      },
+      {
+        country: "October",
+        Birth: 111,
+        Death: 910,
+        Adoption: 483.2,
+        Marriage: 564,
+        Divorce: 216,
+      },
+      {
+        country: "November",
+        Birth: 710.2,
+        Death: 100.4,
+        Adoption: 83.2,
+        Marriage: 54.3,
+        Divorce: 26.1,
+      },
+      {
+        country: "December",
+        Birth: 71,
+        Death: 91.4,
+        Adoption: 83.2,
+        Marriage: 56,
+        Divorce: 300,
+      },
+    ];
+    $(() => {
+      const chart = $("#sampleTable").dxChart({
+        // palette: "Violet",
+        dataSource,
+        commonSeriesSettings: {
+          argumentField: "country",
+          type: "line",
+        },
+        margin: {
+          bottom: 20,
+        },
+        argumentAxis: {
+          valueMarginsEnabled: false,
+          discreteAxisDivisionMode: "crossLabels",
+          grid: {
+            visible: true,
+          },
+        },
+        series: [
+          { valueField: "Birth", name: "Birth" },
+          { valueField: "Death", name: "Death" },
+          { valueField: "Adoption", name: "Adoption" },
+          { valueField: "Marriage", name: "Marriage" },
+          { valueField: "Divorce", name: "Divorce" },
+        ],
+        legend: {
+          verticalAlignment: "bottom",
+          horizontalAlignment: "center",
+          itemTextPosition: "bottom",
+        },
+        title: {
+          text: "CIVIL REGISTRATION AND VITAL STATISTICS",
+          subtitle: {
+            text: "(Registration of the five modules)",
+          },
+        },
+        export: {
+          enabled: true,
+        },
+        tooltip: {
+          enabled: true,
+        },
+      });
+    });
+  </script>
+
+  <!-- Multi Pie chart -->
+  <script>
+    const dataPie = {
+      labels: [
+        "Birth Male",
+        "Birth Female",
+        "Adoption Male",
+        "Adoption Female",
+        "Death Male",
+        "Death Female",
+      ],
+      datasets: [
+        {
+          backgroundColor: ["#AAA", "#777"],
+          data: [21, 79],
+        },
+        {
+          backgroundColor: ["hsl(0, 100%, 60%)", "hsl(0, 100%, 35%)"],
+          data: [33, 67],
+        },
+        {
+          backgroundColor: ["hsl(100, 100%, 60%)", "hsl(100, 100%, 35%)"],
+          data: [20, 80],
+        },
+        {
+          backgroundColor: ["hsl(180, 100%, 60%)", "hsl(180, 100%, 35%)"],
+          data: [10, 90],
+        },
+      ],
+    };
+
+    const configPie = {
+      type: "pie",
+      data: dataPie,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            labels: {
+              generateLabels: function (chart) {
+                // Get the default label list
+                const original =
+                  Chart.overrides.pie.plugins.legend.labels.generateLabels;
+                const labelsOriginal = original.call(this, chart);
+
+                // Build an array of colors used in the datasets of the chart
+                let datasetColors = chart.data.datasets.map(function (e) {
+                  return e.backgroundColor;
+                });
+                datasetColors = datasetColors.flat();
+
+                // Modify the color and hide state of each label
+                labelsOriginal.forEach((label) => {
+                  // There are twice as many labels as there are datasets. This converts the label index into the corresponding dataset index
+                  label.datasetIndex = (label.index - (label.index % 2)) / 2;
+
+                  // The hidden state must match the dataset's hidden state
+                  label.hidden = !chart.isDatasetVisible(label.datasetIndex);
+
+                  // Change the color to match the dataset
+                  label.fillStyle = datasetColors[label.index];
+                });
+
+                return labelsOriginal;
+              },
+            },
+            onClick: function (mouseEvent, legendItem, legend) {
+              // toggle the visibility of the dataset from what it currently is
+              legend.chart.getDatasetMeta(legendItem.datasetIndex).hidden =
+                legend.chart.isDatasetVisible(legendItem.datasetIndex);
+              legend.chart.update();
+            },
+          },
+          tooltip: {
+            callbacks: {
+              label: function (context) {
+                const labelIndex = context.datasetIndex * 2 + context.dataIndex;
+                return (
+                  context.chart.data.labels[labelIndex] +
+                  ": " +
+                  context.formattedValue
+                );
+              },
+            },
+          },
+        },
+      },
+    };
+
+    const pieGraph = new Chart(document.getElementById("pieChart"), configPie);
+
+    // -----------------------------------------
+  </script>
+
+  <!-- Bar Multi -->
+  <script>
+    $(() => {
+      $("#barMulti").dxChart({
+        dataSource: dataSource_,
+        commonSeriesSettings: {
+          argumentField: "state",
+          type: "bar",
+          hoverMode: "allArgumentPoints",
+          selectionMode: "allArgumentPoints",
+          label: {
+            visible: true,
+            format: {
+              type: "fixedPoint",
+              precision: 0,
+            },
+          },
+        },
+        series: [
+          { valueField: "birth", name: "Birth" },
+          { valueField: "death", name: "Death" },
+          { valueField: "adoption", name: "Adoption" },
+          { valueField: "divorce", name: "Divorce" },
+          { valueField: "marriage", name: "Marriage" },
+        ],
+        title: "Income of the Registrations",
+        legend: {
+          verticalAlignment: "bottom",
+          horizontalAlignment: "center",
+        },
+        export: {
+          enabled: true,
+        },
+        onPointClick(e) {
+          e.target.select();
+        },
+      });
+    });
+
+    const dataSource_ = [
+      {
+        state: "January",
+        birth: 200,
+        death: 300,
+        adoption: 400,
+        divorce: 200,
+        marriage: 100,
+      },
+      {
+        state: "Febuary",
+        birth: 500,
+        death: 600,
+        adoption: 200,
+        divorce: 600,
+        marriage: 300,
+      },
+      {
+        state: "March",
+        birth: 1000,
+        death: 300,
+        adoption: 400,
+        divorce: 200,
+        marriage: 100,
+      },
+      {
+        state: "April",
+        birth: 900,
+        death: 400,
+        adoption: 400,
+        divorce: 200,
+        marriage: 100,
+      },
+      {
+        state: "May",
+        birth: 600,
+        death: 200,
+        adoption: 400,
+        divorce: 200,
+        marriage: 100,
+      },
+    ];
   </script>
 </html>
