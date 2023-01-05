@@ -22,11 +22,15 @@ module.exports = {
       },
       fontSize: {
         xx: "0.7rem",
+        sx: "0.6rem",
+        ss: "0.5rem",
       },
     },
     fontFamily: {
       sans: ["DM Sans", "sans-serif"],
       robot: ["Roboto Mono", "monospace"],
+      times: ["Times New Roman", "sans-serif"],
+      timesbold: ["Times New Roman Bold", "sans-serif"],
     },
   },
   plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
