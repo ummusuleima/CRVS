@@ -120,7 +120,6 @@
                   >Registration Reports</h
                 >
 
-                <button id="export">click</button>
               </div>
             </div>
 
@@ -338,14 +337,28 @@
                 </label>
 
                 <label class="block w-full">
-                  <span class="block text-base font-medium">Time Frame</span>
+                  <span class="block text-base font-medium">Shehia</span>
                   <select
                     class="mt-1 h-9 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
                   >
-                    <option>Daily</option>
-                    <option>Weekly</option>
-                    <option>Monthly</option>
+                    <option>Magharibi A</option>
+                    <option>Somewhere B</option>
                   </select>
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium">Date From</span>
+                  <input
+                    type="date"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  />
+                </label>
+                <label class="block w-full">
+                  <span class="block text-base font-medium">Date To</span>
+                  <input
+                    type="date"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  />
                 </label>
               </div>
 
@@ -1286,49 +1299,58 @@
       ];
 
       window.jsPDF = window.jspdf.jsPDF;
-      //   applyPlugin(window.jsPDF);
+      // applyPlugin(window.jsPDF);
 
-      $("#Btn_1").dxButton({
-        text: "Export to PDF",
-        onClick: () => {
-          const pdfDoc = new jsPDF("p", "pt", "a4");
-          const options = {
-            pdfDoc: pdfDoc,
-            component: $("#tablecontent").dxDataGrid("instance"),
-          };
+      $(() => {
+        $("#Btn_1").dxButton({
+          text: "Export to PDF",
+          onClick: () => {
+            const pdfDoc = new jsPDF();
+            const options = {
+              jsPDFDocument: pdfDoc,
+              component: $("#tablecontent").dxDataGrid("instance"),
+            };
 
-          exportDataGrid(options)
-            .then(() => {
-              pdfDoc.setFontSize(12);
-              const pageCount = pdfDoc.internal.getNumberOfPages();
-              for (let i = 1; i <= pageCount; i++) {
-                pdfDoc.setPage(i);
-                const pageSize = pdfDoc.internal.pageSize;
-                const pageWidth = pageSize.width
-                  ? pageSize.width
-                  : pageSize.getWidth();
-                const pageHeight = pageSize.height
-                  ? pageSize.height
-                  : pageSize.getHeight();
-                const header = "Report 2014";
-                const footer = `Page ${i} of ${pageCount}`;
+            DevExpress.pdfExporter
+              .exportDataGrid(options)
+              .then(() => {
+                pdfDoc.setFontSize(12);
+                const pageCount = pdfDoc.internal.getNumberOfPages();
+                for (let i = 1; i <= pageCount; i++) {
+                  pdfDoc.setPage(i);
+                  const pageSize = pdfDoc.internal.pageSize;
+                  const pageWidth = pageSize.width
+                    ? pageSize.width
+                    : pageSize.getWidth();
+                  const pageHeight = pageSize.height
+                    ? pageSize.height
+                    : pageSize.getHeight();
+                  const header =
+                    "WAKALA WA USAJILI MATUKIO YA KIJAMII ZANZIBAR (ZCSRA)";
+                  const footer = `Page ${i} of ${pageCount}`;
 
-                // Header
-                pdfDoc.text(header, 40, 15, { baseline: "top" });
-
-                // Footer
-                pdfDoc.text(
-                  footer,
-                  pageWidth / 2 - pdfDoc.getTextWidth(footer) / 2,
-                  pageHeight - 15,
-                  { baseline: "bottom" }
-                );
-              }
-            })
-            .then(() => {
-              pdfDoc.save("filePDF.pdf");
-            });
-        },
+                  if (i == 1) {
+                    // Header
+                    pdfDoc.text(header, pageWidth / 2, 15, {
+                      baseline: "top",
+                      align: "center",
+                    });
+                  } else {
+                  }
+                  // Footer
+                  pdfDoc.text(
+                    footer,
+                    pageWidth / 2 - pdfDoc.getTextWidth(footer) / 2,
+                    pageHeight - 10,
+                    { baseline: "bottom" }
+                  );
+                }
+              })
+              .then(() => {
+                pdfDoc.save("filePDF.pdf");
+              });
+          },
+        });
       });
 
       $(() => {
