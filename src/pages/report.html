@@ -1329,14 +1329,18 @@
                     "WAKALA WA USAJILI MATUKIO YA KIJAMII ZANZIBAR (ZCSRA)";
                   const footer = `Page ${i} of ${pageCount}`;
 
-                  if (i == 1) {
-                    // Header
-                    pdfDoc.text(header, pageWidth / 2, 15, {
+                  // if (i == 1) {
+                  //   // Header
+                  //   pdfDoc.text(header, pageWidth / 2, 15, {
+                  //     baseline: "top",
+                  //     align: "center",
+                  //   });
+                  // } else {
+                  // }
+
+                  pdfDoc.text(header, pageWidth / 2, 15, {
                       baseline: "top",
-                      align: "center",
-                    });
-                  } else {
-                  }
+                      align: "center",})
                   // Footer
                   pdfDoc.text(
                     footer,
