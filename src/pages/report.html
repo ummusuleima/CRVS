@@ -119,7 +119,6 @@
                 <h class="text-xl font-semibold uppercase"
                   >Registration Reports</h
                 >
-
               </div>
             </div>
 
@@ -380,7 +379,9 @@
             </div>
 
             <div id="Btn_1"></div>
-            <div id="tablecontent" class="mt-6 mb-6 h-auto"></div>
+            <div id="tablecontent" class="mt-6 mb-6 h-auto">
+              <div id="page-header"></div>
+            </div>
           </div>
 
           <!-- Footer -->
@@ -1309,6 +1310,11 @@
             const options = {
               jsPDFDocument: pdfDoc,
               component: $("#tablecontent").dxDataGrid("instance"),
+              // html: "<h1>My PDF</h1><p>This is a PDF exported from the DevExtreme DataGrid widget.</p>",
+              pageLoaded: function (e) {
+                e.context.document.getElementById("page-header").innerHTML =
+                  "<h1>My PDF</h1>";
+              },
             };
 
             DevExpress.pdfExporter
@@ -1338,9 +1344,10 @@
                   // } else {
                   // }
 
-                  pdfDoc.text(header, pageWidth / 2, 15, {
-                      baseline: "top",
-                      align: "center",})
+                  // pdfDoc.text(header, pageWidth / 2, 15, {
+                  //   baseline: "top",
+                  //   align: "center",
+                  // });
                   // Footer
                   pdfDoc.text(
                     footer,
