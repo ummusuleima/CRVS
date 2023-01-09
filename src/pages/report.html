@@ -12,7 +12,7 @@
       href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
     />
     <link href="../dist/output.css" rel="stylesheet" />
-    <title>Birth Registration</title>
+    <title>Main Reports</title>
     <link rel="icon" type="image/x-icon" href="../images/crvs-image.png" />
   </head>
   <body>
@@ -242,7 +242,7 @@
                         </svg>
                       </div>
 
-                      <div class="ml-5 w-0 flex-1">
+                      <div class="ml-5 w-0 flex-1" id="source">
                         <dl>
                           <dt class="truncate font-bold text-gray-500">
                             Pending
@@ -366,22 +366,13 @@
                   type="button"
                   class="rounded bg-crvsblue-700 px-4 font-bold uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-white hover:text-crvsblue-700"
                 >
-                  filter
-                </button>
-
-                <button
-                  type="button"
-                  class="rounded bg-crvsblue-700 px-4 font-bold uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-white hover:text-crvsblue-700"
-                >
-                  show all
+                  search
                 </button>
               </div>
             </div>
 
             <div id="Btn_1"></div>
-            <div id="tablecontent" class="mt-6 mb-6 h-auto">
-              <div id="page-header"></div>
-            </div>
+            <table id="tablecontent" class="mt-6 mb-6 h-auto"></table>
           </div>
 
           <!-- Footer -->
@@ -417,13 +408,28 @@
     <script src="https://cdn3.devexpress.com/jslib/22.1.3/js/dx.all.js"></script>
     <script
       type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+      src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"
     ></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> -->
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.4.0/polyfill.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.0.0/jspdf.umd.min.js"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.1.1/exceljs.min.js"></script> -->
-    <script src="https://unpkg.com/jspdf"></script>
+    <!-- <script src="https://unpkg.com/jspdf"></script> -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"
+      integrity="sha512-03CCNkeosDFN2zCCu4vLpu3pJfZcrL48F3yB8k87ejT+OVMwco7IH3FW02vtbGhdncS6gyYZ/duYaC/K62xQPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+      integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- <script
       src="../js/buttonControls.js"
@@ -1300,30 +1306,50 @@
       ];
 
       window.jsPDF = window.jspdf.jsPDF;
-      // applyPlugin(window.jsPDF);
+      // const source = document.getElementById("source")
 
-      $(() => {
+      $(document).ready(function () {
         $("#Btn_1").dxButton({
           text: "Export to PDF",
           onClick: () => {
             const pdfDoc = new jsPDF();
+
             const options = {
+              margin: { top: 70, right: 10, bottom: 10, left: 10 },
               jsPDFDocument: pdfDoc,
               component: $("#tablecontent").dxDataGrid("instance"),
-              // html: "<h1>My PDF</h1><p>This is a PDF exported from the DevExtreme DataGrid widget.</p>",
-              pageLoaded: function (e) {
-                e.context.document.getElementById("page-header").innerHTML =
-                  "<h1>My PDF</h1>";
-              },
             };
+
+            // function calOption() {
+            //   var options;
+            //   // for (let i = 1; i <= pageCount; i++) {
+            //   //   if (i == 1) {
+            //   //     options = {
+            // margin: { top: 70, right: 10, bottom: 10, left: 10 },
+            //   //       jsPDFDocument: pdfDoc,
+            //   //       component: $("#tablecontent").dxDataGrid("instance"),
+            //   //     };
+            //   //     return options;
+            //   //   } else {
+            //   //     options = {
+            //   //       margin: { top: 20, right: 20, bottom: 20, left: 20 },
+            //   //       jsPDFDocument: pdfDoc,
+            //   //       component: $("#tablecontent").dxDataGrid("instance"),
+            //   //     };
+            //   //     return options;
+            //   //   }
+            //   // }
+            // }
 
             DevExpress.pdfExporter
               .exportDataGrid(options)
               .then(() => {
                 pdfDoc.setFontSize(12);
+
                 const pageCount = pdfDoc.internal.getNumberOfPages();
                 for (let i = 1; i <= pageCount; i++) {
                   pdfDoc.setPage(i);
+                  // pdfDoc.addPage()
                   const pageSize = pdfDoc.internal.pageSize;
                   const pageWidth = pageSize.width
                     ? pageSize.width
@@ -1331,28 +1357,64 @@
                   const pageHeight = pageSize.height
                     ? pageSize.height
                     : pageSize.getHeight();
+
+                  // Add Text
                   const header =
-                    "WAKALA WA USAJILI MATUKIO YA KIJAMII ZANZIBAR (ZCSRA)";
+                    "ZANZIBAR CIVIL STATUS REGISTRATION AGENCY ZANZIBAR (ZCSRA)";
+                  const subheader = `EARLY BIRTH REPORT`;
+                  const date = `From 02/02/2022 to 02/02/2023`;
+                  const location = `IN LOCATION HERE, SHEHIA PLACE HERE`;
                   const footer = `Page ${i} of ${pageCount}`;
 
-                  // if (i == 1) {
-                  //   // Header
-                  //   pdfDoc.text(header, pageWidth / 2, 15, {
-                  //     baseline: "top",
-                  //     align: "center",
-                  //   });
-                  // } else {
-                  // }
+                  if (i == 1) {
+                    pdfDoc.setFontSize(16);
+                    // pdfDoc.setFontStyle('bold');
+                    pdfDoc.setFont("Times New Roman", "bold");
+                    pdfDoc.text(header, pageWidth / 2, 8, {
+                      baseline: "top",
+                      align: "center",
+                      maxWidth: 120,
+                    });
+                    pdfDoc.text(subheader, pageWidth / 2, 24, {
+                      baseline: "top",
+                      align: "center",
+                      // maxWidth: 120,
+                    });
 
-                  // pdfDoc.text(header, pageWidth / 2, 15, {
-                  //   baseline: "top",
-                  //   align: "center",
-                  // });
+                    pdfDoc.setFontSize(14);
+                    pdfDoc.text(location, pageWidth / 2, 32, {
+                      baseline: "top",
+                      align: "center",
+                      // maxWidth: 120,
+                    });
+
+                    //  pdfDoc.setFont("Times New Roman","normal");
+                    pdfDoc.text(date, pageWidth / 2, 40, {
+                      baseline: "top",
+                      align: "center",
+                      // maxWidth: 120,
+                    });
+
+                    pdfDoc.addImage("../images/zcsra.png", 7, 15, 35, 30);
+                    pdfDoc.addImage(
+                      "../images/crvs-image.png",
+                      pageWidth - 42,
+                      15,
+                      35,
+                      30
+                    );
+
+                    // reseting
+                    pdfDoc.setFontSize(12);
+                  } else {
+                    // pdfDoc.setPage(i);
+                  }
+
                   // Footer
                   pdfDoc.text(
                     footer,
                     pageWidth / 2 - pdfDoc.getTextWidth(footer) / 2,
-                    pageHeight - 10,
+                    pageHeight - 5,
                     { baseline: "bottom" }
                   );
                 }
@@ -1360,6 +1422,9 @@
               .then(() => {
                 pdfDoc.save("filePDF.pdf");
               });
+
+            // pdfDoc.autoTable({ html: tb});
+            // pdfDoc.save("table.pdf");
           },
         });
       });
