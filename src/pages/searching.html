@@ -128,6 +128,46 @@
               <div
                 class="grid w-full grid-cols-1 gap-4 pt-4 md:grid-cols-2 xl:grid-cols-3"
               >
+
+               <label class="block w-full">
+                  <span class="block text-base font-medium">Event</span>
+                  <select
+                    type="text"
+                    class="bg-white mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="First Name"
+                  >
+                  <option>Birth</option>
+                  <option>Death</option>
+                  <option>Marriage</option>
+                  <option>Adoption</option>
+                  <option>Divorce</option>
+                </select>
+
+                </label>
+                 <label class="block w-full">
+                  <span class="block text-base font-medium">ID Type</span>
+                  <select
+                    type="text"
+                    class="bg-white mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                    placeholder="First Name"
+                  >
+                  <option>PIN</option>
+                  <option>Passport</option>
+                  <option>Resident Permit ID<option>
+                  <option>National ID<option>
+                  <option> ZanID<option>               
+                </select>
+
+                </label>
+                <label class="block w-full">
+                  <span class="block text-base font-medium">ID Number</span>
+                  <input
+                    type="text"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
+                   
+                  />
+                </label>
+                </label>
                 <label class="block w-full">
                   <span class="block text-base font-medium">First Name</span>
                   <input
@@ -157,59 +197,7 @@
                   />
                 </label>
 
-                <label class="block w-full">
-                  <span class="block text-base font-medium"
-                    >PIN</span
-                  >
-                  <input
-                    type="number"
-                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
-                    placeholder="PIN"
-                  />
-                </label>
-
-                <label class="block w-full">
-                  <span class="block text-base font-medium">Zan ID</span>
-                  <input
-                    type="text"
-                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
-                    placeholder="Zan ID"
-                  />
-                </label>
-
-                <label class="block w-full">
-                  <span class="block text-base font-medium"
-                    >National ID</span
-                  >
-                  <input
-                    type="number"
-                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
-                    placeholder="National ID"
-                  />
-                </label>
-
-                <label class="block w-full">
-                  <span class="block text-base font-medium"
-                    >Passport </span
-                  >
-                  <input
-                    type="number"
-                    placeholder="Passport"
-                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
-                  />
-                </label>
-
-                <label class="block w-full">
-                  <span class="block text-base font-medium"
-                    >Resident Permit ID</span
-                  >
-                  <input
-                    type="number"
-                    placeholder="Resident Permit ID"
-                    class="mt-1 h-9 w-full rounded border border-slate-400 px-4 focus:outline-crvsblue-700"
-                  />
-                </label>
-
+              
                 <label class="block w-full">
                   <span class="block text-base font-medium"
                     >Date of Birth</span
@@ -222,18 +210,13 @@
               </div>
 
               <div class="mt-4 flex h-10 justify-end space-x-4">
-                <button
-                  type="button"
-                  class="rounded bg-crvsblue-700 px-4 font-bold uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-white hover:text-crvsblue-700"
-                >
-                  filter
-                </button>
+               
 
                 <button
                   type="button"
                   class="rounded bg-crvsblue-700 px-4 font-bold uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-white hover:text-crvsblue-700"
                 >
-                  show all
+                  search
                 </button>
               </div>
             </div>
