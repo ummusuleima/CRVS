@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" /> -->
+
+    <!-- tailwindcss elements -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <title>Top Report</title>
+    <link rel="icon" type="image/x-icon" href="../images/crvs-image.png" />
+  </head>
+  <body>
+    <div class="min-h-full">
+      <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
+      <div
+        id="sidebar"
+        class="fixed inset-0 z-40 flex hidden"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div
+          class="fixed inset-0 bg-gray-600 bg-opacity-75"
+          aria-hidden="true"
+        ></div>
+
+        <div
+          class="relative flex w-full max-w-xs flex-1 flex-col bg-crvsblue-700 pt-5 pb-4"
+        >
+          <div class="absolute top-0 right-0 -mr-12 pt-2">
+            <button
+              id="close_sidebar"
+              type="button"
+              class="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            >
+              <span class="sr-only">Close sidebar</span>
+              <!-- Heroicon name: outline/x -->
+              <svg
+                class="h-6 w-6 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- <div class="flex-shrink-0 flex items-center px-4"></div> -->
+
+          <!--nav bar place-->
+          <section include="navigation.html"></section>
+        </div>
+
+        <div class="w-14 flex-shrink-0" aria-hidden="true">
+          <!-- Dummy element to force sidebar to shrink to fit close icon -->
+        </div>
+      </div>
+
+      <!-- Static sidebar for desktop -->
+      <div class="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col">
+        <!-- Sidebar component, swap this element with another sidebar if you like -->
+
+        <div
+          class="flex flex-grow flex-col overflow-y-auto bg-crvsblue-700 pt-5 pb-4"
+        >
+          <div
+            class="flex w-full flex-shrink-0 flex-row items-center justify-center space-x-3 px-4"
+          >
+            <image src="../images/crvs-image.png" class="h-10 w-16" />
+            <h class="text-2xl font-bold tracking-widest text-white">CRVS</h>
+          </div>
+
+          <!-- navigation section -->
+          <section include="navigation.html"></section>
+        </div>
+      </div>
+
+      <div class="flex flex-1 flex-col lg:pl-64">
+        <main class="relative min-h-screen flex-1 pb-8">
+          <!-- Header -->
+          <section include="header.html"></section>
+
+          <!-- Main Content -->
+          <div class="px-6 py-2">
+            <div
+              class="flex w-full flex-row items-center border-b-2 border-black py-2 px-2"
+            >
+              <div class="flex flex-row items-center space-x-2">
+                <span class="rounded-full bg-crvsicon-100 px-3 py-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6 text-crvsicon-900"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M20.893 13.393l-1.135-1.135a2.252 2.252 0 01-.421-.585l-1.08-2.16a.414.414 0 00-.663-.107.827.827 0 01-.812.21l-1.273-.363a.89.89 0 00-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 01-1.81 1.025 1.055 1.055 0 01-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 01-1.383-2.46l.007-.042a2.25 2.25 0 01.29-.787l.09-.15a2.25 2.25 0 012.37-1.048l1.178.236a1.125 1.125 0 001.302-.795l.208-.73a1.125 1.125 0 00-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 01-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 01-1.458-1.137l1.411-2.353a2.25 2.25 0 00.286-.76m11.928 9.869A9 9 0 008.965 3.525m11.928 9.868A9 9 0 118.965 3.525"
+                    />
+                  </svg>
+                </span>
+
+                <h class="text-xl font-semibold uppercase"
+                  >Top District Reports</h
+                >
+              </div>
+            </div>
+
+            <!-- card -->
+
+            <div class="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
+              <div
+                class="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
+              >
+                <!-- Cardh -->
+                <div class="overflow-hidden rounded-lg bg-white shadow">
+                  <div class="p-5">
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <!-- Heroicon name: outline/scale -->
+                        <svg
+                          width="20"
+                          height="29"
+                          viewBox="0 0 20 29"
+                          fill="none"
+                          class="text-gray-500"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M10 19V28"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M5 24H15"
+                            stroke="black"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="ml-5 w-0 flex-1">
+                        <dl>
+                          <dt class="truncate font-bold text-gray-500">
+                            Approved
+                          </dt>
+                          <dd>
+                            <div class="text-xl font-bold text-gray-900">
+                              300,609
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-sky-400 px-5 py-3"></div>
+                </div>
+
+                <div class="overflow-hidden rounded-lg bg-white shadow">
+                  <div class="p-5">
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <!-- Heroicon name: outline/scale -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-6 w-6 text-gray-500"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="ml-5 w-0 flex-1">
+                        <dl>
+                          <dt class="truncate font-bold text-gray-500">
+                            Rejected
+                          </dt>
+                          <dd>
+                            <div class="text-xl font-bold text-gray-900">
+                              300,000
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-red-200 px-5 py-3"></div>
+                </div>
+
+                <div class="overflow-hidden rounded-lg bg-white shadow">
+                  <div class="p-5">
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <!-- Heroicon name: outline/scale -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-6 w-6 text-gray-500"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="ml-5 w-0 flex-1">
+                        <dl>
+                          <dt class="truncate font-bold text-gray-500">
+                            Pending
+                          </dt>
+                          <dd>
+                            <div class="text-xl font-bold text-gray-900">
+                              300,659
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-orange-200 px-5 py-3"></div>
+                </div>
+
+                <div class="overflow-hidden rounded-lg bg-white shadow">
+                  <div class="p-5">
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <!-- Heroicon name: outline/scale -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-6 w-6 text-gray-500"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="ml-5 w-0 flex-1">
+                        <dl>
+                          <dt class="truncate font-bold text-gray-500">
+                            Something Else
+                          </dt>
+                          <dd>
+                            <div class="text-xl font-bold text-gray-900">
+                              400,659
+                            </div>
+                          </dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-emerald-300 px-5 py-3"></div>
+                </div>
+
+                <!-- More items... -->
+              </div>
+            </div>
+            <!-- table content -->
+            <div class="mt-4 rounded bg-slate-100 px-4 py-2 md:px-14 xl:px-28">
+              <div></div>
+              <div
+                class="grid w-full grid-cols-1 gap-4 pt-4 md:grid-cols-2 xl:grid-cols-3"
+              >
+                <label class="block w-full">
+                  <span class="block text-base font-medium">Report</span>
+                  <select
+                    class="mt-1 h-9 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  >
+                    <option>All Registration</option>
+                    <option>Early Registration</option>
+                    <option>Late Registration</option>
+                  </select>
+                </label>
+                <label class="block w-full">
+                  <span class="block text-base font-medium">Event</span>
+                  <select
+                    class="mt-1 h-9 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  >
+                    <option>Birth</option>
+                    <option>Death</option>
+                    <option>Marriage</option>
+                    <option>Divorce</option>
+                    <option>Adoption</option>
+                  </select>
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium">District</span>
+                  <select
+                    class="mt-1 h-9 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  >
+                    <option>Magharibi A</option>
+                    <option>Somewhere B</option>
+                  </select>
+                </label>
+
+                <label class="block w-full">
+                  <span class="block text-base font-medium">Date From</span>
+                  <input
+                    type="date"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  />
+                </label>
+                <label class="block w-full">
+                  <span class="block text-base font-medium">Date To</span>
+                  <input
+                    type="date"
+                    class="mt-1 h-9 w-full rounded border border-slate-400 bg-white px-4 focus:outline-crvsblue-700"
+                  />
+                </label>
+              </div>
+
+              <div class="mt-4 flex h-10 justify-end space-x-4">
+                <button
+                  type="button"
+                  class="rounded bg-crvsblue-700 px-4 font-bold uppercase text-white hover:border hover:border-crvsblue-700 hover:bg-white hover:text-crvsblue-700"
+                >
+                  search
+                </button>
+              </div>
+            </div>
+
+            <div height="90" id="barMulti" class="py-12 px-4"></div>
+          </div>
+
+          <!-- Footer -->
+          <section include="footer.html"></section>
+        </main>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      elect+User+type
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="../js/section.js"></script>
+    <!-- DevExtreme theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn3.devexpress.com/jslib/21.2.7/css/dx.light.css"
+    />
+
+    <!-- DevExtreme library -->
+    <script
+      type="text/javascript"
+      src="https://cdn3.devexpress.com/jslib/21.2.7/js/dx.all.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.4.0/polyfill.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.1.1/exceljs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js"></script>
+
+
+     <!-- Bar Multi -->
+  <script>
+    $(() => {
+      $("#barMulti").dxChart({
+        dataSource: dataSource_,
+        commonSeriesSettings: {
+          argumentField: "state",
+          type: "bar",
+          hoverMode: "allArgumentPoints",
+          selectionMode: "allArgumentPoints",
+          label: {
+            visible: true,
+            format: {
+              type: "fixedPoint",
+              precision: 0,
+            },
+          },
+        },
+        series: [
+          { valueField: "birth", name: "Birth" },
+          { valueField: "death", name: "Death" },
+          { valueField: "adoption", name: "Adoption" },
+          { valueField: "divorce", name: "Divorce" },
+          { valueField: "marriage", name: "Marriage" },
+        ],
+        title: "Top District Report of {name} Regirtation ",
+        legend: {
+          verticalAlignment: "bottom",
+          horizontalAlignment: "center",
+        },
+        export: {
+          enabled: true,
+        },
+        onPointClick(e) {
+          e.target.select();
+        },
+      });
+    });
+
+    const dataSource_ = [
+      {
+        state: "January",
+        birth: 200,
+        death: 300,
+        adoption: 400,
+        divorce: 200,
+        marriage: 100,
+      },
+      {
+        state: "Febuary",
+        birth: 500,
+        death: 600,
+        adoption: 200,
+        divorce: 600,
+        marriage: 300,
+      },
+      {
+        state: "March",
+        birth: 1000,
+        death: 300,
+        adoption: 400,
+        divorce: 200,
+        marriage: 100,
+      },
+      {
+        state: "April",
+        birth: 900,
+        death: 400,
+        adoption: 400,
+        divorce: 200,
+        marriage: 100,
+      },
+      {
+        state: "May",
+        birth: 600,
+        death: 200,
+        adoption: 400,
+        divorce: 200,
+        marriage: 100,
+      },
+    ];
+  </script>
+    <!-- modal-tailwindcss cnd script -->
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  </body>
+</html>

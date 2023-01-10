@@ -1320,27 +1320,6 @@
               component: $("#tablecontent").dxDataGrid("instance"),
             };
 
-            // function calOption() {
-            //   var options;
-            //   // for (let i = 1; i <= pageCount; i++) {
-            //   //   if (i == 1) {
-            //   //     options = {
-            // margin: { top: 70, right: 10, bottom: 10, left: 10 },
-            //   //       jsPDFDocument: pdfDoc,
-            //   //       component: $("#tablecontent").dxDataGrid("instance"),
-            //   //     };
-            //   //     return options;
-            //   //   } else {
-            //   //     options = {
-            //   //       margin: { top: 20, right: 20, bottom: 20, left: 20 },
-            //   //       jsPDFDocument: pdfDoc,
-            //   //       component: $("#tablecontent").dxDataGrid("instance"),
-            //   //     };
-            //   //     return options;
-            //   //   }
-            //   // }
-            // }
-
             DevExpress.pdfExporter
               .exportDataGrid(options)
               .then(() => {
@@ -1368,7 +1347,6 @@
 
                   if (i == 1) {
                     pdfDoc.setFontSize(16);
-                    // pdfDoc.setFontStyle('bold');
                     pdfDoc.setFont("Times New Roman", "bold");
                     pdfDoc.text(header, pageWidth / 2, 8, {
                       baseline: "top",
@@ -1388,7 +1366,7 @@
                       // maxWidth: 120,
                     });
 
-                    //  pdfDoc.setFont("Times New Roman","normal");
+                    pdfDoc.setFont("Times New Roman", "normal");
                     pdfDoc.text(date, pageWidth / 2, 40, {
                       baseline: "top",
                       align: "center",
