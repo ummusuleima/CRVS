@@ -900,7 +900,7 @@
           </a>
           <a
             href="./topreport.html"
-            class="printingReports group flex items-center rounded-md px-2 py-2 text-sm font-bold leading-6 text-white hover:bg-crvsblue-900"
+            class="topReports group flex items-center rounded-md px-2 py-2 text-sm font-bold leading-6 text-white hover:bg-crvsblue-900"
             aria-current="page"
           >
             <svg
@@ -1132,6 +1132,11 @@
         sectionDetails("report-toggle");
 
         $(".customizableReports").addClass("bg-crvsblue-900");
+      }
+      else if (pageURL.includes("/pages/topreport.html")) {
+        sectionDetails("report-toggle");
+
+        $(".topReports").addClass("bg-crvsblue-900");
       }
     });
   </script>
