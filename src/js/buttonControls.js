@@ -475,6 +475,66 @@ $(document).ready(function () {
     $("#desadopId").addClass("stepper-completed");
   });
 
+  // Marriage No Impedement
+  $("#info-nomarrNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#nomarriageId").removeClass("stepper-active");
+    $("#info-nomarrId").addClass("stepper-active ");
+
+    $("#info-nomarrDiv").attr("style", "display:block");
+    $("#nomarriageDiv").attr("style", "display:none");
+    $("#nomarriageId").addClass("stepper-completed");
+  });
+
+  $("#prev-noMarr").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#info-nomarrId").removeClass("stepper-active");
+    $("#nomarriageId").addClass("stepper-active");
+
+    $("#nomarriageDiv").attr("style", "display:block");
+    $("#info-nomarrDiv").attr("style", "display:none");
+    $("#nomarriageId").addClass("stepper-completed");
+  });
+
+  $("#att-nomarrNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#info-nomarrId").removeClass("stepper-active");
+    $("#attnomarrId").addClass("stepper-active");
+
+    $("#attnomarrDiv").attr("style", "display:block");
+    $("#info-nomarrDiv").attr("style", "display:none");
+    $("#info-nomarrId").addClass("stepper-completed");
+  });
+
+  $("#previnfoMarr").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#attnomarrId").removeClass("stepper-active");
+    $("#info-nomarrId").addClass("stepper-active");
+
+    $("#info-nomarrDiv").attr("style", "display:block");
+    $("#attnomarrDiv").attr("style", "display:none");
+    $("#info-nomarrId").addClass("stepper-completed");
+  });
+
+  $("#desnomarrNext").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#attnomarrId").removeClass("stepper-active");
+    $("#desnomarrId").addClass("stepper-active");
+
+    $("#desnomarrDiv").attr("style", "display:block");
+    $("#attnomarrDiv").attr("style", "display:none");
+    $("#attnomarrId").addClass("stepper-completed");
+  });
+
+  $("#prevAttnomarr").click(() => {
+    document.getElementById("mainpage").scrollIntoView();
+    $("#desnomarrId").removeClass("stepper-active");
+    $("#attnomarrId").addClass("stepper-active");
+
+    $("#attnomarrDiv").attr("style", "display:block");
+    $("#desnomarrDiv").attr("style", "display:none");
+  });
+
   // const All_Details = document.querySelectorAll("details");
 
   // All_Details.forEach((deet) => {

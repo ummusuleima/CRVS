@@ -78,3 +78,9 @@
 .backgroundimg {
     background-image: url('/remote_wwwroot/images/backgroundcover.jpg');
 }
+
+/* @media (-webkit-device-pixel-ratio: 2) {
+  * {
+    zoom: 97%;
+  }
+} */
