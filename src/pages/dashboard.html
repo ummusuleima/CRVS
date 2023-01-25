@@ -308,17 +308,36 @@
               </div>
             </div>
 
-            <canvas id="lineGraph" height="90" class="mt-6 px-8 py-4"></canvas>
+            <div class="flex flex-col items-center justify-center py-12">
+              <h class="text-2xl font-bold uppercase underline">
+                Total number of registrated events per month of this year</h
+              >
+              <canvas
+                id="lineGraph"
+                height="90"
+                class="mt-6 px-8 py-4"
+              ></canvas>
+            </div>
 
             <div
               class="mx-auto grid max-w-full grid-cols-1 gap-4 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-2 lg:px-8"
             >
-              <div class="w-full space-y-6">
-                <h class="text-xl font-bold uppercase">registrations</h>
+              <div
+                class="flex w-full flex-col items-center justify-center space-y-6"
+              >
+                <h class="text-xl font-bold uppercase underline"
+                  >Total number of registered event with gender of this year</h
+                >
                 <canvas id="pieChart"></canvas>
               </div>
 
-              <div height="90" id="barMulti"></div>
+              <div class="flex w-full flex-col items-center space-y-6">
+                <h class="text-xl font-bold uppercase underline"
+                  >Total revenue(TZS) of all registered events per month - this
+                  year</h
+                >
+                <div class="h-full w-full" id="barMulti"></div>
+              </div>
 
               <!-- <div class="w-full space-y-6">
                 <h class="text-xl font-bold uppercase">Births registrations</h>
@@ -353,7 +372,7 @@
             </div>
           </div>
 
-          <div id="sampleTable" height="90" class="mt-6 px-8 py-4"></div>
+          <!-- <div id="sampleTable" height="90" class="mt-6 px-8 py-4"></div> -->
 
           <section include="footer.html"></section>
         </main>
@@ -904,7 +923,7 @@
           { valueField: "divorce", name: "Divorce" },
           { valueField: "marriage", name: "Marriage" },
         ],
-        title: "Income of the Registrations",
+
         legend: {
           verticalAlignment: "bottom",
           horizontalAlignment: "center",
