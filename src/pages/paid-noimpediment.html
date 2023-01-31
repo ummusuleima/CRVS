@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../image/header-logo.png" />
+    <title>No impediment letter</title>
+  </head>
+  <body class="min-h-screen bg-slate-100 mx-auto lg:px-24 py-12">
+    <main class="px-2 lg:px-24">
+      <div
+        class="py-2 w-full flex-col flex justify-center items-center space-y-2"
+      >
+        <div class="flex justify-center flex-col">
+          <img src="./image/header-logo.png" class="h-28 w-36" />
+        </div>
+        <h class="uppercase font-bold text-center px-2 md:text-xl"
+          >Zanzibar Civil Status Registration Agency (ZCSRA)</h
+        >
+      </div>
+
+      <div class="w-full flex items-center justify-center px-8 mt-6">
+        <div
+          class="bg-white shadow-lg rounded-md px-12 flex justify-center py-16 flex-col items-center space-y-12"
+        >
+          <button
+            class="uppercase px-4 flex space-x-2 bg-crvsblue-700 py-4 text-white font-semibold rounded hover:border hover:bg-transparent hover:border-crvsblue-700 hover:text-crvsblue-700"
+            type="button"
+            id="download"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"
+              />
+            </svg>
+            <h> download </h>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- <script src="./js/index.js"></script> -->
+
+    <script>
+      function copyMeOnClipboard() {
+        var r = document.createRange();
+        var text = document.getElementById("writeText");
+        r.selectNode(document.getElementById("controlnumber"));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();
+        console.log("copy");
+        text.innerHTML = "The control number is copied !";
+      }
+      991270416395;
+    </script>
+  </body>
+
+  <!-- download form -->
+  <div class="mt-12 flex justify-center">
+    <div id="form" class="w-[792px] h-auto px-2 py-4 ">
+      <div class="font-times mt-12">
+        <div class="flex justify-center flex-col items-center space-y-1">
+          <img src="../images/crvs-image.png" class="h-12 w-18" alt="" />
+          <h class="upppercase font-bold text-lg"
+            >SERIKALI YA MAPINDUZI YA ZANZIBAR</h
+          >
+          <h>Kanuni za Usajili wa Matukia ya Kijamii 2020, kanuni ya 17</h>
+        </div>
+        <div class="flex justify-center flex-col items-center py-6">
+          <h class="upppercase font-bold text-xl"
+            >SHAHADA YA KUTOKUWEPO PINGAMIZI YA NDOA</h
+          >
+        </div>
+
+        <div>
+          <p class="leading-loose mt-12">
+            <h class="uppercase font-bold"> kwakuwa </h
+            ><input class="border-b border-dashed border-black w-96 px-4" /> ni
+            raia wa Jamhuri ya muungano ambaye anaishi Zanzibar anakusudia
+            kufunga ndoa na
+            <input class="border-b border-dashed border-black w-96 px-4" /> raia
+            wa
+            <input class="border-b border-dashed border-black w-96 px-4" /> nchi
+            ambayo sheria yake inamtaka yeye apeleke shahada kwamba hakuna pingamizi
+            yoyote ya kisheria juu ya ndoa inayokusudiwa kufungwa inayojulikana
+            na mamlaka yenye madaraka hapa Zanzibar.<br />
+            <h class="uppercase font-bold">na kwa kuwa </h
+            >huyo <input class="border-b border-dashed border-black w-96 px-4" />
+            amemuomba Mrajis Mkuu wa Ndoa atoe shahada hiyo.<br />
+            <h class="uppercase font-bold">na kwakuwa mimi </h
+            ><input class="border-b border-dashed border-black w-96 px-4" />
+            ndio Mrajis Mkuu wa Ndoa<br />
+
+            <h
+              >kwa madhumuni ya Kanuni za Usajili wa Matukio ya Kijamii, 2020,
+              baada ya kuanzisha uchunguzi unaohusika juu ya jambo hili
+              nimetosheka kwamba hakuna pingamizi yoyote iliyoonyeshwa.</h
+            ><br />
+            <h class="uppercase font-bold">kwa hiyo </h> kwa kutumia mamlaka
+            niliyopewa na Kanuni ya 17 ya Kanuni hizo mimi ninatoa shahada kwa
+            niaba ya Serikali ya mapinduzi ya zanaibar kwamba hakuna pingamizi
+            yo yote ya kisheria juu ya hiyo ndoa inayokusudiwa ambayo
+            inajulikana na mamlaka yenyewe madaraka yenye madaraka hapa
+            Zanzibar.<br />
+            <h class="uppercase font-bold">imetiwa saini</h> na mimi leo
+            <input class="border-b border-dashed border-black w-1/4 px-4" />
+            mwezi wa <input class="border-b border-dashed border-black px-4" /> 20 <input class="border-b border-dashed border-black w-12 px-4" />
+          </p>
+
+          <div class="px-6 py-6 flex items-baseline justify-between mt-12">
+            <div class="border h-48 w-64 border-black flex justify-center items-center">
+              <h class="uppercase text-gray-400">Muhuri</h>
+            </div>
+
+            <div class="flex flex-col  justify-center items-center pt-10">
+              <input class="border-b border-dashed border-black px-4 w-52" /> 
+              <h>Mrajis Mkuu wa Ndoa</h>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- print thisjs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.js"></script>
+
+  <script>
+    var button = document.getElementById("download");
+    var makepdf = document.getElementById("form");
+
+    button.addEventListener("click", function () {
+      $(makepdf).printThis({
+        // removeInline:true,
+        // header: null,
+        // footer: null,
+        importCSS: true,
+        pageTitle: "Birth Registration Late Form",
+      });
+    });
+  </script>
+
+  <!-- html2pdf CDN
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.5/JsBarcode.all.js"></script>
+  <script>
+    // Barcode
+    JsBarcode("#barcode", "84865847889893");
+  </script>
+</html>
