@@ -5,7 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
   font-family: "Times New Roman";
   src: url("../assets/fonts/times_new_roman.ttf");
@@ -14,6 +13,16 @@
 @font-face {
   font-family: "Times New Roman Bold";
   src: url("../assets/fonts/times_new_roman_bold.ttf");
+}
+
+@font-face {
+  font-family: "Calibri Regular";
+  src: url("../assets/fonts/Calibri_Regular.ttf");
+}
+
+@font-face {
+  font-family: "Calibri Bold";
+  src: url("../assets/fonts/Calibri_Bold.ttf");
 }
 
 .dx-icon-trash {
@@ -61,22 +70,20 @@
   text-orientation: mixed;
 }
 
-.tablehead{
-  @apply border border-black px-2 py-1 align-text-top font-normal font-times
+.tablehead {
+  @apply border border-black px-2 py-1 align-text-top font-times font-normal;
 }
 
-.tabledata{
-  @apply verticaltext absolute bottom-0 left-2 flex -rotate-180 justify-start pt-2 uppercase py-2
+.tabledata {
+  @apply verticaltext absolute bottom-0 left-2 flex -rotate-180 justify-start py-2 pt-2 uppercase;
 }
 
-.dx-datagrid-text-content{
-  @apply font-semibold font-robot  text-black 
+.dx-datagrid-text-content {
+  @apply font-robot font-semibold  text-black;
 }
-
-
 
 .backgroundimg {
-    background-image: url('/remote_wwwroot/images/backgroundcover.jpg');
+  background-image: url("/remote_wwwroot/images/backgroundcover.jpg");
 }
 
 /* @media (-webkit-device-pixel-ratio: 2) {

@@ -1862,6 +1862,10 @@ video {
   font-family: DM Sans, sans-serif;
 }
 
+.font-calibri{
+  font-family: Calibri, sans-serif;
+}
+
 .text-base{
   font-size: 1rem;
   line-height: 1.5rem;
@@ -2234,6 +2238,18 @@ video {
   src: url("../assets/fonts/times_new_roman_bold.ttf");
 }
 
+@font-face {
+  font-family: "Calibri Regular";
+
+  src: url("../assets/fonts/Calibri_Regular.ttf");
+}
+
+@font-face {
+  font-family: "Calibri Bold";
+
+  src: url("../assets/fonts/Calibri_Bold.ttf");
+}
+
 .dx-icon-trash{
   --tw-text-opacity: 1 !important;
   color: rgb(220 38 38 / var(--tw-text-opacity)) !important;
@@ -2324,7 +2340,7 @@ video {
 }
 
 .backgroundimg {
-  background-image: url('/remote_wwwroot/images/backgroundcover.jpg');
+  background-image: url("/remote_wwwroot/images/backgroundcover.jpg");
 }
 
 /* @media (-webkit-device-pixel-ratio: 2) {
