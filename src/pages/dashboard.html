@@ -320,56 +320,29 @@
             </div>
 
             <div
-              class="mx-auto grid max-w-full grid-cols-1 gap-4 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-2 lg:px-8"
+              class="mx-auto grid max-w-full px-4 py-12 sm:px-6 space-y-12 lg:px-8"
             >
-              <div
-                class="flex w-full flex-col items-center justify-center space-y-6"
+            <div class="flex w-full flex-col items-center space-y-6 h-[600px]">
+              <h class="text-2xl font-bold uppercase underline"
+                >Total revenue(TZS) of all registered events per month - this
+                year</h
               >
-                <h class="text-xl font-bold uppercase underline"
+              <div class="h-full w-full" id="barMulti"></div>
+            </div>
+              <div
+                class="flex w-full flex-col items-center justify-center space-y-6 h-[900px]"
+              >
+                <h class="text-2xl font-bold uppercase underline"
                   >Total number of registered event with gender of this year</h
                 >
                 <canvas id="pieChart"></canvas>
               </div>
 
-              <div class="flex w-full flex-col items-center space-y-6">
-                <h class="text-xl font-bold uppercase underline"
-                  >Total revenue(TZS) of all registered events per month - this
-                  year</h
-                >
-                <div class="h-full w-full" id="barMulti"></div>
-              </div>
 
-              <!-- <div class="w-full space-y-6">
-                <h class="text-xl font-bold uppercase">Births registrations</h>
-                <canvas id="birthChart"></canvas>
-              </div>
-
-              <div class="w-full space-y-6">
-                <h class="text-xl font-bold uppercase">Deaths registrations</h>
-                <canvas id="deathChart"></canvas>
-              </div>
-
-              <div class="w-full space-y-6">
-                <h class="text-xl font-bold uppercase"
-                  >Marriage registrations</h
-                >
-                <canvas id="marriageChart"></canvas>
-              </div>
-
-              <div class="w-full space-y-6">
-                <h class="text-xl font-bold uppercase">Divorce registrations</h>
-                <canvas id="divorceChart"></canvas>
-              </div>
-
-              <div class="w-full space-y-6">
-                <h class="text-xl font-bold uppercase"
-                  >Adaption registrations</h
-                >
-                <canvas id="adaptionChart"></canvas>
-              </div> -->
-
+             
               <!-- <div id="sample"></div> -->
             </div>
+            
           </div>
 
           <!-- <div id="sampleTable" height="90" class="mt-6 px-8 py-4"></div> -->
@@ -814,6 +787,8 @@
         "Death Female",
         "Marriage Male",
         "Marriage Female",
+        "Divorced Male",
+        "Divorced Female",
       ],
       datasets: [
         {
@@ -831,6 +806,10 @@
         {
           backgroundColor: ["hsl(180, 100%, 60%)", "hsl(180, 100%, 35%)"],
           data: [10, 90],
+        },
+        {
+          backgroundColor: ["hsl(190, 100%, 60%)", "hsl(190, 100%, 85%)"],
+          data: [90, 70],
         },
       ],
     };
@@ -972,6 +951,62 @@
       },
       {
         state: "May",
+        birth: 600,
+        death: 200,
+        adoption: 400,
+        divorce: 200,
+        marriage: 100,
+      },
+       {
+        state: "June",
+        birth: 600,
+        death: 200,
+        adoption: 400,
+        divorce: 200,
+        marriage: 100,
+      },
+       {
+        state: "July",
+        birth: 600,
+        death: 200,
+        adoption: 400,
+        divorce: 200,
+        marriage: 100,
+      },
+       {
+        state: "August",
+        birth: 600,
+        death: 200,
+        adoption: 400,
+        divorce: 200,
+        marriage: 100,
+      },
+       {
+        state: "September",
+        birth: 600,
+        death: 200,
+        adoption: 400,
+        divorce: 200,
+        marriage: 100,
+      },
+       {
+        state: "October",
+        birth: 600,
+        death: 200,
+        adoption: 400,
+        divorce: 200,
+        marriage: 100,
+      },
+       {
+        state: "November",
+        birth: 600,
+        death: 200,
+        adoption: 400,
+        divorce: 200,
+        marriage: 100,
+      },
+       {
+        state: "December",
         birth: 600,
         death: 200,
         adoption: 400,

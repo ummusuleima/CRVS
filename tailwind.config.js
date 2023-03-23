@@ -29,6 +29,8 @@ module.exports = {
     fontFamily: {
       sans: ["DM Sans", "sans-serif"],
       robot: ["Roboto Mono", "monospace"],
+      calibri: ["Calibri Regular", "sans-serif"],
+      calibribold: ["Calibri Bold", "sans-serif"],
       times: ["Times New Roman", "sans-serif"],
       timesbold: ["Times New Roman Bold", "sans-serif"],
     },
