@@ -320,17 +320,18 @@
             </div>
 
             <div
-              class="mx-auto grid max-w-full px-4 py-12 sm:px-6 space-y-12 lg:px-8"
+              class="mx-auto grid max-w-full grid-cols-1 gap-4 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-2 lg:px-8"
             >
-            <div class="flex w-full flex-col items-center space-y-6 h-[600px]">
+              <!-- <div class="flex w-full flex-col items-center space-y-6 h-[600px]">
               <h class="text-2xl font-bold uppercase underline"
                 >Total revenue(TZS) of all registered events per month - this
                 year</h
               >
               <div class="h-full w-full" id="barMulti"></div>
-            </div>
+            </div> -->
+
               <div
-                class="flex w-full flex-col items-center justify-center space-y-6 h-[900px]"
+                class="flex h-[600px] w-full flex-col items-center justify-center space-y-6"
               >
                 <h class="text-2xl font-bold uppercase underline"
                   >Total number of registered event with gender of this year</h
@@ -338,11 +339,270 @@
                 <canvas id="pieChart"></canvas>
               </div>
 
+              <div class="flex h-full  space-y-6">
+                <div class="w-full space-y-20">
+                  <div class="flex w-full items-center justify-center">
+                    <h class="text-2xl font-bold uppercase underline">
+                      title here</h
+                    >
+                  </div>
 
-             
+                  <table class="mt-2 w-full table-auto">
+                    <tr class="border border-black">
+                      <th
+                        colspan="2"
+                        class="border border-black bg-gray-800 text-white"
+                      ></th>
+                      <th
+                        colspan="2"
+                        class="border border-black bg-gray-800 text-white"
+                      >
+                        Previous Month
+                      </th>
+                      <th
+                        colspan="2"
+                        class="border border-black bg-gray-800 text-white"
+                      >
+                        This Month
+                      </th>
+                      <th
+                        colspan="2"
+                        class="border border-black bg-gray-800 text-white"
+                      >
+                        All Total
+                      </th>
+                    </tr>
+
+                    <tr class="border border-black">
+                      <td
+                        class="border-l border-b border-black bg-gray-800 pl-2 text-white"
+                      ></td>
+                      <td class="bg-gray-800 text-white"></td>
+                      <td class="border border-black bg-gray-800 text-white">
+                        Processing
+                      </td>
+                      <td class="border border-black bg-gray-800 text-white">
+                        Complete
+                      </td>
+
+                      <td class="border border-black bg-gray-800 text-white">
+                        Processing
+                      </td>
+                      <td class="border border-black bg-gray-800 text-white">
+                        Complete
+                      </td>
+                      <td class="border border-black bg-gray-800 text-white">
+                        Processing
+                      </td>
+                      <td class="border border-black bg-gray-800 text-white">
+                        Complete
+                      </td>
+                    </tr>
+
+                    <tr class="border border-black">
+                      <td class="border-l border-b border-black pl-2">
+                        Kaskazini 'A'
+                      </td>
+                      <td class="border-l-0"></td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                    </tr>
+
+                    <tr class="border border-black">
+                      <td class="border-l border-b border-black pl-2">
+                        Kaskazini 'B'
+                      </td>
+                      <td class="border-l-0"></td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                    </tr>
+
+                    <tr class="border border-black">
+                      <td class="border-l border-b border-black pl-2">
+                        Kusini
+                      </td>
+                      <td class="border-l-0"></td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                    </tr>
+
+                    <tr class="border border-black">
+                      <td class="border-l border-b border-black pl-2">Kati</td>
+                      <td class="border-l-0"></td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                    </tr>
+
+                    <tr class="border border-black">
+                      <td class="border-l border-b border-black pl-2">Mjini</td>
+                      <td class="border-l-0"></td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                    </tr>
+
+                    <tr class="border border-black">
+                      <td class="border-l border-b border-black pl-2">
+                        Magharibi 'A'
+                      </td>
+                      <td class="border-l-0"></td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                    </tr>
+
+                    <tr class="border border-black">
+                      <td class="border-l border-b border-black pl-2">
+                        Magharibi 'B'
+                      </td>
+                      <td class="border-l-0"></td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                    </tr>
+
+                    <tr class="border border-black">
+                      <td class="border-l border-b border-black pl-2">
+                        Chacke Chake
+                      </td>
+                      <td class="border-l-0"></td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                    </tr>
+
+                    <tr class="border border-black">
+                      <td class="border-l border-b border-black pl-2">
+                        Mkoani
+                      </td>
+                      <td class="border-l-0"></td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                    </tr>
+
+                    <tr class="border border-black">
+                      <td class="border-l border-b border-black pl-2">Wete</td>
+                      <td class="border-l-0"></td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                    </tr>
+
+                    <tr class="border border-black">
+                      <td class="border-l border-b border-black pl-2">
+                        Micheweni
+                      </td>
+                      <td class="border-l-0"></td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                    </tr>
+
+                    <tr class="border border-black">
+                      <td class="border-l border-b border-black pl-2">
+                        Not stated
+                      </td>
+                      <td class="border-l-0"></td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                    </tr>
+
+                    <tr class="border border-black">
+                      <td class="border-l border-b border-black pl-2">
+                        Magharibi 'B'
+                      </td>
+                      <td class="border-l-0"></td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                      <td class="border border-black">43</td>
+                    </tr>
+
+                    <tr class="border border-black">
+                      <td class="border-l border-b border-black font-bold">
+                        Total
+                      </td>
+                      <td class="border-l-0"></td>
+                      <td class="border border-black font-bold">43</td>
+                      <td class="border border-black font-bold">43</td>
+
+                      <td class="border border-black font-bold">43</td>
+                      <td class="border border-black font-bold">43</td>
+                      <td class="border border-black font-bold">43</td>
+                      <td class="border border-black font-bold">43</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+              <!-- <div
+                class="flex h-[600px] w-full  space-y-6"
+              >
+                <h class="text-2xl font-bold uppercase underline">Total </h>
+
+                
+               
+              </div> -->
+
               <!-- <div id="sample"></div> -->
             </div>
-            
           </div>
 
           <!-- <div id="sampleTable" height="90" class="mt-6 px-8 py-4"></div> -->
@@ -957,7 +1217,7 @@
         divorce: 200,
         marriage: 100,
       },
-       {
+      {
         state: "June",
         birth: 600,
         death: 200,
@@ -965,7 +1225,7 @@
         divorce: 200,
         marriage: 100,
       },
-       {
+      {
         state: "July",
         birth: 600,
         death: 200,
@@ -973,7 +1233,7 @@
         divorce: 200,
         marriage: 100,
       },
-       {
+      {
         state: "August",
         birth: 600,
         death: 200,
@@ -981,7 +1241,7 @@
         divorce: 200,
         marriage: 100,
       },
-       {
+      {
         state: "September",
         birth: 600,
         death: 200,
@@ -989,7 +1249,7 @@
         divorce: 200,
         marriage: 100,
       },
-       {
+      {
         state: "October",
         birth: 600,
         death: 200,
@@ -997,7 +1257,7 @@
         divorce: 200,
         marriage: 100,
       },
-       {
+      {
         state: "November",
         birth: 600,
         death: 200,
@@ -1005,7 +1265,7 @@
         divorce: 200,
         marriage: 100,
       },
-       {
+      {
         state: "December",
         birth: 600,
         death: 200,
