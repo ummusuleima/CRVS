@@ -479,7 +479,7 @@
       </div>
     </div>
   </div>
-  <script src="../js/printThis.js"></script>
+  <script type='text/javascript' src="../js/printThis.js"></script>
 
   <script>
     var button = document.getElementById("download");
@@ -498,10 +498,10 @@
         //   $("#form").addClass("bg-none");
         //   console.log("Remove Background");
         // },
-        // afterPrint: function () {
-        //   $("#form").removeClass("bg-none");
-        //   console.log("Return Background");
-        // },
+        afterPrint: function () {
+          $("#form").removeClass("bg-none");
+          console.log("Return Background");
+        },
       });
 
       // var cloudinary = new cloudinary.Cloudinary({
