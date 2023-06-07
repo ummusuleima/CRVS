@@ -10,6 +10,7 @@
   </head>
   <body class="mx-auto h-auto bg-slate-100 lg:px-24">
     <main class="mb-6 px-2 lg:px-24">
+      
       <div class="mt-8 flex w-full items-center justify-center px-8">
         <div
           class="flex flex-col items-center justify-center space-y-12 rounded-md bg-white px-12 py-16 shadow-lg"
@@ -354,9 +355,9 @@
       <div class="mt-20">
         <div class="block">
           <div class="flex items-center justify-center pt-7">
-            <h class="text-center font-timesbold text-[21.5px] print:text-black "
-              >Certified Copy of No Impediment Certificate </h
-            >
+            <h class="text-center font-timesbold text-[21.5px] print:text-black"
+              >Certified Copy of No Impediment Certificate
+            </h>
           </div>
 
           <table class="mt-2 table-auto border-collapse border border-black">
@@ -471,7 +472,8 @@
               </svg>
               <div class="w-80 border-b border-dashed border-black"></div>
               <h1 class="text-ss">
-                <h class="italic">For</h> Registar General of Marriage and Divorce
+                <h class="italic">For</h> Registar General of Marriage and
+                Divorce
               </h1>
             </div>
           </div>
@@ -479,14 +481,14 @@
       </div>
     </div>
   </div>
-  <script type='text/javascript' src="../js/printThis.js"></script>
+  <script type="text/javascript" src="../js/printThis.js"></script>
 
   <script>
     var button = document.getElementById("download");
-    var makepdf = document.getElementById("form");
+    // var makepdf = document.getElementById("form");
 
     button.addEventListener("click", function () {
-      $(makepdf).printThis({
+      $("#form").printThis({
         importCSS: true,
         importStyle: true,
         // removeInline: true,
