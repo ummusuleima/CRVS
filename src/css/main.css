@@ -77,7 +77,7 @@
 }
 
 .tabledata {
-  @apply verticaltext absolute bottom-0 left-2 flex -rotate-180 justify-start py-2 pt-2 uppercase font-calibribold;
+  @apply verticaltext absolute bottom-0 left-2 flex -rotate-180 justify-start py-2 pt-2 uppercase font-calibribold text-[14px];
 }
 
 .dx-datagrid-text-content {
